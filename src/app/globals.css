@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-montserrat), sans-serif;
+  --font-lato: var(--font-lato), 'Lato', sans-serif;
+  
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #fbf5e6;
+  --color-gold-200: #f5e4c6;
+  --color-gold-300: #ecc78e;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #b8901c;
+  --color-gold-700: #8c6c10;
+  
+  --color-pastel-rose: #e6c5c5;
+  --color-pastel-blush: #faf0e6;
+  --color-pastel-sage: #e2edea;
+  --color-pastel-lavender: #eae6fa;
+  --color-pastel-cream: #faf7f2;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c1917;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for premium look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf5e6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8901c;
+}
+
+/* Custom styles for masonry and luxury feel */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 1.5rem;
+}
+
+.luxury-text-gradient {
+  background: linear-gradient(135deg, #1c1917 30%, #8c6c10 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
