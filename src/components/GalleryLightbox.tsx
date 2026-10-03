@@ -18,15 +18,15 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    src: "/hero_model.png",
+    src: "/images/dev_fashion/deeps2.jpeg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
-    category: "Custom Designs",
+    category: "Custom Designs", 
     title: "Luxury Ethnic Editorial",
     description: "Intricately detailed custom gown featuring bespoke neckline contours, handcrafted embellishments, and smooth pastel lining."
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/sai.jpeg",
     alt: "Bridal Zardozi Blouse",
     category: "Bridal Collection",
     title: "Royal Crimson Zardozi Blouse",
@@ -34,7 +34,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/ammu.jpeg",
     alt: "Designer Saree Blouse Cutwork",
     category: "Designer Blouses",
     title: "Sheer Cutwork Blouse Design",
@@ -42,7 +42,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1610030469668-93535c17b6b3?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/deeps1.jpeg",
     alt: "Traditional Silk Saree Outfit",
     category: "Traditional Wear",
     title: "Traditional Banarasi Styling",
@@ -50,7 +50,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1608748010899-18f300247112?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/ammu_deeps.jpeg",
     alt: "Festive Lehenga Design",
     category: "Festive Collection",
     title: "Pastel Meadow Festive Lehenga",
@@ -58,7 +58,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/ammu_sai.jpeg",
     alt: "Premium Tailoring Detailing",
     category: "Custom Designs",
     title: "Tailoring Perfection & Patterns",
@@ -66,7 +66,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/sadha_bls1.jpeg",
     alt: "Bridal Lehanga Embroidery Detail",
     category: "Bridal Collection",
     title: "Intricate Bridal Lehanga Panel",
@@ -74,7 +74,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/sadhana_back.jpg",
     alt: "Modern Indo-Western Party Wear",
     category: "Party Wear",
     title: "Contemporary Indo-Western Outfit",
@@ -82,7 +82,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 9,
-    src: "/dev_hero.png",
+    src: "/images/dev_fashion/sadhana_beach1.jpg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -90,7 +90,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 10,
-    src: "/images/dev_f1.png",
+    src: "/images/dev_fashion/sadhana_beach2.jpg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -98,7 +98,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 10,
-    src: "/images/kan.jpg",
+    src: "/images/dev_fashion/sadhana_beach3.jpg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -106,7 +106,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 10,
-    src: "/images/dev_fashion/deeps.jpg",
+    src: "/images/dev_fashion/sadhana_blue.png",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -114,7 +114,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 11,
-    src: "/images/dev_fashion/blouse_back.jpg",
+    src: "/images/dev_fashion/sadhana_kid1.png",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -122,7 +122,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 12,
-    src: "/images/dev_fashion/bride1.jpg",
+    src: "/images/dev_fashion/sadhana_main.png",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -130,7 +130,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 13,
-    src: "/images/dev_fashion/couple1.jpg",
+    src: "/images/dev_fashion/sadhana_orange.png",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -138,7 +138,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 14,
-    src: "/images/dev_fashion/couple2.jpg",
+    src: "/images/dev_fashion/sadhana_orange2.png",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -146,7 +146,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 15,
-    src: "/images/dev_fashion/couple3.jpg",
+    src: "/images/dev_fashion/sadhana_red.png",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -154,7 +154,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 16,
-    src: "/images/dev_fashion/couple4.jpg",
+    src: "/images/dev_fashion/sadhana_red2.png",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -162,7 +162,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 17,
-    src: "/images/dev_fashion/couple5.jpg",
+    src: "/images/dev_fashion/sadhana_red3.png",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -170,7 +170,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 18,
-    src: "/images/dev_fashion/couple6.jpg",
+    src: "/images/dev_fashion/sadhana_smile1.jpg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -178,7 +178,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 19,
-    src: "/images/dev_fashion/couple7.jpg",
+    src: "/images/dev_fashion/sadhana_smile2.jpg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -186,7 +186,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 20,
-    src: "/images/dev_fashion/couple9.jpg",
+    src: "/images/dev_fashion/sadhana_smile2_2.jpg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -194,7 +194,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 21,
-    src: "/images/dev_fashion/custom_drs1.jpg",
+    src: "/images/dev_fashion/sadhana_smile3.jpg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -202,7 +202,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 22,
-    src: "/images/dev_fashion/family.jpg",
+    src: "/images/dev_fashion/sadhana_yello.jpg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -210,7 +210,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 23,
-    src: "/images/dev_fashion/group.jpg",
+    src: "/images/dev_fashion/sadhana1.png",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -218,7 +218,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 24,
-    src: "/images/dev_fashion/kid_mom1.jpg",
+    src: "/images/dev_fashion/sadhana2.jpeg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Party Wear",
     title: "Luxury Ethnic Editorial",
@@ -226,7 +226,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 25,
-    src: "/images/dev_fashion/kid1.jpg",
+    src: "/images/dev_fashion/sadhana3.jpeg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -234,7 +234,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 26,
-    src: "/images/dev_fashion/kid2.jpg",
+    src: "/images/dev_fashion/sadhana_night1.jpg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",

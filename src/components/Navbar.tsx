@@ -11,6 +11,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Classes", href: "/classes" },
   { name: "Services", href: "/services" },
+  { name: "Jewelry", href: "/jewelry", badge: "NEW" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
 ];
@@ -94,13 +95,18 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-xs tracking-[0.18em] uppercase font-semibold transition-colors duration-200 relative py-1 ${
+                    className={`text-xs tracking-[0.18em] uppercase font-semibold transition-colors duration-200 relative py-1 flex items-center gap-1.5 ${
                       isActive
                         ? "text-gold-600 font-bold"
                         : "text-stone-800 hover:text-gold-600"
                     }`}
                   >
-                    {link.name}
+                    <span>{link.name}</span>
+                    {link.badge && (
+                      <span className="text-[9px] px-1.5 py-0.2 bg-[#B8324A] text-gold-300 font-sans tracking-widest font-bold rounded-sm uppercase">
+                        {link.badge}
+                      </span>
+                    )}
                     {isActive && (
                       <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gold-500 rounded-full" />
                     )}
@@ -208,7 +214,14 @@ export default function Navbar() {
                     : "text-stone-850 hover:text-gold-600 hover:pl-4"
                 }`}
               >
-                <span>{link.name}</span>
+                <div className="flex items-center gap-2">
+                  <span>{link.name}</span>
+                  {link.badge && (
+                    <span className="text-[9px] px-1.5 py-0.5 bg-stone-900 text-gold-300 font-sans tracking-widest font-bold rounded-sm uppercase">
+                      {link.badge}
+                    </span>
+                  )}
+                </div>
                 <ChevronRight className={`w-4 h-4 ${isActive ? "text-gold-600" : "text-stone-300"}`} />
               </Link>
             );

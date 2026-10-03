@@ -12,7 +12,7 @@ export default function ContactPage() {
       {/* Page Header */}
       <section className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-fixed bg-no-repeat" 
       style={{
-        backgroundImage: "url('/images/dev_fashion/lan_bls25.jpg')",
+        backgroundImage: "url('/images/dev_fashion/contact.png')",
       }}>
 
 
@@ -35,29 +35,10 @@ export default function ContactPage() {
         <div className="h-[1.5px] w-20 bg-gold-500 mx-auto mb-6" />
 
         <p className="text-stone-100 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-        Pop in for a visit at our Coimbatore boutique or jump on a quick video call with us — 
-        our stylists would love to help you find your perfect fit.
+        Reach out to us for anything you need — whether it's custom stitching, wedding blouse designs 
+        or getting alterations done, we've got you covered.
         </p>
       </div>
-
-
-
-
-
-
-        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
-            ✦ Get In Touch
-          </span>
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-stone-950 mb-6">
-            Contact & Consultation
-          </h1>
-          <div className="h-[1.5px] w-20 bg-gold-500 mx-auto mb-6" />
-          <p className="text-stone-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Pop in for a visit at our Coimbatore boutique or jump on a quick video call with us — our stylists would love to help you find your perfect fit.
-          </p>
-        </div> */}
-
 
 
       </section>
@@ -74,7 +55,8 @@ export default function ContactPage() {
               </h2>
               <div className="h-[1px] w-12 bg-gold-500 mb-6" />
               <p className="text-stone-600 text-sm leading-relaxed">
-                Reach out to us for anything you need — whether it's custom stitching, wedding blouse designs, taking your measurements or getting alterations done, we've got you covered.
+                Pop in for a visit at our Coimbatore boutique or jump on a quick video call with us — 
+                our stylists would love to help you find your perfect fit.
               </p>
             </div>
 
@@ -154,6 +136,12 @@ export default function ContactPage() {
 
           {/* Form Column */}
           <div className="lg:col-span-7 scroll-mt-24" id="booking">
+            <div>
+            <p className="text-[10px] font-semibold text-center tracking-widest text-gold-600 uppercase block mb-3">
+              Private Appointment
+            </p>
+            <div className="h-[1.5px] w-20 bg-gold-500 mx-auto mb-6" />
+            </div>
             <BookingForm />
           </div>
 
@@ -177,3 +165,15 @@ export default function ContactPage() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+

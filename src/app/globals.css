@@ -1,53 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
 @theme {
-  --font-serif: var(--font-playfair), Georgia, serif;
-  --font-sans: var(--font-montserrat), sans-serif;
-  --font-lato: var(--font-lato), 'Lato', sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-lato: 'Manrope', sans-serif;
   
-  --color-gold-50: #fdfbf7;
-  --color-gold-100: #fbf5e6;
-  --color-gold-200: #f5e4c6;
-  --color-gold-300: #ecc78e;
-  --color-gold-500: #d4af37;
-  --color-gold-600: #b8901c;
-  --color-gold-700: #8c6c10;
+  --color-gold-50: #FAF8F5;
+  --color-gold-100: #F5F0E8;
+  --color-gold-200: #EFEBE4;
+  --color-gold-300: #E5D9C5;
+  --color-gold-400: #D4C3A3;
+  --color-gold-500: #C5A059;
+  --color-gold-600: #B38E46;
+  --color-gold-700: #8C6F32;
+  --color-gold-800: #665022;
+  --color-gold-900: #423414;
   
-  --color-pastel-rose: #e6c5c5;
-  --color-pastel-blush: #faf0e6;
-  --color-pastel-sage: #e2edea;
-  --color-pastel-lavender: #eae6fa;
-  --color-pastel-cream: #faf7f2;
+  --color-stone-925: #141312;
+  --color-stone-950: #0C0C0B;
+  
+  --color-pastel-rose: #E6C5C5;
+  --color-pastel-blush: #FAF0E6;
+  --color-pastel-sage: #E2EDEA;
+  --color-pastel-lavender: #EAE6FA;
+  --color-pastel-cream: #FAF7F2;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #1c1917;
+  --background: #FAF8F5;
+  --foreground: #141312;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Custom scrollbar for premium look */
+/* Global Heading Defaults to High-Contrast Luxury Editorial Serif */
+h1, h2, h3, .font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "lnum" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Global Body & UI Defaults to Refined Modern Sans-Serif */
+p, span, button, input, select, textarea, nav, .font-sans {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Responsive High-Fashion Editorial Typography System */
+.hero-headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.75rem, 6vw + 0.5rem, 6rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.section-headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.85rem, 3.8vw + 0.5rem, 3.4rem);
+  line-height: 1.12;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.editorial-eyebrow {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: #B38E46;
+}
+
+.editorial-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #141312;
+}
+
+.editorial-number {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1;
+  color: #B38E46;
+}
+
+/* Hide scrollbar for clean luxury horizontal scroll galleries */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom quiet luxury scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #fbf5e6;
+  background: #FAF8F5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d4af37;
-  border-radius: 4px;
+  background: #D4C3A3;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b8901c;
+  background: #C5A059;
 }
 
-/* Custom styles for masonry and luxury feel */
+/* Custom styles for quiet luxury masonry and editorial feel */
 .masonry-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -55,7 +136,7 @@ body {
 }
 
 .luxury-text-gradient {
-  background: linear-gradient(135deg, #1c1917 30%, #8c6c10 100%);
+  background: linear-gradient(135deg, #141312 20%, #B38E46 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

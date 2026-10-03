@@ -95,7 +95,7 @@ export default function TestimonialCarousel() {
   const current = testimonials[currentIndex];
 
   return (
-    <div className="relative max-w-4xl mx-auto px-4 py-8">
+    <div className="relative max-w-4xl mx-auto px-4 py-2">
       {/* Background Quote Mark */}
       <div className="absolute top-0 left-6 text-gold-200/20 pointer-events-none select-none">
         <Quote className="w-40 h-40 stroke-[0.5]" />

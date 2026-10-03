@@ -18,7 +18,7 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    src: "/hero_model.png",
+    src: "/images/dev_fashion/deeps2.jpeg",
     alt: "Luxury Custom Tailored Ethnic Outfit",
     category: "Custom Designs",
     title: "Luxury Ethnic Editorial",
@@ -26,7 +26,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/sai.jpeg",
     alt: "Bridal Zardozi Blouse",
     category: "Bridal Collection",
     title: "Royal Crimson Zardozi Blouse",
@@ -34,7 +34,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/ammu.jpeg",
     alt: "Designer Saree Blouse Cutwork",
     category: "Designer Blouses",
     title: "Sheer Cutwork Blouse Design",
@@ -42,7 +42,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1610030469668-93535c17b6b3?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/deeps1.jpeg",
     alt: "Traditional Silk Saree Outfit",
     category: "Traditional Wear",
     title: "Traditional Banarasi Styling",
@@ -50,7 +50,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1608748010899-18f300247112?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/ammu_deeps.jpeg",
     alt: "Festive Lehenga Design",
     category: "Festive Collection",
     title: "Pastel Meadow Festive Lehenga",
@@ -58,7 +58,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/ammu_sai.jpeg",
     alt: "Premium Tailoring Detailing",
     category: "Custom Designs",
     title: "Tailoring Perfection & Patterns",
@@ -66,7 +66,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/dd_black.png",
     alt: "Bridal Lehanga Embroidery Detail",
     category: "Bridal Collection",
     title: "Intricate Bridal Lehanga Panel",
@@ -74,7 +74,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+    src: "/images/dev_fashion/deeps.jpg",
     alt: "Modern Indo-Western Party Wear",
     category: "Party Wear",
     title: "Contemporary Indo-Western Outfit",

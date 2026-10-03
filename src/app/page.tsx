@@ -58,7 +58,7 @@ export default function HomePage() {
 
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-wide text-stone-950">
               Crafting Elegance,<br />
-              <span className="luxury-text-gradient">Designed for You</span>
+              <span className="font-serif luxury-text-gradient">Designed for You</span>
             </h1>
 
             <p className="text-stone-600 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed text-justify">
@@ -179,15 +179,6 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Intro */}
-                {/* <p className="text-stone-600 text-sm sm:text-base lg:text-[17px] leading-8">
-                  &nbsp;&nbsp;&nbsp;Welcome to <strong className="text-stone-900 font-semibold">Dev Fashion</strong> —
-                  where South Indian tradition meets modern blouse design. For over a decade, we have been creating
-                  beautifully crafted women's wear with a special focus on
-                  <strong> designer blouses, bridal couture,
-                    custom stitching and premium alterations.</strong>
-                </p> */}
-
                 {/* Quote / Brand Philosophy */}
                 <div className="relative border-l-2 border-gold-400 pl-5 sm:pl-6 py-2">
                   <p className="font-serif italic text-lg sm:text-xl leading-relaxed text-stone-800">
@@ -197,33 +188,16 @@ export default function HomePage() {
                 </div>
 
                 {/* Story */}
-                <div className="space-y-4">
-                  <p className="text-stone-600 text-sm sm:text-base leading-8">
-                    <i> &nbsp;&nbsp;&nbsp;With over a decade of experience </i> in custom blouse stitching and bridal fashion, 
-                    Dev Fashion specializes in beautifully crafted South Indian<strong> bridal blouses, 
-                    designer saree blouses, Aari work blouses, embroidery blouses and custom-fit blouse designs. </strong>
-                    Every blouse is created to complement the saree, occasion, personality and individual style of the woman wearing it.
-                  </p>
+                <div className="space-y-3">
 
-                  <p className="text-stone-600 text-sm sm:text-base leading-8">
-                    &nbsp;&nbsp;&nbsp;Our expertise includes <strong> bridal blouse stitching, Aari embroidery, Maggam work, hand embroidery, intricate sleeve designs, 
-                    back-neck designs, traditional motifs, contemporary cuts and perfectly fitted custom blouses.</strong>
-                  </p>
-
-                  <p className="text-stone-600 text-sm sm:text-base leading-8">
-                    &nbsp;&nbsp;&nbsp;Based in the heart of <strong className="text-stone-900">Gandhipuram,
-                    Coimbatore</strong>, Dev Fashion has become a trusted destination for
-                    brides and women who appreciate the beauty of
-                    <span className="text-stone-900 font-medium"> tailor-made fashion. </span>
-                    Our work now reaches customers across India and NRI clients worldwide
-                    through virtual consultations, personalized fitting assistance and
-                    reliable delivery.
-                  </p>
-
-                  <p className="text-stone-600 text-sm sm:text-base leading-8">
-                   At Dev Fashion, we believe a blouse is not simply something worn with a saree.
-                    <br />
-                    It is a piece of craftsmanship that completes the saree, celebrates the woman, and becomes part of her story.
+                  <p className="text-stone-800 text-sm sm:text-base text-justify leading-7">
+                     &nbsp;&nbsp;&nbsp;With over a decade of experience in blouse stitching and bridal fashion, Dev Fashion creates beautifully crafted blouses that are made especially for each woman. From bridal blouses and designer saree blouses to Aari work, embroidery and custom-fit designs, every piece is made with care and attention to detail.
+                    <br /><br />
+                    We specialize in bridal blouse stitching, Aari embroidery, Maggam work, hand embroidery, unique sleeve and back-neck designs, traditional patterns and modern styles. Our focus is always on creating a blouse that fits beautifully and goes perfectly with your saree and occasion.
+                    <br /><br />
+                    Based in Gandhipuram, Coimbatore, Dev Fashion is trusted by brides and women who love well-made, personalized clothing. We also work with customers across India and NRI clients through virtual consultations and personalized fitting support.
+                    <br /><br />
+                    For us, a blouse is more than just something you wear with a saree. It is the little details, the craftsmanship and the perfect fit that make it special. We put our heart into every blouse we create, so you can wear it with confidence and make it a part of your special memories.
                   </p>
                 </div>
 
@@ -273,7 +247,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] border border-gold-300 p-3 bg-white shadow-2xl overflow-hidden group">
                 <div className="relative h-full w-full overflow-hidden">
                   <Image
-                    src="/images/dev_fashion/tailaring_course1.png"
+                    src="/images/dev_fashion/class2.png"
                     alt="Dev Fashion Tailoring & Aari Work Classes Studio in Coimbatore"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -284,7 +258,7 @@ export default function HomePage() {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 right-4 sm:right-8 bg-stone-900 text-white p-4 sm:p-6 border border-gold-400 shadow-xl max-w-xs">
+              <div className="absolute -bottom-6 right-4 sm:right-8 bg-red-900 text-white p-4 sm:p-6 border border-gold-400 shadow-xl max-w-xs">
                 <span className="text-gold-500 font-serif text-xl sm:text-2xl font-bold block mb-1">
                   Admissions Open!
                 </span>
@@ -361,7 +335,7 @@ export default function HomePage() {
                   href="https://wa.me/918098558923?text=Hi%20Dev%20Fashion%2C%20I%20am%20interested%20in%20joining%20your%20Tailoring%20and%20Aari%20Work%20Course.%20Please%20share%20the%20batch%20timings%20and%20fees."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-4 bg-stone-900 text-white hover:bg-gold-600 text-xs font-semibold tracking-widest uppercase transition-colors text-center shadow-md flex items-center justify-center gap-2.5"
+                  className="px-6 py-3 bg-[#B8324A] hover:bg-[#C8A96A] hover:text-[#16302A] text-white font-semibold text-xs uppercase tracking-[0.2em] transition-colors flex items-center gap-2"
                 >
                   <MessageSquare className="w-4 h-4" />
                   Enquire via WhatsApp
@@ -369,7 +343,7 @@ export default function HomePage() {
 
                 <Link
                   href="/contact?service=Tailoring%20%26%20Aari%20Work%20Course#booking"
-                  className="px-8 py-4 border border-stone-900 text-stone-900 hover:border-gold-600 hover:text-gold-600 text-xs font-semibold tracking-widest uppercase transition-colors text-center bg-transparent flex items-center justify-center gap-2"
+                  className="px-6 py-3 bg-[#C8A96A]  hover:bg-[#B8324A] hover:text-[#16302A] text-white font-semibold text-xs uppercase tracking-[0.2em] transition-colors flex items-center gap-2"
                 >
                   Book Course Admission
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -431,8 +405,9 @@ export default function HomePage() {
               Featured Collections & Gallery
             </h2>
             <div className="h-[1px] w-20 bg-gold-500 mb-5" />
-            <p className="text-stone-600 text-sm">
-              Discover our signature designs. Browse through high-resolution photography, filter by categories, and request custom tailoring for any design.
+            <p className="text-stone-900 text-sm">
+              Maybe it is not a blouse.
+              Maybe it is who you become when you wear it.
             </p>
           </div>
 
@@ -510,14 +485,14 @@ export default function HomePage() {
       {/* 7. Customer Testimonials */}
       <section className="py-20 sm:py-28 border-b border-gold-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12 flex flex-col items-center">
+          <div className="text-center max-w-2xl mx-auto mb-8 flex flex-col items-center">
             <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
               ✦ Words of Praise
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-wide text-stone-950 mb-4">
-              Client Testimonials
+              Your Happiness is Our Reward!
             </h2>
-            <div className="h-[1px] w-20 bg-gold-500 mb-5" />
+            <div className="h-[1px] w-20 bg-gold-500 mb-1" />
           </div>
 
           <TestimonialCarousel />

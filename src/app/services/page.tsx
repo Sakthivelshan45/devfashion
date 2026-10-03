@@ -1,63 +1,30 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Scissors, Sparkles, Heart, Ruler, Award, Globe, ShieldAlert, Phone, HelpCircle } from "lucide-react";
-import ServiceCard from "@/components/ServiceCard";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Scissors,
+  Sparkles,
+  Heart,
+  Ruler,
+  Award,
+  Globe,
+  ArrowRight,
+  ShieldCheck,
+  CheckCircle,
+  MessageSquare,
+  ChevronRight,
+  Gem,
+  HelpCircle,
+  Clock,
+  MapPin,
+  Lock,
+  Phone
+} from "lucide-react";
 
-export const metadata = {
-  title: "Premium Services & Fitting Guide",
-  description: "Explore custom blouse stitching, bridal wear design, luxury saree styling, virtual measurement sessions, and international shipping options.",
-};
-
-const allServices = [
-  {
-    title: "Custom Blouse Stitching",
-    description: "Tailored to your exact contour. Choose neck designs, backless patterns, sweetheart designs, padding, custom hooks, and cotton/silk inner linings.",
-    iconName: "Scissors",
-    price: "From ₹1,500 / $45"
-  },
-  {
-    title: "Bridal Wear Design",
-    description: "Custom bridal lehengas, reception gowns, and wedding blouses. Adorned with premium handcrafts like zardozi, kundan, dabka, and pearl embroidery.",
-    iconName: "Sparkles",
-    price: "Custom Quote"
-  },
-  {
-    title: "Designer Saree Blouses",
-    description: "Sleek cutouts, boat necks, high-necks, collar designs, sheer backs, puff sleeves, and traditional elbow sleeve border designs.",
-    iconName: "Heart",
-    price: "From ₹2,000 / $60"
-  },
-  {
-    title: "Alteration Services",
-    description: "Perfecting fits for pre-purchased outfits, wedding wear adjustments, size updates, sleeve additions, and zipper replacements.",
-    iconName: "Ruler",
-    price: "From ₹500 / $15"
-  },
-  {
-    title: "Boutique Fashion Consultation",
-    description: "Sit down with our designers (in person or online) to plan color palettes, match designer fabrics, and draft silhouette layouts.",
-    iconName: "Award",
-    price: "Free with Booking"
-  },
-  {
-    title: "Occasion Wear Design",
-    description: "Handcrafted ensembles for sangeet, mehendi, receptions, and festivals. Designed in silk, velvet, organza, and net.",
-    iconName: "Globe",
-    price: "From ₹5,000 / $150"
-  },
-  {
-    title: "Custom Measurements",
-    description: "Accurate physical recording or virtual guided measuring. We maintain a secure digital measurement card for all subsequent orders.",
-    iconName: "Ruler",
-    price: "Complimentary"
-  },
-  {
-    title: "International Order Support",
-    description: "Dedicated assistance for global clients. Includes fabric sourcing on request, video calls, secure transactions, and courier delivery.",
-    iconName: "Globe",
-    price: "Worldwide Shipping"
-  }
-];
-
+// FAQ List (100% Preserved)
 const faqs = [
   {
     q: "Do you offer same-day or 1-day delivery?",
@@ -97,146 +64,815 @@ const faqs = [
   }
 ];
 
+// Featured Jewellery Rental Preview Items
+const rentalPreview = [
+  {
+    title: "Traditional Lakshmi Kasu Mala",
+    category: "Temple Haram",
+    price: "₹1,400 / day",
+    image: "/images/jewelry/kasu_mala_1.png"
+  },
+  {
+    title: "Royal Guttapusalu Pearl Set",
+    category: "Pearl Clusters",
+    price: "₹1,950 / day",
+    image: "/images/jewelry/guttapusalu_1.png"
+  },
+  {
+    title: "Heritage 5-Piece Bridal Ensemble",
+    category: "Full Bridal Set",
+    price: "₹3,500 / day",
+    image: "/images/jewelry/bridal_set_1.png"
+  },
+  {
+    title: "Naga Vanki & Maang Tikka Pair",
+    category: "Accessories",
+    price: "₹750 / day",
+    image: "/images/jewelry/vanki_armlet_1.png"
+  }
+];
+
 export default function ServicesPage() {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
   return (
-    <div className="w-full bg-white pt-24">
-    <section
-      className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-fixed bg-no-repeat"
+    <div className="w-full bg-[#FAF8F5] text-[#141312] pt-24 overflow-x-hidden font-sans">
+      
+      {/* ==========================================
+          HERO SECTION: "CRAFTED FOR EVERY CELEBRATION"
+          Cinematic Luxury Bridal Photography
+          ========================================== */}
+      <section className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-fixed bg-no-repeat" 
       style={{
-        backgroundImage: "url('/images/dev_fashion/lan_bls25.jpg')",
-      }}
-    >
-      {/* Dark/white overlay */}
+        backgroundImage: "url('/images/dev_fashion/service.png')",
+      }}>
+
+
+     {/* Dark/white overlay */}
       <div className="absolute inset-0 bg-black/65" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
-          ✦ Bespoke Curation
+          ✦ DEV FASHION ATELIER • COIMBATORE ✦ 
         </span>
 
         <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white mb-6">
-          Boutique Services & Fitting Guide
+           Crafted for Every &nbsp;
+              <span className="italic font-serif font-normal text-[#C5A059] capitalize">
+                Celebration
+              </span>
         </h1>
+        
+        <p className="text-stone-100 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">Your Occasion. Your Style. Our Expertise.!</p>
 
         <div className="h-[1.5px] w-20 bg-gold-500 mx-auto mb-6" />
 
         <p className="text-stone-100 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-          From custom designer blouses to bridal wear and alterations, discover our
-          premium services tailored with precise craftsmanship.
+          we provides a complete South Indian bridal experience — from bespoke Aari embroidered blouses and custom stitching to saree draping, jewellery rental and bridal mehendi.
         </p>
-
       </div>
-    </section>
 
-      {/* Services Grid */}
-      <section className="py-20 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {allServices.map((srv, i) => (
-              <div key={i} className="flex flex-col bg-white border border-gold-200/50 p-6 hover:shadow-xl hover:border-gold-500 transition-all duration-300 relative justify-between">
-                <div>
-                  {/* Icon resolver */}
-                  <div className="w-10 h-10 bg-gold-100 text-gold-600 flex items-center justify-center mb-5">
-                    {srv.iconName === "Scissors" && <Scissors className="w-5 h-5 stroke-[1.5]" />}
-                    {srv.iconName === "Sparkles" && <Sparkles className="w-5 h-5 stroke-[1.5]" />}
-                    {srv.iconName === "Heart" && <Heart className="w-5 h-5 stroke-[1.5]" />}
-                    {srv.iconName === "Ruler" && <Ruler className="w-5 h-5 stroke-[1.5]" />}
-                    {srv.iconName === "Award" && <Award className="w-5 h-5 stroke-[1.5]" />}
-                    {srv.iconName === "Globe" && <Globe className="w-5 h-5 stroke-[1.5]" />}
+
+      </section>
+
+
+      {/* ==========================================
+          EDITORIAL SERVICE JOURNEY STARTS HERE
+          ========================================== */}
+      <div id="service-journey" className="relative">
+
+        {/* ------------------------------------------
+            SERVICE 01 — BRIDAL BLOUSE DESIGN
+            ------------------------------------------ */}
+        <section className="py-24 bg-white border-b border-[#EFEBE4]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              
+              {/* Asymmetric Macro Embroidery Image Frame */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-6 relative aspect-[5/5] border border-[#E5D9C5] p-3 bg-white shadow-2xl overflow-hidden group"
+              >
+                <div className="relative h-full w-full overflow-hidden">
+                  <Image
+                    src="/images/dev_fashion/featured-aari.webp"
+                    alt="Handcrafted Bridal Blouse Aari Embroidery Work"
+                    fill
+                    className="object-cover group-hover:scale-108 transition-transform duration-700"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                  />
+                  <div className="absolute inset-0 bg-stone-950/10" />
+                  
+                  <div className="absolute bottom-4 left-4 right-4 bg-stone-950/85 backdrop-blur-sm p-4 text-white border border-[#C5A059]/40">
+                    <span className="text-[9px] font-semibold tracking-[0.25em] text-[#C5A059] uppercase block mb-1">
+                      ✦ Handcrafted Artisan Craftsmanship
+                    </span>
+                    <p className="font-serif text-xs italic text-stone-300">
+                      Zardozi, Kundan, Dabka & Pearl Work
+                    </p>
                   </div>
-                  
-                  <h3 className="font-serif text-lg font-semibold text-stone-900 tracking-wide mb-3">
-                    {srv.title}
-                  </h3>
-                  
-                  <p className="text-stone-500 text-xs sm:text-sm leading-relaxed mb-6">
-                    {srv.description}
-                  </p>
+                </div>
+              </motion.div>
+
+              {/* Service 01 Narrative */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-6 flex flex-col space-y-6 text-[#141312]"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="font-serif text-3xl font-light text-[#B38E46]">01</span>
+                  <span className="h-px w-12 bg-[#C5A059]" />
+                  <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase">
+                    BRIDAL ATELIER
+                  </span>
                 </div>
 
-                <div className="pt-4 border-t border-stone-100 flex items-center justify-between">
-                  <span className="text-[11px] font-semibold tracking-wider text-gold-700 uppercase">
-                    {srv.price}
-                  </span>
-                  
+                <div>
+                  <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide leading-tight text-stone-950">
+                    Bridal Blouse<br />
+                    <span className="italic font-serif font-normal text-[#B38E46]">
+                      Design
+                    </span>
+                  </h2>
+                </div>
+
+                <div className="h-px w-20 bg-[#C5A059]" />
+
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-lato">
+                  Dev Fashion specializes in creating intricately detailed South Indian <strong>bridal blouses</strong>. Our master artisans hand-craft each design using traditional <strong>Zardozi, Kundan, Dabka, pearl work, Aari embroidery, and custom embellishments</strong> tailored to perfectly complement your Kanjivaram or wedding silk saree.
+                </p>
+
+                {/* Craftsmanship Highlights Grid */}
+                <div className="grid grid-cols-2 gap-4 text-xs font-lato pt-2">
+                  <div className="p-3.5 bg-[#FAF8F5] border border-[#EFEBE4]">
+                    <strong className="block text-stone-950 font-semibold mb-0.5">Aari & Maggam Work</strong>
+                    <span className="text-stone-600">Beadwork, stones, cutwork & thread motifs.</span>
+                  </div>
+                  <div className="p-3.5 bg-[#FAF8F5] border border-[#EFEBE4]">
+                    <strong className="block text-stone-950 font-semibold mb-0.5">Heavy Zardozi Artistry</strong>
+                    <span className="text-stone-600">Pure zari coils & metallic embellishments.</span>
+                  </div>
+                </div>
+
+                <div className="pt-4 flex items-center gap-6">
+                  <span className="text-xs font-serif italic text-[#B38E46]">Starting from ₹4,500+</span>
                   <Link
-                    href={`/contact?service=${encodeURIComponent(srv.title)}#booking`}
-                    className="text-[10px] font-bold tracking-widest text-stone-900 hover:text-gold-600 uppercase transition-colors"
+                    href="/contact?service=Bridal%20Wear%20Design#booking"
+                    className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[#141312] hover:text-[#B38E46] uppercase transition-colors underline decoration-[#C5A059] underline-offset-4"
                   >
-                    Select
+                    Request Design Consultation
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </motion.div>
+
+            </div>
+          </div>
+        </section>
+
+
+        {/* ------------------------------------------
+            SERVICE 02 — CUSTOM BLOUSE STITCHING
+            ------------------------------------------ */}
+        <section className="py-24 bg-[#FAF8F5] border-b border-[#EFEBE4]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              
+              {/* Service 02 Narrative (Left Column) */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-6 flex flex-col space-y-6 text-[#141312] order-2 lg:order-1"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="font-serif text-3xl font-light text-[#B38E46]">02</span>
+                  <span className="h-px w-12 bg-[#C5A059]" />
+                  <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase">
+                    TAILORING MASTERY
+                  </span>
+                </div>
+
+                <div>
+                  <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide leading-tight text-stone-950">
+                    Custom Blouse<br />
+                    <span className="italic font-serif font-normal text-[#B38E46]">
+                      Stitching
+                    </span>
+                  </h2>
+                </div>
+
+                <div className="h-px w-20 bg-[#C5A059]" />
+
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-lato">
+                  Tailored strictly to your unique body contour. We draft custom armhole patterns, necklines, padded linings, sweetheart back cuts, and custom hook closures so that your blouse fits flawlessly like a second skin.
+                </p>
+
+                <div className="space-y-3 font-lato text-xs text-stone-800 pt-2">
+                  <div className="flex items-center gap-3 p-3 bg-white border border-[#EFEBE4]">
+                    <Ruler className="w-4 h-4 text-[#B38E46] shrink-0" />
+                    <span>In-person physical measurements & digital client profile cards</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-white border border-[#EFEBE4]">
+                    <ShieldCheck className="w-4 h-4 text-[#B38E46] shrink-0" />
+                    <span>Perfect Fit Guarantee — Complimentary fitting adjustments</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-white border border-[#EFEBE4]">
+                    <Clock className="w-4 h-4 text-[#B38E46] shrink-0" />
+                    <span>Express 24-hour delivery options available for urgent orders</span>
+                  </div>
+                </div>
+
+                <div className="pt-4 flex items-center gap-6">
+                  <span className="text-xs font-serif italic text-[#B38E46]">Starting from ₹1,500</span>
+                  <Link
+                    href="/contact?service=Custom%20Blouse%20Stitching#booking"
+                    className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[#141312] hover:text-[#B38E46] uppercase transition-colors underline decoration-[#C5A059] underline-offset-4"
+                  >
+                    Book Tailoring Slot
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </motion.div>
+
+              {/* Tailoring Atelier Photography Frame */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="lg:col-span-6 relative aspect-[5/5.5] border border-[#E5D9C5] p-3 bg-white shadow-2xl overflow-hidden group order-1 lg:order-2"
+              >
+                <div className="relative h-full w-full overflow-hidden">
+                  <Image
+                    src="/images/dev_fashion/durga_custom.png"
+                    alt="Dev Fashion Master Tailoring Studio in Gandhipuram Coimbatore"
+                    fill
+                    className="object-cover group-hover:scale-108 transition-transform duration-700"
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                  />
+                  <div className="absolute inset-0 bg-stone-950/15" />
+                </div>
+              </motion.div>
+
+            </div>
+          </div>
+        </section>
+
+
+        {/* ------------------------------------------
+            SERVICE 03 — DESIGNER SAREE BLOUSES
+            ------------------------------------------ */}
+        <section className="py-24 bg-white border-b border-[#EFEBE4]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-2xl mx-auto mb-16 flex flex-col items-center">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="font-serif text-3xl font-light text-[#B38E46]">03</span>
+                <span className="h-px w-12 bg-[#C5A059]" />
+                <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase">
+                  COUTURE PATTERNS
+                </span>
+              </div>
+
+              <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide text-stone-950">
+                Designer Saree Blouses
+              </h2>
+              <div className="h-px w-20 bg-[#C5A059] my-4" />
+              <p className="text-stone-600 text-sm font-lato">
+               She does not become someone else when she wears the blouse. <br />
+               She simply becomes a little more herself.
+              </p>
+            </div>
+
+            {/* Horizontal Wide Editorial Composition */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-[#FAF8F5] border border-[#EFEBE4] p-4 flex flex-col justify-between group hover:border-[#C5A059] transition-all">
+                <div className="relative aspect-[3/4] w-full overflow-hidden bg-stone-200 border border-[#EFEBE4] mb-4">
+                  <Image
+                    src="/images/dev_fashion/sadhana_red.png"
+                    alt="Designer Sweetheart Back Neck Cutout Blouse"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div>
+                  <span className="text-[10px] font-semibold text-[#B38E46] uppercase tracking-wider block mb-1">
+                    ✦ Cutouts & Deep Necks
+                  </span>
+                  <h3 className="font-serif text-lg font-medium text-stone-950 mb-2">
+                    Contemporary Sweetheart Cut
+                  </h3>
+                  <p className="text-stone-600 text-xs leading-relaxed font-lato">
+                    Modern backless patterns adorned with tassels, Kundan stones, and pearl strings.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-[#FAF8F5] border border-[#EFEBE4] p-4 flex flex-col justify-between group hover:border-[#C5A059] transition-all">
+                <div className="relative aspect-[3/4] w-full overflow-hidden bg-stone-200 border border-[#EFEBE4] mb-4">
+                  <Image
+                    src="/images/dev_fashion/sadhana_blue.png"
+                    alt="Traditional Raw Silk Elbow Sleeve Blouse"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div>
+                  <span className="text-[10px] font-semibold text-[#B38E46] uppercase tracking-wider block mb-1">
+                    ✦ Traditional Silk Wear
+                  </span>
+                  <h3 className="font-serif text-lg font-medium text-stone-950 mb-2">
+                    Elbow-Sleeve Zari Borders
+                  </h3>
+                  <p className="text-stone-600 text-xs leading-relaxed font-lato">
+                    Classic raw silk stitching featuring traditional temple zari borders and heavy elbow embroidery.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-[#FAF8F5] border border-[#EFEBE4] p-4 flex flex-col justify-between group hover:border-[#C5A059] transition-all">
+                <div className="relative aspect-[3/4] w-full overflow-hidden bg-stone-200 border border-[#EFEBE4] mb-4">
+                  <Image
+                    src="/images/dev_fashion/sadhana_red3.png"
+                    alt="Sheer Net & Velvet Reception Blouse"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div>
+                  <span className="text-[10px] font-semibold text-[#B38E46] uppercase tracking-wider block mb-1">
+                    ✦ Reception & Festive
+                  </span>
+                  <h3 className="font-serif text-lg font-medium text-stone-950 mb-2">
+                    Velvet & Organza Couture
+                  </h3>
+                  <p className="text-stone-600 text-xs leading-relaxed font-lato">
+                    Rich velvet and sheer net backs designed for grand evening receptions and sangeets.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                href="/contact?service=Designer%20Saree%20Blouses#booking"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#141312] text-white hover:bg-[#B38E46] text-xs font-semibold tracking-[0.2em] uppercase transition-colors"
+              >
+                View All Blouse Styles
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+
+        {/* ------------------------------------------
+            SERVICE 04 — ALTERATION SERVICES ("PERFECTING THE FIT")
+            ------------------------------------------ */}
+        <section className="py-24 bg-[#FAF8F5] border-b border-[#EFEBE4]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              
+              {/* Image Column */}
+              <div className="lg:col-span-5 relative aspect-[5/6] border border-[#E5D9C5] p-3 bg-white shadow-xl">
+                <div className="relative h-full w-full overflow-hidden">
+                  <Image
+                    src="/images/dev_fashion/durga_fit.png"
+                    alt="Garment Fitting and Alteration Services Studio"
+                    fill
+                    className="object-cover"
+                    sizes="40vw"
+                  />
+                </div>
+              </div>
+
+              {/* Text Column */}
+              <div className="lg:col-span-7 flex flex-col space-y-6 text-[#141312]">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif text-3xl font-light text-[#B38E46]">04</span>
+                  <span className="h-px w-12 bg-[#C5A059]" />
+                  <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase">
+                    FIT REFINEMENT
+                  </span>
+                </div>
+
+                <div>
+                  <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide text-stone-950">
+                    Perfecting the Fit
+                  </h2>
+                  <span className="text-xs uppercase tracking-[0.25em] text-[#B38E46] font-semibold block mt-1">
+                    Professional Alteration Services
+                  </span>
+                </div>
+
+                <div className="h-px w-20 bg-[#C5A059]" />
+
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-lato">
+                  From bridal and wedding wear to your favorite pre-purchased pieces, we refine every detail with precision. 
+                  Whether it’s a size adjustment, sleeve addition, armhole refinement or zipper replacement, 
+                  our alteration service brings comfort, confidence and a beautifully finished fit to every garment.
+                </p>
+
+                <div className="bg-white p-6 border border-[#EFEBE4] space-y-3 font-lato text-xs text-stone-700 shadow-sm">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-4 h-4 text-[#B38E46]" />
+                    <span>Free re-alterations until 100% satisfied</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-4 h-4 text-[#B38E46]" />
+                    <span>Expedited express fitting for urgent events</span>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <Link
+                    href="/contact?service=Alteration%20Services#booking"
+                    className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[#141312] hover:text-[#B38E46] uppercase transition-colors underline decoration-[#C5A059] underline-offset-4"
+                  >
+                    Book Fitting Session
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Measurement Process Callout */}
-      <section className="py-20 bg-stone-950 text-white scroll-mt-20" id="measurement-guide">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="text-[10px] font-semibold tracking-widest text-gold-400 uppercase block mb-3">
-            ✦ Perfect Fit Guarantee
-          </span>
-          <h2 className="font-serif text-3xl font-bold tracking-wide mb-6">
-            Bespoke Virtual Fitting & Measuring
-          </h2>
-          <p className="text-stone-400 text-sm sm:text-base leading-relaxed mb-8">
-            You don't need to visit our studio to get the perfect custom fit. We provide virtual styling and measuring assistance where our stylist guides you live on camera. We can also replicate the measurements of a well-fitting sample blouse or suit mailed to our studio.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-stone-300 text-xs text-left mb-8 border-t border-b border-stone-850 py-8">
-            <div>
-              <span className="block font-serif text-lg text-gold-500 mb-2">1. Schedule Call</span>
-              Book your virtual slot. Keep a tape ready. We will guide you or your local tailor live.
-            </div>
-            <div>
-              <span className="block font-serif text-lg text-gold-500 mb-2">2. Secure Card</span>
-              Your measurement record is encrypted on your client profile card for future orders.
-            </div>
-            <div>
-              <span className="block font-serif text-lg text-gold-500 mb-2">3. Easy Updates</span>
-              Need changes next time? Tell your designer, and we will update your measurement card instantly.
             </div>
           </div>
-          <Link
-            href="/contact#booking"
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-stone-950 hover:bg-gold-500 hover:text-white text-xs font-semibold tracking-widest uppercase transition-colors"
-          >
-            Schedule Measurement Call
-          </Link>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQs Section */}
-      <section className="py-20 sm:py-24 bg-white border-t border-gold-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
-              ✦ Support & FAQs
-            </span>
-            <h2 className="font-serif text-3xl font-bold tracking-wide text-stone-950">
-              Frequently Asked Questions
-            </h2>
-            <div className="h-[1.5px] w-16 bg-gold-500 mx-auto mt-4" />
+
+        {/* ------------------------------------------
+            SERVICE 05 — JEWELLERY RENTAL SHOWCASE
+            ------------------------------------------ */}
+        <section className="py-24 bg-white border-b border-[#EFEBE4]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-[#EFEBE4] gap-6">
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="font-serif text-3xl font-light text-[#B38E46]">05</span>
+                  <span className="h-px w-12 bg-[#C5A059]" />
+                  <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase">
+                    HERITAGE ARCHIVE
+                  </span>
+                </div>
+                <h2 className="font-serif text-3xl sm:text-5xl font-light tracking-wide text-stone-950 uppercase">
+                  South Indian Jewellery Rental
+                </h2>
+              </div>
+              
+              <Link
+                href="/jewelry"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#141312] hover:bg-[#B38E46] text-white text-xs font-semibold tracking-[0.2em] uppercase transition-all shadow-md shrink-0 self-start md:self-auto"
+              >
+                Explore 24+ Rental Sets
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Jewellery Editorial Gallery Showcase */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {rentalPreview.map((item, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ y: -5 }}
+                  className="bg-[#FAF8F5] border border-[#EFEBE4] p-4 flex flex-col justify-between group hover:border-[#C5A059] transition-all shadow-sm"
+                >
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-white border border-[#EFEBE4] mb-4">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover group-hover:scale-108 transition-transform duration-500"
+                    />
+                    <div className="absolute top-2 left-2 bg-[#141312] text-white px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider">
+                      {item.price}
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] font-semibold text-[#B38E46] uppercase tracking-wider block mb-1">
+                      ✦ {item.category}
+                    </span>
+                    <h3 className="font-serif text-base font-medium text-stone-950 mb-3">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <Link
+                    href="/jewelry#catalog"
+                    className="text-xs font-semibold tracking-widest text-[#B38E46] uppercase flex items-center gap-1 pt-2 border-t border-[#EFEBE4]"
+                  >
+                    View Details <ChevronRight className="w-3.5 h-3.5" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
           </div>
+        </section>
 
-          <div className="space-y-6">
-            {faqs.map((faq, i) => (
-              <div key={i} className="border border-gold-200/50 p-6 bg-gold-50/20">
-                <h4 className="font-serif text-base font-semibold text-stone-950 flex items-start gap-2.5">
-                  <HelpCircle className="w-5 h-5 text-gold-600 shrink-0 mt-0.5" />
-                  {faq.q}
-                </h4>
-                <p className="text-stone-600 text-sm leading-relaxed mt-3 pl-7">
-                  {faq.a}
+
+        {/* ------------------------------------------
+            SERVICE 06 — SAREE DRAPING & STYLING
+            ------------------------------------------ */}
+        <section className="py-24 bg-[#FAF8F5] border-b border-[#EFEBE4]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              
+              {/* Text Column */}
+              <div className="lg:col-span-6 flex flex-col space-y-6 text-[#141312]">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif text-3xl font-light text-[#B38E46]">06</span>
+                  <span className="h-px w-12 bg-[#C5A059]" />
+                  <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase">
+                    ELEGANT FINISHING
+                  </span>
+                </div>
+
+                <div>
+                  <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide text-stone-950">
+                    Saree Draping<br />
+                    <span className="italic font-serif font-normal text-[#B38E46]">
+                      & Bridal Styling
+                    </span>
+                  </h2>
+                </div>
+
+                <div className="h-px w-20 bg-[#C5A059]" />
+
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-lato text-justify">
+                  At Dev Fashion, we believe elegance lies in the details. Alongside our bespoke tailoring and bridal services, 
+                  we offer professional saree draping services. every pleat, fold
+                   and pin is placed with precision.
+                  
+                  <br /><br />
+
+                  From traditional South Indian drapes to elegant contemporary styles, our saree draping service is designed to give you a neat, graceful and comfortable finish—
+                  so you can feel confident and beautifully dressed for every special occasion.
+                  
+                  <br /><br />
+                  Whether it is your wedding day, a cherished family celebration, a reception, or a special occasion, let Dev Fashion take care of the details—so you can simply enjoy the moment.
+                </p>
+
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-lato">
+                  She is never trying too hard.
+                  Somehow, everything still looks better on her when we stand besides her.
+                </p>          
+
+                <div className="pt-2">
+                  <Link
+                    href="/contact?service=Saree%20Draping#booking"
+                    className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[#141312] hover:text-[#B38E46] uppercase transition-colors underline decoration-[#C5A059] underline-offset-4"
+                  >
+                    Reserve Draping Stylist
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Editorial Image Frame */}
+              <div className="lg:col-span-6 relative aspect-[5/5] border border-[#E5D9C5] p-3 bg-white shadow-xl">
+                <div className="relative h-full w-full overflow-hidden">
+                  <Image
+                    src="/images/dev_fashion/saree_draping.png"
+                    alt="Professional Bridal Saree Draping & Styling"
+                    fill
+                    className="object-cover"
+                    sizes="45vw"
+                  />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        {/* ------------------------------------------
+            SERVICE 07 — BRIDAL MEHENDI & ARTISTRY
+            ------------------------------------------ */}
+        <section className="py-24 bg-white border-b border-[#EFEBE4]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              
+              {/* Mehendi Image Frame */}
+              <div className="lg:col-span-5 relative aspect-[4/5] border border-[#E5D9C5] p-3 bg-white shadow-xl">
+                <div className="relative h-full w-full overflow-hidden">
+                  <Image
+                    src="/images/dev_fashion/mehandhi.jpg"
+                    alt="Detailed Intricate Indian Bridal Mehendi Henna Work"
+                    fill
+                    className="object-cover"
+                    sizes="40vw"
+                  />
+                </div>
+              </div>
+
+              {/* Text Column */}
+              <div className="lg:col-span-7 flex flex-col space-y-6 text-[#141312]">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif text-3xl font-light text-[#B38E46]">07</span>
+                  <span className="h-px w-12 bg-[#C5A059]" />
+                  <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase">
+                    ARTISTIC EMBELLISHMENT
+                  </span>
+                </div>
+
+                <div>
+                  <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide text-stone-950">
+                    Bridal Mehendi
+                  </h2>
+                  <span className="text-xs uppercase tracking-[0.25em] text-[#B38E46] font-semibold block mt-1">
+                    Traditional Art That Completes Your Bridal Look
+                  </span>
+                </div>
+
+                <div className="h-px w-20 bg-[#C5A059]" />
+
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-lato text-justify">
+                  
+                  Our bridal mehendi service brings together intricate artistry, traditional elegance, and personalised designs to make your wedding celebrations even more memorable.
+                  <br /> <br />
+                  From detailed bridal patterns to elegant, minimal designs, we create mehendi that complements your bridal outfit, jewellery and personal style. 
+                  Every design is applied with care and attention to detail, creating beautiful patterns that become part of your wedding memories.
+                </p>
+
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-lato text-justify">
+                 <span className="text-xs uppercase tracking-[0.25em] text-[#B38E46] font-semibold block mt-2">
+                    Perfect For
+                  </span> 
+                  Weddings • Engagements • Receptions • Mehendi Ceremonies • Family Celebrations • Special Occasions
+                  <span className="text-xs uppercase tracking-[0.25em] text-[#B38E46] font-semibold block mt-1">
+                    Your Bridal Look, Completed With Art
+                  </span> 
+                    From the blouse you wear to the mehendi you carry, every detail matters. Let our artistry add the finishing touch to your celebration.
+                </p>
+
+                <div className="pt-2">
+                  <Link
+                    href="/contact?service=Bridal%20Mehendi#booking"
+                    className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[#141312] hover:text-[#B38E46] uppercase transition-colors underline decoration-[#C5A059] underline-offset-4"
+                  >
+                    Enquire Mehendi Booking
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+
+      {/* ==========================================
+          GLOBAL COURIER & VIRTUAL CONSULTATIONS
+          ========================================== */}
+      <section className="py-20 bg-stone-950 text-white border-b border-stone-850">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            
+            <div className="flex items-start gap-4">
+              <Globe className="w-8 h-8 text-[#C5A059] shrink-0 mt-1" />
+              <div>
+                <h4 className="font-serif text-lg font-light uppercase text-white">Worldwide Express Courier</h4>
+                <p className="text-stone-400 text-xs leading-relaxed mt-1 font-lato">
+                  Tracked doorstep delivery to UK, USA, UAE, Canada, Australia, Singapore & beyond.
                 </p>
               </div>
-            ))}
+            </div>
+
+            <div className="flex items-start gap-4">
+              <Ruler className="w-8 h-8 text-[#C5A059] shrink-0 mt-1" />
+              <div>
+                <h4 className="font-serif text-lg font-light uppercase text-white">Virtual Measurement Card</h4>
+                <p className="text-stone-400 text-xs leading-relaxed mt-1 font-lato">
+                  Step-by-step video call measuring session recorded on your private profile card.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <ShieldCheck className="w-8 h-8 text-[#C5A059] shrink-0 mt-1" />
+              <div>
+                <h4 className="font-serif text-lg font-light uppercase text-white">Confidentiality Assured</h4>
+                <p className="text-stone-400 text-xs leading-relaxed mt-1 font-lato">
+                  Private measurement logs, design sketches, and personal details protected securely.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
+
+
+      {/* ==========================================
+          FAQS SECTION (100% PRESERVED)
+          ========================================== */}
+      <section className="py-24 bg-white border-b border-[#EFEBE4]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase block mb-3">
+              ✦ Support & Guidance
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-light uppercase tracking-wide text-stone-950">
+              Frequently Asked Questions
+            </h2>
+            <div className="h-px w-20 bg-[#C5A059] mx-auto mt-4" />
+          </div>
+
+          <div className="space-y-4 font-lato">
+            {faqs.map((faq, i) => {
+              const isOpen = openFaqIndex === i;
+              return (
+                <div key={i} className="border border-[#EFEBE4] bg-[#FAF8F5] transition-colors">
+                  <button
+                    onClick={() => toggleFaq(i)}
+                    className="w-full text-left p-5 flex items-center justify-between gap-4 font-serif text-base font-medium text-stone-950 hover:text-[#B38E46] transition-colors"
+                  >
+                    <span className="flex items-center gap-3">
+                      <HelpCircle className="w-4 h-4 text-[#B38E46] shrink-0" />
+                      {faq.q}
+                    </span>
+                    <span className="text-lg font-light text-[#B38E46]">{isOpen ? "−" : "+"}</span>
+                  </button>
+
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="px-5 pb-5 text-stone-600 text-sm leading-relaxed border-t border-[#EFEBE4]/60 pt-4"
+                      >
+                        {faq.a}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+
+      {/* ==========================================
+          FINAL CALL TO ACTION
+          ========================================== */}
+      <section className="py-24 bg-[#FAF8F5] text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase block">
+            ✦ Begin Your Journey
+          </span>
+
+          <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide text-stone-950">
+            Let's Create Something Beautiful
+          </h2>
+
+          <div className="h-px w-20 bg-[#C5A059] mx-auto" />
+
+          <p className="text-stone-700 text-sm sm:text-base font-lato max-w-xl mx-auto leading-relaxed">
+            Contact Dev Fashion today for custom blouse stitching, bridal wear design, jewellery rental, and occasion styling.
+          </p>
+
+          <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="https://wa.me/918098558923?text=Hi%20Dev%20Fashion%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-[#141312] text-white hover:bg-[#B38E46] text-xs font-semibold tracking-[0.2em] uppercase transition-colors shadow-md flex items-center justify-center gap-2"
+            >
+              <MessageSquare className="w-4 h-4 text-[#C5A059]" />
+              <span>Enquire via WhatsApp</span>
+            </a>
+
+            <Link
+              href="/contact#booking"
+              className="px-8 py-4 border border-[#141312] text-[#141312] hover:border-[#B38E46] hover:text-[#B38E46] text-xs font-semibold tracking-[0.2em] uppercase transition-colors bg-transparent"
+            >
+              Book Online Appointment
+            </Link>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

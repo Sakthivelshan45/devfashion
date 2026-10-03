@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Scissors, Sparkles, Award, Globe, CheckCircle, Phone, MessageSquare, ArrowRight, BookOpen, Clock, UserCheck, Star } from "lucide-react";
+import { Scissors, Sparkles, Award, Globe, CheckCircle, Phone, ArrowRight, BookOpen, UserCheck, Star } from "lucide-react";
 import BookingForm from "@/components/BookingForm";
 
 export const metadata = {
@@ -55,69 +55,57 @@ const whyChooseUs = [
 
 export default function ClassesPage() {
   return (
-    <div className="w-full bg-white pt-20">
-      {/* 1. Fashion School Style Hero Banner (Karen's School of Fashion Style) */}
-      <section className="relative min-h-[580px] sm:min-h-[660px] flex items-center justify-center text-center text-white overflow-hidden bg-stone-950 font-lato">
-        {/* Background Image: Sewing Box, Thimble, Pins, Pink Thread & Magenta Silk */}
-        <div className="absolute inset-0 z-0 ">
-          <Image
-            src="/images/dev_fashion/new_2.jpg"
-            alt="Dev Fashion Design School Studio & Sewing Background"
-            fill
-            className="object-cover object-center scale-100"
-            priority
-          />
-          {/* Dark Overlay matching fashionschoolnj.com */}
-          <div className="absolute inset-0 bg-black/0" />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-black/70" />
-        </div>
+    <div className="w-full bg-[#FAF8F5] text-stone-900 pt-24">
+      
+      {/* 1. Grand Couture Academy Hero Section */}
+     <section className="relative py-16 sm:py-38 border-b border-gold-100  text-center bg-cover bg-center bg-fixed bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/dev_fashion/bls_bck.png')",
+        }}>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 flex flex-col items-center">
-          {/* Quote Header (Fashion School NJ Style) */}
-          <p className="font-lato font-normal text-lg sm:text-0xl text-stone-10 mb-2 tracking-wide text-center drop-shadow-md">
-            ``Our goal is to guide and inspire students in creating a work of art``
+
+        {/* Dark/white overlay */}
+        <div className="absolute inset-0 bg-black/65" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <span className="text-[10px] font-bold tracking-widest text-gold-600 block mb-3">
+            ✦ DEV FASHION ACADEMY • COIMBATORE ✦
+          </span>
+
+          {/* <p className="font-serif italic text-stone-300 text-lg sm:text-xl max-w-3x2 font-light mb-4 tracking-wide text-center leading-relaxed">
+            &ldquo;Our goal is to guide and inspire students in creating a work of art&rdquo;
+          </p> */}
+
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white mb-6">
+            Dev Fashion School of design
+          </h1>
+          
+          <p className="text-stone-100 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed"> &ldquo;Our goal is to guide and inspire students in creating a work of art&rdquo;</p>
+          <div className="h-[1.5px] w-20 bg-gold-500 mx-auto mb-6" />
+
+          <p className="text-stone-100 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            your ultimate destination for premier fashion education in coimbatore. we stands out as the best-in-class for fashion designing, tailoring classes and Aari embroidery instruction.
           </p>
 
-          {/* Main Title (Thin Uppercase Lato) */}
-          <h3 className="font-lato font-light text-3xl sm:text-5x3 lg:text-6x4 tracking-[0.10em] uppercase text-white my-3 drop-shadow-lg leading-tight">
-            DEV FASHION DESIGN SCHOOL
-          </h3>
-
-          {/* Description Paragraph (Lato) */}
-          <p className="font-lato font-normal text-sm sm:text-base text-stone-100 max-w-3x2 leading-relaxed my-3 text-center drop-shadow">
-            We offer fun and innovative fashion design & tailoring classes designed to spark creativity at any age. Our design school offers fashion classes consisting of sketching, draping, sewing, pattern making, Aari embroidery, blouse stitching, and boutique techniques for beginners & adults. We offer practical studio training in Gandhipuram, Coimbatore and live online classes for global students. Private lessons and boutique startup guidance are also available.
-          </p>
-
-          {/* Dual Vibrant Magenta Pink Buttons (Matching fashionschoolnj.com screenshot) */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
-            <a
-              href="https://wa.me/918098558923?text=Hi%20Dev%20Fashion%2C%20I%20want%20to%20book%20a%20Demo%20Class%20for%20the%20Fashion%20Design%20Course."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#e748b8] hover:bg-[#c9369d] text-white font-lato font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-xl flex items-center justify-center gap-2 rounded-none"
-            >
-              LEARN MORE
-            </a>
-            
-            <a
-              href="#demo-class"
-              className="px-8 py-4 bg-[#e748b8] hover:bg-[#c9369d] text-white font-lato font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-xl flex items-center justify-center gap-2 rounded-none"
-            >
-              CONTACT US
-            </a>
-          </div>
         </div>
       </section>
 
       {/* 2. Poster Showcase & Institute Identity Section */}
-      <section className="py-20 sm:py-28 bg-gold-50/30 border-b border-gold-100">
+      <section className="py-20 sm:py-28 bg-[#FAF8F5] border-b border-[#C5A059]/20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-center">
             
-            {/* Left Column: Official Poster Display */}
+            {/* Left Column: Official Poster Display with Fine Couture Framing */}
             <div className="lg:col-span-6 flex justify-center">
-              <div className="relative w-full max-w-md aspect-[3/4] border-2 border-gold-300 p-3 bg-white shadow-2xl overflow-hidden group">
-                <div className="relative h-full w-full overflow-hidden">
+              <div className="relative w-full max-w-md bg-[#141312] border border-[#C5A059]/40 p-4 shadow-2xl relative group">
+                <div className="absolute top-1.5 left-1.5 w-3 h-3 border-t border-l border-[#C5A059]" />
+                <div className="absolute top-1.5 right-1.5 w-3 h-3 border-t border-r border-[#C5A059]" />
+                <div className="absolute bottom-1.5 left-1.5 w-3 h-3 border-b border-l border-[#C5A059]" />
+                <div className="absolute bottom-1.5 right-1.5 w-3 h-3 border-b border-r border-[#C5A059]" />
+
+                <div className="relative aspect-[3/4] w-full overflow-hidden bg-white">
                   <Image
                     src="/images/dev_fashion/institute_poster.png"
                     alt="Dev Fashion Training Institute Official Course Poster"
@@ -130,24 +118,25 @@ export default function ClassesPage() {
             </div>
 
             {/* Right Column: Why Choose Us & Key Specs */}
-            <div className="lg:col-span-6 flex flex-col space-y-6 sm:space-y-8 text-stone-900">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-gold-300 bg-gold-100/35 text-[10px] font-semibold tracking-widest text-gold-700 uppercase rounded-full self-start">
+            <div className="lg:col-span-6 flex flex-col space-y-6 sm:space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-[#C5A059]/40 bg-[#161514] text-[10px] font-semibold tracking-[0.25em] text-[#C5A059] uppercase self-start">
                 ✦ 100 Feet Road, Gandhipuram, Coimbatore
               </div>
 
               <div>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.15] tracking-tight text-stone-950">
+                <span className="text-[10px] font-medium tracking-[0.3em] text-[#C5A059] uppercase block mb-2">
+                  ESTABLISHED CRAFTSMANSHIP ACADEMY
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light leading-tight tracking-wide text-stone-950">
                   Why Learn With Us?
                 </h2>
-                <div className="mt-4 flex items-center gap-3">
-                  <span className="h-px w-16 bg-gold-500" />
-                  <span className="text-gold-500 text-xs">✦</span>
-                  <span className="h-px w-8 bg-gold-300" />
-                </div>
+                <div className="mt-4 h-px w-20 bg-[#C5A059]" />
               </div>
 
-              <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-                At <strong>Dev Fashion Training Institute</strong>, we bridge the gap between traditional craftsmanship and modern boutique demands. Whether you want to master blouse stitching for your family or establish your own fashion studio, our experienced instructors guide you step by step with personalized attention.
+              <p className="text-stone-700 text-sm sm:text-base text-justify leading-relaxed font-light">
+                &nbsp;&nbsp;&nbsp;We offer fun and innovative fashion design &amp; tailoring classes designed to spark creativity at any age. Our design school offers fashion classes consisting of sketching, draping, sewing, pattern making, Aari embroidery, blouse stitching, and boutique techniques for beginners &amp; adults. We offer practical studio training in Gandhipuram, Coimbatore and live online classes for global students.
+                <br /><br />
+                &nbsp;&nbsp;&nbsp;At <strong>Dev Fashion Training Institute</strong>, we bridge the gap between traditional craftsmanship and modern boutique demands. Whether you want to master blouse stitching for your family or establish your own fashion studio, our experienced instructors guide you step by step with personalized attention.
               </p>
 
               {/* 4 Feature Badges */}
@@ -155,13 +144,13 @@ export default function ClassesPage() {
                 {whyChooseUs.map((item, i) => {
                   const IconComp = item.icon;
                   return (
-                    <div key={i} className="bg-white p-4 border border-gold-200 shadow-sm flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-full bg-gold-100 text-gold-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <div key={i} className="bg-white p-5 border border-stone-200/80 shadow-sm flex items-start gap-3 hover:border-[#C5A059]/50 transition-colors">
+                      <div className="w-8 h-8 rounded-full bg-[#161514] text-[#C5A059] flex items-center justify-center shrink-0 mt-0.5">
                         <IconComp className="w-4 h-4" />
                       </div>
                       <div>
-                        <strong className="block text-stone-950 font-semibold mb-0.5">{item.title}</strong>
-                        <span className="text-stone-600 leading-normal">{item.desc}</span>
+                        <strong className="block text-stone-950 font-serif text-sm font-normal mb-1">{item.title}</strong>
+                        <span className="text-stone-600 text-xs leading-relaxed font-light">{item.desc}</span>
                       </div>
                     </div>
                   );
@@ -169,16 +158,17 @@ export default function ClassesPage() {
               </div>
 
               {/* Highlights bar */}
-              <div className="bg-stone-900 text-white p-5 border border-gold-400 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold uppercase tracking-wider">
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-gold-400" />
-                  <span>Studio & Online Classes</span>
+              <div className="bg-[#141312] text-white p-5 border border-[#C5A059]/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium tracking-[0.2em] uppercase">
+                <div className="flex items-center gap-2.5">
+                  <CheckCircle className="w-4 h-4 text-[#C5A059]" />
+                  <span>Studio &amp; Online Classes</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Globe className="w-4 h-4 text-gold-400" />
+                <div className="flex items-center gap-2.5">
+                  <Globe className="w-4 h-4 text-[#C5A059]" />
                   <span>International Exposure</span>
                 </div>
               </div>
+
             </div>
 
           </div>
@@ -186,17 +176,18 @@ export default function ClassesPage() {
       </section>
 
       {/* 3. Courses Offered Grid Section */}
-      <section id="courses-offered" className="py-20 sm:py-28 bg-white scroll-mt-20">
+      <section id="courses-offered" className="py-20 sm:py-28 bg-white scroll-mt-20 border-b border-[#C5A059]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="text-center max-w-2xl mx-auto mb-16 flex flex-col items-center">
-            <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
-              ✦ Comprehensive Modules
+            <span className="text-[10px] font-semibold tracking-[0.3em] text-[#C5A059] uppercase block mb-3">
+              ✦ COMPREHENSIVE CURRICULUM MODULES
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-wide text-stone-950 mb-4">
+            <h2 className="font-serif text-3xl sm:text-4xl font-light tracking-wide text-stone-950 mb-4">
               Courses Offered
             </h2>
-            <div className="h-[1.5px] w-20 bg-gold-500 mb-5" />
-            <p className="text-stone-600 text-sm">
+            <div className="h-px w-20 bg-[#C5A059] mb-5" />
+            <p className="text-stone-600 text-sm font-light">
               Explore our 5 specialized training modules carefully structured for beginners and aspiring fashion entrepreneurs.
             </p>
           </div>
@@ -204,82 +195,91 @@ export default function ClassesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {coursesOffered.map((course, i) => {
               const CourseIcon = course.icon;
+              const romanNums = ["01", "02", "03", "04", "05"];
               return (
-                <div key={i} className="bg-white border border-gold-200/80 p-8 flex flex-col justify-between hover:border-gold-500 hover:shadow-xl transition-all duration-300 relative group">
+                <div key={i} className="bg-[#FAF8F5] border border-stone-200/90 p-8 flex flex-col justify-between hover:border-[#C5A059] hover:shadow-xl transition-all duration-300 relative group">
+                  
                   <div>
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-12 h-12 bg-gold-100 text-gold-700 flex items-center justify-center rounded-none group-hover:bg-stone-900 group-hover:text-gold-400 transition-colors">
-                        <CourseIcon className="w-6 h-6" />
+                      <div className="w-12 h-12 bg-[#161514] text-[#C5A059] flex items-center justify-center group-hover:bg-[#C5A059] group-hover:text-stone-950 transition-colors">
+                        <CourseIcon className="w-5 h-5" />
                       </div>
-                      <span className="text-[10px] uppercase font-bold tracking-widest text-gold-700 bg-gold-50 border border-gold-200 px-3 py-1">
-                        {course.tag}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[11px] font-mono text-[#C5A059] font-medium">{romanNums[i]}</span>
+                        <span className="text-[9px] uppercase font-semibold tracking-[0.2em] text-[#C5A059] bg-white border border-[#C5A059]/30 px-3 py-1">
+                          {course.tag}
+                        </span>
+                      </div>
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-stone-950 mb-1">
+                    <h3 className="font-serif text-xl font-normal text-stone-950 mb-1">
                       {course.title}
                     </h3>
                     
-                    <span className="text-xs font-semibold text-gold-600 uppercase tracking-wider block mb-4">
+                    <span className="text-xs font-medium text-[#C5A059] uppercase tracking-wider block mb-4">
                       {course.subtitle}
                     </span>
 
-                    <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-6">
+                    <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-6 font-light">
                       {course.description}
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-stone-100">
+                  <div className="pt-4 border-t border-stone-200">
                     <a
                       href={`https://wa.me/918098558923?text=Hi%20Dev%20Fashion%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(course.title)}%20module.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest text-stone-900 group-hover:text-gold-600 uppercase transition-colors"
+                      className="inline-flex items-center gap-2 text-xs font-medium tracking-[0.2em] text-stone-950 group-hover:text-[#C5A059] uppercase transition-colors"
                     >
                       Enquire For Batch Details
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </a>
                   </div>
+
                 </div>
               );
             })}
           </div>
+
         </div>
       </section>
 
       {/* 4. Book Demo Class Section */}
-      <section id="demo-class" className="py-20 sm:py-28 bg-gold-50/25 border-t border-b border-gold-100 scroll-mt-20">
+      <section id="demo-class" className="py-20 sm:py-28 bg-[#FAF8F5] scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             {/* Callout Info Column */}
             <div className="lg:col-span-5 flex flex-col space-y-6 sm:space-y-8">
-              <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block">
-                ✦ Limited Seats Per Batch
-              </span>
+              <div>
+                <span className="text-[10px] font-semibold tracking-[0.3em] text-[#C5A059] uppercase block mb-3">
+                  ✦ LIMITED SEATS PER BATCH
+                </span>
 
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-wide text-stone-950">
-                Book Your Demo Class Today!
-              </h2>
+                <h2 className="font-serif text-3xl sm:text-4xl font-light tracking-wide text-stone-950">
+                  Book Your Demo Class Today!
+                </h2>
 
-              <div className="h-[1px] w-20 bg-gold-500" />
+                <div className="mt-4 h-px w-20 bg-[#C5A059]" />
+              </div>
 
-              <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+              <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-light">
                 Experience our teaching methodology firsthand! Attend a trial demo session at our Gandhipuram studio or online before enrolling.
               </p>
 
-              <div className="space-y-4 text-xs sm:text-sm text-stone-800">
+              <div className="space-y-4 text-xs sm:text-sm text-stone-800 font-light">
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 text-gold-600 mt-0.5 shrink-0">✦</div>
+                  <span className="text-[#C5A059] text-xs mt-0.5">✦</span>
                   <p><strong>Studio Classes:</strong> 100 Feet Road, Gandhipuram, Coimbatore.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 text-gold-600 mt-0.5 shrink-0">✦</div>
-                  <p><strong>Online Classes:</strong> Interactive live sessions with step-by-step guidance for NRI & outstation students.</p>
+                  <span className="text-[#C5A059] text-xs mt-0.5">✦</span>
+                  <p><strong>Online Classes:</strong> Interactive live sessions with step-by-step guidance for NRI &amp; outstation students.</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 text-gold-600 mt-0.5 shrink-0">✦</div>
-                  <p><strong>Direct Helpline:</strong> Call or WhatsApp <a href="tel:+918098558923" className="text-gold-700 font-bold hover:underline">+91 80985 58923</a></p>
+                  <span className="text-[#C5A059] text-xs mt-0.5">✦</span>
+                  <p><strong>Direct Helpline:</strong> Call or WhatsApp <a href="tel:+918098558923" className="text-[#C5A059] font-medium hover:underline">+91 80985 58923</a></p>
                 </div>
               </div>
 
@@ -287,9 +287,9 @@ export default function ClassesPage() {
               <div className="pt-2">
                 <a
                   href="tel:+918098558923"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-stone-900 text-white hover:bg-gold-600 text-xs font-semibold tracking-widest uppercase transition-colors shadow-md"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#141312] text-white hover:bg-[#C5A059] hover:text-stone-950 text-xs font-semibold tracking-[0.25em] uppercase transition-colors shadow-md"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4 text-[#C5A059]" />
                   Call Helpline: +91 80985 58923
                 </a>
               </div>
@@ -303,6 +303,8 @@ export default function ClassesPage() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
+

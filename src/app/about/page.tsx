@@ -27,7 +27,7 @@ export default function AboutPage() {
       {/* Page Header Banner */}
       <section className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-fixed bg-no-repeat" 
       style={{
-        backgroundImage: "url('/images/dev_fashion/lan_bls25.jpg')",
+        backgroundImage: "url('/images/dev_fashion/stiching_durga1.png')",
       }}>
 
 
@@ -38,13 +38,16 @@ export default function AboutPage() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
-          ✦ Discover Dev Fashion
+          ✦ Our Legacy & Craftsmanship
         </span>
 
         <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white mb-6">
-          Our Legacy & Craftsmanship
+          Built by a woman. For women.
         </h1>
         
+        <p className="text-stone-100 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          Your occasion is unique. Your blouse should be too.
+        </p>
         <div className="h-[1.5px] w-20 bg-gold-500 mx-auto mb-6" />
 
         <p className="text-stone-100 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
@@ -151,7 +154,7 @@ export default function AboutPage() {
             <div className="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8 text-stone-900">
 
               <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block">
-                ✦ Meet The Founder, Mrs. Durga Devi
+                ✦ Meet The Founder, Creative Director, Instructor  & CHIEF DESIGNER Mrs. Durga Devi  
               </span>
 
               <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-wide text-stone-950">
@@ -173,7 +176,9 @@ export default function AboutPage() {
                 &nbsp;&nbsp;&nbsp;However, due to the circumstances of life at the time, she found herself working multiple minimum-wage jobs and later becoming a mother. Yet, she couldn’t ignore the creative world that had been quietly growing in the back of her mind. Eventually, she took the leap and entered the world of fashion that had been calling her for so long.
               <br /> <br />
                 &nbsp;&nbsp;&nbsp;She started her career as a tailor in 2007, earning a daily wage of ₹35, and she hasn’t looked back since.
-                She loves the idea of expressing herself through blouse design. Designing became a form of therapy for her. Her eye for design and her deep belief in quality over quantity became the soul of this boutique.
+                She loves the idea of expressing herself through blouse design.
+                She has worked for some of the finest brands, including Classic polo. Now, after years of experience in coimbator’s Garment industry, Durga Devi welcomes the opportunity to share her skills and expertise with others as a fashion design instructor serving coimbatore.
+                Designing became a form of therapy for her. Her eye for design and her deep belief in quality over quantity became the soul of this boutique.
               </p>
               <p className="text-stone-900 text-xs sm:text-base leading-relaxed">
                 The dream of one day creating her magnum opus continues to drive her forward.
@@ -202,7 +207,7 @@ export default function AboutPage() {
               <div className="relative aspect-[3/4] border border-gold-200 p-2 bg-white shadow-md mt-8">
                 <div className="relative h-full w-full">
                   <Image
-                    src="/images/dev_fashion/dd_new.png"
+                    src="/images/dev_fashion/lap_dur.png"
                     alt="Durga Devi - Founder of Dev Fashion"
                     fill
                     className="object-cover"
