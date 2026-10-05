@@ -9,7 +9,16 @@ export default function PrivacyPage() {
   return (
     <div className="w-full bg-white pt-24 min-h-screen">
       {/* Header */}
-      <section className="bg-gold-50/50 py-12 sm:py-16 border-b border-gold-100 text-center">
+      <section  className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-fixed bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/dev_fashion/terms_conditions.jpg')",
+        }}>
+
+
+        {/* Dark/white overlay */}
+        <div className="absolute inset-0 bg-black/65" />
+
+        {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-2">
             ✦ Safe & Confidential

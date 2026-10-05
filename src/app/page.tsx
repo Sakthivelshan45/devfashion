@@ -62,7 +62,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-stone-600 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed text-justify">
-              We are delighted to be one of the city's leading Bridel Blouse Designers, providing an extraordinary stiching experience every time. Come and explore our collection - your wardrobe will never look the same!
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are delighted to be one of the city's leading Bridel Blouse Designers, providing an extraordinary stiching experience every time. Come and explore our collection - your wardrobe will never look the same!
               Update your wardrobe with the allure of top Blouses, without compromising your budget!
             </p>
 
@@ -136,7 +136,7 @@ export default function HomePage() {
               <div className="relative aspect-[3/4] border border-gold-200 p-2 bg-white shadow-md mt-6">
                 <div className="relative h-full w-full">
                   <Image
-                    src="/images/dev_fashion/featured-aari.webp"
+                    src="/images/dev_fashion/aari6.jpg"
                     alt="Fabric Drafting Studio"
                     fill
                     className="object-cover"
@@ -146,7 +146,7 @@ export default function HomePage() {
               <div className="relative aspect-[3/4] border border-gold-200 p-2 bg-white shadow-md">
                 <div className="relative h-full w-full">
                   <Image
-                    src="/images/dev_fashion/blouse_back.jpg"
+                    src="/images/dev_fashion/aari5.jpg"
                     alt="Bridal Details"
                     fill
                     className="object-cover"
@@ -191,13 +191,13 @@ export default function HomePage() {
                 <div className="space-y-3">
 
                   <p className="text-stone-800 text-sm sm:text-base text-justify leading-7">
-                     &nbsp;&nbsp;&nbsp;With over a decade of experience in blouse stitching and bridal fashion, Dev Fashion creates beautifully crafted blouses that are made especially for each woman. From bridal blouses and designer saree blouses to Aari work, embroidery and custom-fit designs, every piece is made with care and attention to detail.
+                     &nbsp;&nbsp;&nbsp;&nbsp;With over a decade of experience in blouse stitching and bridal fashion, Dev Fashion creates beautifully crafted blouses that are made especially for each woman. From bridal blouses and designer saree blouses to Aari work, embroidery and custom-fit designs, every piece is made with care and attention to detail.
                     <br /><br />
-                    We specialize in bridal blouse stitching, Aari embroidery, Maggam work, hand embroidery, unique sleeve and back-neck designs, traditional patterns and modern styles. Our focus is always on creating a blouse that fits beautifully and goes perfectly with your saree and occasion.
+                    &nbsp;&nbsp;&nbsp;&nbsp;"The idea was a place where you can feel very comfortable" says Durga Devi of dev fashion's concept. "It's a place to spend time. You arrive, you take off your clothes, you're at someone's house or you're in your gigantic closet and you can try everything."
                     <br /><br />
-                    Based in Gandhipuram, Coimbatore, Dev Fashion is trusted by brides and women who love well-made, personalized clothing. We also work with customers across India and NRI clients through virtual consultations and personalized fitting support.
+                    &nbsp;&nbsp;&nbsp;&nbsp;Based in Gandhipuram, Coimbatore, Dev Fashion is trusted by brides and women who love well-made, personalized clothing. We also work with customers across India and NRI clients through virtual consultations and personalized fitting support.
                     <br /><br />
-                    For us, a blouse is more than just something you wear with a saree. It is the little details, the craftsmanship and the perfect fit that make it special. We put our heart into every blouse we create, so you can wear it with confidence and make it a part of your special memories.
+                    &nbsp;&nbsp;&nbsp;&nbsp;For us, a blouse is more than just something you wear with a saree. We put our heart into every blouse we create, so you can wear it with confidence and make it a part of your special memories.
                   </p>
                 </div>
 
@@ -291,7 +291,11 @@ export default function HomePage() {
               </div>
 
               <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-                We have officially started our <strong>Professional Tailoring, Fashion Designing & Aari Embroidery Course</strong>! Learn directly from our master designers in Gandhipuram, Coimbatore. Whether you are a beginner wanting to stitch your own blouses or aiming to start your own boutique business, our practical hands-on classes will guide you step by step.
+                We are proud to introduce our Professional Tailoring, Fashion Designing & Aari Embroidery Course, 
+                designed for those who want to turn their passion for fashion into a valuable skill.
+                <br /><br />
+                Learn directly from our experienced master designers in Gandhipuram, Coimbatore, 
+                through practical, hands-on training that takes you step by step from the fundamentals to advanced techniques.               
               </p>
 
               {/* Course Highlights Grid */}
@@ -469,7 +473,7 @@ export default function HomePage() {
               <Truck className="w-12 h-12 text-gold-500 shrink-0" />
               <div>
                 <h4 className="font-serif text-lg font-medium text-stone-100">Global Courier Shipping Available</h4>
-                <p className="text-stone-400 text-xs mt-1">We safely parcel your design items right to your doorstep, anywhere in the UK, USA, UAE, and beyond.</p>
+                <p className="text-stone-400 text-xs mt-1">We safely parcel your design items right to your doorstep, anywhere in the UK, USA, UAE and beyond.</p>
               </div>
             </div>
             <Link
@@ -522,7 +526,7 @@ export default function HomePage() {
               <div className="space-y-4 text-sm text-stone-700">
                 <div className="flex gap-3 items-start">
                   <div className="w-5 h-5 text-gold-600 mt-0.5 shrink-0">✦</div>
-                  <p><strong>Step 1: Consultation</strong> - Share references, fabrics preferences, necklines, and style sketches.</p>
+                  <p><strong>Step 1: Consultation</strong> - Share references, fabrics preferences, necklines and style sketches.</p>
                 </div>
                 <div className="flex gap-3 items-start">
                   <div className="w-5 h-5 text-gold-600 mt-0.5 shrink-0">✦</div>
@@ -563,7 +567,7 @@ export default function HomePage() {
               </div>
               <div>
                 <h4 className="font-serif text-lg font-medium text-white">Your Privacy is Our Highest Priority</h4>
-                <p className="text-stone-400 text-xs mt-0.5">Confidential measurements, designs, and personal information are protected securely.</p>
+                <p className="text-stone-400 text-xs mt-0.5">Confidential measurements, designs and personal information are protected securely.</p>
               </div>
             </div>
 
@@ -585,7 +589,7 @@ export default function HomePage() {
             <div>
               <h4 className="font-serif text-xl font-bold text-stone-900 mb-3">Visit Our Studio</h4>
               <p className="text-stone-600 text-sm leading-relaxed">
-                no 37, Tatabed,<br />
+                No 37, 100 feet road, Tatabed,<br />
                 Gandhipuram, Coimbatore,<br />
                 Tamil nadu 641012, India
               </p>

@@ -119,7 +119,7 @@ export default function ServicesPage() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
-          ✦ DEV FASHION ATELIER • COIMBATORE ✦ 
+          ✦ A NEW LUXURY EXPERIENCE • COIMBATORE ✦ 
         </span>
 
         <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white mb-6">
@@ -129,7 +129,7 @@ export default function ServicesPage() {
               </span>
         </h1>
         
-        <p className="text-stone-100 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">Your Occasion. Your Style. Our Expertise.!</p>
+        <p className="text-stone-100 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">An exploration of lightness. As if air were a material!</p>
 
         <div className="h-[1.5px] w-20 bg-gold-500 mx-auto mb-6" />
 
@@ -318,7 +318,7 @@ export default function ServicesPage() {
               >
                 <div className="relative h-full w-full overflow-hidden">
                   <Image
-                    src="/images/dev_fashion/durga_custom.png"
+                    src="/images/dev_fashion/durga_custom2.png"
                     alt="Dev Fashion Master Tailoring Studio in Gandhipuram Coimbatore"
                     fill
                     className="object-cover group-hover:scale-108 transition-transform duration-700"
@@ -660,8 +660,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-
-        {/* ------------------------------------------
+             {/* ------------------------------------------
             SERVICE 07 — BRIDAL MEHENDI & ARTISTRY
             ------------------------------------------ */}
         <section className="py-24 bg-white border-b border-[#EFEBE4]">
@@ -672,7 +671,7 @@ export default function ServicesPage() {
               <div className="lg:col-span-5 relative aspect-[4/5] border border-[#E5D9C5] p-3 bg-white shadow-xl">
                 <div className="relative h-full w-full overflow-hidden">
                   <Image
-                    src="/images/dev_fashion/mehandhi.jpg"
+                    src="/images/dev_fashion/lap_dur.png"
                     alt="Detailed Intricate Indian Bridal Mehendi Henna Work"
                     fill
                     className="object-cover"
@@ -687,6 +686,59 @@ export default function ServicesPage() {
                   <span className="font-serif text-3xl font-light text-[#B38E46]">07</span>
                   <span className="h-px w-12 bg-[#C5A059]" />
                   <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase">
+                    book an Private appointment
+                  </span>
+                </div>
+
+                <div>
+                  <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide text-stone-950">
+                    Our Private Client Styling and shopping services
+                  </h2>
+                  <span className="text-xs uppercase tracking-[0.25em] text-[#B38E46] font-semibold block mt-1">
+                  We bring the Dev Fashion experience directly to your doorstep.
+                  </span>
+                </div>
+
+                <div className="h-px w-20 bg-[#C5A059]" />
+
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-lato text-justify">
+                  Our stylist team delivers a personalized white glove experience for both Women's and Men's clients across every occasion and lifestyle.
+                  <br /><br />
+                  We offer complimentary in-store and virtual styling, fit, and general product assistance, special sourcing, curated look books, customizations, personal recommendations, and much more.
+                  <br /><br />
+                  Plus, gain access to the best new and in-demand items before they hit the market. We’ll also tell you which ones we think are best for your personal style.
+                </p>
+
+                <div className="pt-2">
+                  <Link
+                    href="/contact?service=Bridal%20Mehendi#booking"
+                    className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-[#141312] hover:text-[#B38E46] uppercase transition-colors underline decoration-[#C5A059] underline-offset-4"
+                  >
+                    Enquire private Booking
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ------------------------------------------
+            SERVICE 08 — BRIDAL MEHENDI & ARTISTRY
+            ------------------------------------------ */}
+        <section className="py-24 bg-white border-b border-[#EFEBE4]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              
+             
+
+              {/* Text Column */}
+              <div className="lg:col-span-7 flex flex-col space-y-6 text-[#141312]">
+                <div className="flex items-center gap-3">
+                  <span className="font-serif text-3xl font-light text-[#B38E46]">08</span>
+                  <span className="h-px w-12 bg-[#C5A059]" />
+                  <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B38E46] uppercase">
                     ARTISTIC EMBELLISHMENT
                   </span>
                 </div>
@@ -696,7 +748,7 @@ export default function ServicesPage() {
                     Bridal Mehendi
                   </h2>
                   <span className="text-xs uppercase tracking-[0.25em] text-[#B38E46] font-semibold block mt-1">
-                    Traditional Art That Completes Your Bridal Look
+                    Your Bridal Look, Completed With Art
                   </span>
                 </div>
 
@@ -714,11 +766,7 @@ export default function ServicesPage() {
                  <span className="text-xs uppercase tracking-[0.25em] text-[#B38E46] font-semibold block mt-2">
                     Perfect For
                   </span> 
-                  Weddings • Engagements • Receptions • Mehendi Ceremonies • Family Celebrations • Special Occasions
-                  <span className="text-xs uppercase tracking-[0.25em] text-[#B38E46] font-semibold block mt-1">
-                    Your Bridal Look, Completed With Art
-                  </span> 
-                    From the blouse you wear to the mehendi you carry, every detail matters. Let our artistry add the finishing touch to your celebration.
+                  Weddings • Engagements • Receptions • Family Celebrations • Special Occasions
                 </p>
 
                 <div className="pt-2">
@@ -729,6 +777,20 @@ export default function ServicesPage() {
                     Enquire Mehendi Booking
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
+                </div>
+              </div>
+
+
+               {/* Mehendi Image Frame */}
+              <div className="lg:col-span-5 relative aspect-[4/5] border border-[#E5D9C5] p-3 bg-white shadow-xl">
+                <div className="relative h-full w-full overflow-hidden">
+                  <Image
+                    src="/images/dev_fashion/mehandhi.jpg"
+                    alt="Detailed Intricate Indian Bridal Mehendi Henna Work"
+                    fill
+                    className="object-cover"
+                    sizes="40vw"
+                  />
                 </div>
               </div>
 

@@ -51,12 +51,13 @@ export default function ContactPage() {
           <div className="lg:col-span-5 flex flex-col space-y-10">
             <div>
               <h2 className="font-serif text-2xl font-bold text-stone-900 tracking-wide mb-4">
-                Dev Fashion Bridel Blouse Designer & Boutique Studio 🪡
+                VIP styling and shopping services 🪡
               </h2>
               <div className="h-[1px] w-12 bg-gold-500 mb-6" />
-              <p className="text-stone-600 text-sm leading-relaxed">
-                Pop in for a visit at our Coimbatore boutique or jump on a quick video call with us — 
-                our stylists would love to help you find your perfect fit.
+              <p className="text-stone-600 text-sm leading-relaxed text-justify">                
+              Our world-class stylists are waiting to connect with you now. Visit or call a store to book an appointment.
+              We deliver a personalized white glove experience for Women clients across every occasion and lifestyle. 
+              {/* Contact a store now to be matched with a stylist for in-store and virtual styling and special product sourcing. */}
               </p>
             </div>
 

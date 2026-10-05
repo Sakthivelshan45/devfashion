@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     comment: "Absolutely loved the blouse. The fitting is perfect and very comfortable. The embroidery work is neat and beautifully finished. The stitching is excellent and the blouse looks exactly like the pictures which I gave as reference. Very happy. Highly Satisfied.",
     designType: "Designer Saree & Blouse"
-  },
+  }, 
   {
     id: 3,
     name: "Dishyantha B",
@@ -49,6 +49,24 @@ const testimonials: Testimonial[] = [
     location: "Coimbatore",
     rating: 5,
     comment: "The entire experience was 10/10! Working with Durga Devi was so nice, the design and fit is absolutely stunning! I’ve been wearing it for months and have gotten so many compliments. I love that it’s a woman owned brand and made here in the coimbatore. That doesn’t come often anymore. Can’t wait to get more Blouses!",
+    designType: "Festive Anarkali Suit"
+  },
+  {
+    id: 5,
+    name: "Subiksha Manoharan",
+    role: "New Fashion Client",
+    location: "Coimbatore",
+    rating: 5,
+    comment: "I got my engagement blouse stitched at Dev Fashions and the blouse fitting and design came out so beautifully ❤️ Everyone kept complimenting it and saying the same too. I absolutely loved how perfectly it fit and how elegant the design looked. Also, thank you so much for delivering it on time that made the whole experience even better. Truly happy and satisfied with your work 😊",
+    designType: "Festive Anarkali Suit"
+  },
+  {
+    id: 6,
+    name: "prathiba Nair",
+    role: "New Fashion Client",
+    location: "Coimbatore",
+    rating: 5,
+    comment: "I went in looking just to get some function blouses stitched, little did I know that I would comd back home with a whole luggage of stiched blouses and salwars. The stitching is exceptional and delivered on time! Durga also suggested different patterns patiently and catered for what I need.What I loved was how Dev fashions was a one stop shop. Durga was happy to go shopping for me and buy some of the blouse materials in my preferred colour. She also made sure she was there when I came to pick up the blouses to ensure she could fix any issues when I tried them on. Overall ir has been an amazing experience and so glad I found her.Highly recommend Dev fashions!",
     designType: "Festive Anarkali Suit"
   }
 ];
