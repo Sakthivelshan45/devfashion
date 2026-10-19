@@ -322,13 +322,13 @@ export default function JewelryPage() {
   });
 
   return (
-    <div className="w-full bg-[#FBF7F2] text-[#1C1C1C] pt-28 overflow-x-hidden font-sans">
+    <div className="w-full bg-[#FBF7F2] text-[#1C1C1C] pt-4 overflow-x-hidden font-sans">
 
       {/* ==========================================
           SECTION 1: CINEMATIC HERO (FULL-SCREEN CINEMATIC)
           "Jewellery for the woman who leads."
           ========================================== */}
-      <section className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-fixed bg-no-repeat"
+      <section className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-no-repeat sm:bg-fixed"
         style={{
           backgroundImage: "url('/images/jewelry/group11.png')",
         }}>
@@ -338,7 +338,7 @@ export default function JewelryPage() {
         <div className="absolute inset-0 bg-black/65" />
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 boutique-container">
 
           <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
             ✦ SOUTH INDIAN JEWELLERY ATELIER
@@ -364,7 +364,8 @@ export default function JewelryPage() {
       {/* ==========================================
           SECTION 2: "WEAR IT TO..." OCCASION PANELS
           ========================================== */}
-      <section id="occasions" className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
+      <section id="occasions" className="py-24 w-full scroll-mt-20">
+        <div className="boutique-container">
 
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B8324A] uppercase block mb-2">
@@ -432,6 +433,7 @@ export default function JewelryPage() {
           </div>
         )}
 
+        </div>
       </section>
 
 
@@ -439,7 +441,7 @@ export default function JewelryPage() {
           SECTION 3: SIGNATURE PIECES / PRODUCT SHOWCASE
           ========================================== */}
       <section className="py-24 bg-[#F8E8EB] border-y border-[#C8A96A]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="boutique-container">
 
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
             <div>
@@ -528,7 +530,7 @@ export default function JewelryPage() {
           SECTION 4: CRAFTSMANSHIP STORY
           ========================================== */}
       <section className="py-24 bg-[#FBF7F2] border-b border-[#C8A96A]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="boutique-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
             {/* Story Left Image Spread */}
@@ -604,7 +606,7 @@ export default function JewelryPage() {
           SECTION 5: GLOBAL SERVICE STRIP
           ========================================== */}
       <section className="py-16 bg-[#16302A] text-[#FBF7F2] border-y border-[#C8A96A]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="boutique-container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
 
             <div className="flex items-start gap-4">
@@ -636,51 +638,14 @@ export default function JewelryPage() {
       </section>
 
 
-      {/* ==========================================
-          SECTION 6: PRIVATE CONSULTATION BOOKING
-          ========================================== */}
-      <section id="consultation" className="py-24 bg-[#FBF7F2] border-b border-[#C8A96A]/30 scroll-mt-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B8324A] uppercase block">
-            ✦ Private Appointment
-          </span>
-
-          <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide text-[#1C1C1C]">
-            Schedule a Personal Styling Consultation
-          </h2>
-
-          <div className="h-px w-20 bg-[#C8A96A] mx-auto" />
-
-          <p className="text-stone-700 text-sm sm:text-base leading-relaxed max-w-xl mx-auto font-lato">
-            Connect with our lead bridal stylists either in person at our Gandhipuram studio or virtually via assisted video call.
-          </p>
-
-          <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://wa.me/918098558923?text=Hi%20Dev%20Fashion%2C%20I%20would%20like%20to%20schedule%20a%20personal%20jewellery%20styling%20consultation."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-[#B8324A] hover:bg-[#16302A] text-white text-xs font-semibold tracking-[0.25em] uppercase transition-colors rounded-none shadow-md flex items-center justify-center gap-2"
-            >
-              <MessageSquare className="w-4 h-4 text-[#C8A96A]" />
-              <span>Schedule via WhatsApp</span>
-            </a>
-
-            <Link
-              href="/contact#booking"
-              className="px-8 py-4 border border-[#1C1C1C] text-[#1C1C1C] hover:border-[#B8324A] hover:text-[#B8324A] text-xs font-semibold tracking-[0.25em] uppercase transition-colors rounded-none bg-transparent"
-            >
-              Online Booking Form
-            </Link>
-          </div>
-        </div>
-      </section>
+  
 
 
       {/* ==========================================
-          SECTION 7: NEW ARRIVALS / CATALOG GRID
+          SECTION 6: NEW ARRIVALS / CATALOG GRID
           ========================================== */}
-      <section id="catalog" className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
+      <section id="catalog" className="py-24 w-full scroll-mt-20">
+        <div className="boutique-container">
 
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B8324A] uppercase block mb-2">
@@ -780,73 +745,51 @@ export default function JewelryPage() {
           ))}
         </div>
 
+        </div>
       </section>
 
 
-      {/* ==========================================
-          SECTION 8: TESTIMONIALS
+          {/* ==========================================
+          SECTION 7: PRIVATE CONSULTATION BOOKING
           ========================================== */}
-      <section className="py-24 bg-[#F8E8EB] border-t border-[#C8A96A]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="consultation" className="py-24 bg-[#FBF7F2] border-b border-[#C8A96A]/30 scroll-mt-20">
+        <div className="boutique-container max-w-4xl text-center space-y-6">
+          <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B8324A] uppercase block">
+            ✦ Private Appointment
+          </span>
 
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-[10px] font-semibold tracking-[0.25em] text-[#B8324A] uppercase block mb-2">
-              ✦ Words of Praise
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-light text-[#1C1C1C] uppercase tracking-wide">
-              Client Testimonials
-            </h2>
-            <div className="h-px w-20 bg-[#C8A96A] mx-auto mt-4" />
-          </div>
+          <h2 className="font-serif text-3xl sm:text-5xl font-light uppercase tracking-wide text-[#1C1C1C]">
+            Schedule a Personal Styling Consultation
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border border-[#C8A96A]/40 rounded-none p-8 shadow-sm">
-              <div className="flex text-[#C8A96A] mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-              <p className="text-stone-700 text-sm leading-relaxed mb-6 italic font-serif">
-                "Rented the Kasu Mala and Temple Jhumka set for my wedding in Coimbatore. The antique gold finish looked 100% real on camera and complemented my Kanjivaram saree flawlessly."
-              </p>
-              <div className="pt-4 border-t border-stone-200 text-left">
-                <h4 className="font-serif text-sm font-semibold text-[#1C1C1C]">Swathi Raghavan</h4>
-                <span className="text-[11px] text-stone-500 uppercase tracking-wider block">Coimbatore Bride</span>
-              </div>
-            </div>
+          <div className="h-px w-20 bg-[#C8A96A] mx-auto" />
 
-            <div className="bg-white border border-[#C8A96A]/40 rounded-none p-8 shadow-sm">
-              <div className="flex text-[#C8A96A] mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-              <p className="text-stone-700 text-sm leading-relaxed mb-6 italic font-serif">
-                "Super convenient rental service! The Guttapusalu long haram made my reception outfit complete. Seamless trial and sanitized jewelry."
-              </p>
-              <div className="pt-4 border-t border-stone-200 text-left">
-                <h4 className="font-serif text-sm font-semibold text-[#1C1C1C]">Priya Sundaram</h4>
-                <span className="text-[11px] text-stone-500 uppercase tracking-wider block">Chennai Bride</span>
-              </div>
-            </div>
+          <p className="text-stone-700 text-sm sm:text-base leading-relaxed max-w-xl mx-auto font-lato">
+            Connect with our lead bridal stylists either in person at our Gandhipuram studio or virtually via assisted video call.
+          </p>
 
-            <div className="bg-white border border-[#C8A96A]/40 rounded-none p-8 shadow-sm">
-              <div className="flex text-[#C8A96A] mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
-              <p className="text-stone-700 text-sm leading-relaxed mb-6 italic font-serif">
-                "Loved pairing their temple choker set with my custom Aari embroidered blouse from Dev Fashion. Exceptional craftsmanship and customer service."
-              </p>
-              <div className="pt-4 border-t border-stone-200 text-left">
-                <h4 className="font-serif text-sm font-semibold text-[#1C1C1C]">Ananya Krishnan</h4>
-                <span className="text-[11px] text-stone-500 uppercase tracking-wider block">Tirupur Client</span>
-              </div>
-            </div>
+          <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="https://wa.me/918098558923?text=Hi%20Dev%20Fashion%2C%20I%20would%20like%20to%20schedule%20a%20personal%20jewellery%20styling%20consultation."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-[#B8324A] hover:bg-[#16302A] text-white text-xs font-semibold tracking-[0.25em] uppercase transition-colors rounded-none shadow-md flex items-center justify-center gap-2"
+            >
+              <MessageSquare className="w-4 h-4 text-[#C8A96A]" />
+              <span>Schedule via WhatsApp</span>
+            </a>
+
+            <Link
+              href="/contact#booking"
+              className="px-8 py-4 border border-[#1C1C1C] text-[#1C1C1C] hover:border-[#B8324A] hover:text-[#B8324A] text-xs font-semibold tracking-[0.25em] uppercase transition-colors rounded-none bg-transparent"
+            >
+              Online Booking Form
+            </Link>
           </div>
         </div>
       </section>
+
+
     </div>
   );
 }

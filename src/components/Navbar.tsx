@@ -57,17 +57,17 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      <header
+        className={`sticky top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gold-100 py-2.5"
-            : "bg-white/70 backdrop-blur-sm py-3.5 sm:py-4"
+            ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-[#EFEBE4] py-2.5"
+            : "bg-white/90 backdrop-blur-md border-b border-[#EFEBE4] py-3.5 sm:py-4"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
+        <div className="site-container">
+          <div className="flex justify-between items-center w-full">
             {/* Logo with official brand image */}
-            <Link href="/" className="flex items-center gap-2.5 group">
+            <Link href="/" className="flex items-center gap-2.5 group shrink-0">
               <div className="relative h-10 w-10 sm:h-11 sm:w-11 overflow-hidden rounded-full border border-gold-300 shadow-sm shrink-0 bg-white p-0.5">
                 <Image
                   src="/logo.jpg"
@@ -87,15 +87,15 @@ export default function Navbar() {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-7">
+            {/* Desktop Navigation — Centered with responsive gap (gap-2.5 on tablet lg, gap-8 on desktop xl) */}
+            <nav className="hidden lg:flex items-center gap-2.5 xl:gap-8">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-xs tracking-[0.18em] uppercase font-semibold transition-colors duration-200 relative py-1 flex items-center gap-1.5 ${
+                    className={`text-[10.5px] xl:text-xs tracking-[0.08em] xl:tracking-[0.18em] uppercase font-semibold transition-colors duration-200 relative py-1 inline-flex items-center gap-1 xl:gap-1.5 ${
                       isActive
                         ? "text-gold-600 font-bold"
                         : "text-stone-800 hover:text-gold-600"
@@ -103,7 +103,7 @@ export default function Navbar() {
                   >
                     <span>{link.name}</span>
                     {link.badge && (
-                      <span className="text-[9px] px-1.5 py-0.2 bg-[#B8324A] text-gold-300 font-sans tracking-widest font-bold rounded-sm uppercase">
+                      <span className="text-[8px] xl:text-[9px] px-1 xl:px-1.5 py-0.5 bg-[#B8324A] text-gold-300 font-sans tracking-widest font-bold rounded-xs uppercase leading-none inline-flex items-center">
                         {link.badge}
                       </span>
                     )}
@@ -113,21 +113,21 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-            </div>
+            </nav>
 
-            {/* Desktop CTA */}
-            <div className="hidden md:block">
+            {/* Desktop CTA Button */}
+            <div className="hidden lg:block shrink-0">
               <Link
                 href="/contact#booking"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-900 text-white hover:bg-gold-600 hover:text-white text-[11px] font-semibold tracking-[0.2em] uppercase transition-all duration-300 shadow-sm border border-stone-900 hover:border-gold-600"
+                className="inline-flex items-center gap-1.5 xl:gap-2 px-3 xl:px-5 py-2 xl:py-2.5 bg-stone-900 text-white hover:bg-gold-600 hover:text-white text-[9.5px] xl:text-[11px] font-semibold tracking-[0.12em] xl:tracking-[0.2em] uppercase transition-all duration-300 shadow-sm border border-stone-900 hover:border-gold-600"
               >
                 Book Consultation
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3 h-3 xl:w-3.5 xl:h-3.5" />
               </Link>
             </div>
 
-            {/* Mobile Hamburger Button */}
-            <div className="md:hidden flex items-center gap-2">
+            {/* Mobile / Tablet Hamburger & Call */}
+            <div className="lg:hidden flex items-center gap-2">
               <a
                 href="tel:+918098558923"
                 className="p-2 text-stone-800 hover:text-gold-600 border border-stone-200 rounded-full bg-stone-50"
@@ -142,25 +142,24 @@ export default function Navbar() {
                 aria-label="Open navigation menu"
               >
                 <Menu className="w-5 h-5" />
-                {/* <span>Menu</span> */}
               </button>
             </div>
           </div>
         </div>
-      </nav>
+      </header>
 
       {/* Full-Screen Mobile Slide-Out Drawer Overlay */}
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-50 bg-stone-950/60 backdrop-blur-sm transition-opacity duration-300 md:hidden"
+          className="fixed inset-0 z-50 bg-stone-950/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden"
           aria-hidden="true"
         />
       )}
 
       {/* Slide-Out Drawer Panel */}
       <div
-        className={`fixed inset-y-0 right-0 z-50 w-full max-w-xs sm:w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between overflow-y-auto ${
+        className={`fixed inset-y-0 right-0 z-50 w-full max-w-xs sm:w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between overflow-y-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <div className="absolute inset-0 bg-black/65" />
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="boutique-container">
           <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-2">
             ✦ Safe & Confidential
           </span>
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
       </section>
 
       {/* Main content */}
-      <section className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-stone-700 text-sm leading-relaxed space-y-8">
+      <section className="py-16 boutique-container max-w-5xl text-stone-700 text-sm leading-relaxed space-y-8">
         
         {/* Highlight Alert Box */}
         <div className="bg-gold-50/50 border border-gold-250/70 p-6 flex gap-4 items-start">

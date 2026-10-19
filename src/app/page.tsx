@@ -1,14 +1,19 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Star, ShieldCheck, Heart, Award, Sparkles, Scissors, Globe, Lock, Truck, Ruler, CheckCircle, MessageSquare } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import GalleryLightbox from "@/components/GalleryLightbox";
 import GalleryLightbox_copy from "@/components/GalleryLightbox_copy";
 import BookingForm from "@/components/BookingForm";
+import Landingpage from "@/components/landingpage";
+import CoursesSection from "@/components/CoursesSection";
+
+
 
 const stats = [
   { value: "10K+", label: "Happy Customers" },
@@ -16,6 +21,14 @@ const stats = [
   { value: "5K+", label: "Bridal Orders Completed" },
   { value: "2K+", label: "International Clients" },
 ];
+
+
+const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
+const reveal = {
+  hidden: { opacity: 0, y: 28 },
+  show: { opacity: 1, y: 0, transition: { duration: 1.1, ease } },
+};
+
 
 const featuredServices = [
   { title: "Custom Blouse Stitching", description: "Bespoke designer blouses tailored to perfection with custom necklines, sleeve details, and padding choices.", iconName: "Scissors" },
@@ -35,334 +48,326 @@ const highlights = [
   { title: "Secure Customer Privacy", description: "Confidential design consultations, private measurements, and secure transactions.", icon: Lock },
 ];
 
+const bridalCampaignImages = [
+  { src: "/images/dev_fashion/main.jpeg", alt: "Bridal Couture Outfit" },
+  { src: "/images/dev_fashion/deeps2.jpeg", alt: "Bridal Couture Outfit" },
+  { src: "/images/dev_fashion/sadhana_main.png", alt: "Dev Fashion Bridal Silk Couture" },
+  { src: "/images/dev_fashion/deepika1.jpg", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_red2.png", alt: "Royal Crimson Zardozi Blouse" },
+  { src: "/images/dev_fashion/ammu.jpeg", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_blue.png", alt: "Sapphire Velvet Couture" },
+  { src: "/dev_hero.png", alt: "Dev Fashion Master Designer Outfit" },
+
+  { src: "/images/dev_fashion/angel1.png", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_beach1.jpg", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_blue2.png", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_red_chudi.png", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_smile_flowers.png", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_smile_udha.png", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_smile5.png", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_smile6.png", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_temple.png", alt: "Sapphire Velvet Couture" },
+  { src: "/images/dev_fashion/sadhana_vilet.png", alt: "Sapphire Velvet Couture" },
+
+];
+
+const customBlouseImages = [
+  { src: "/images/dev_fashion/aari1.jpg", alt: "Sandhana Orange Designer Blouse" },
+  { src: "/images/dev_fashion/aari2.jpg", alt: "Sandhana Crimson Silk Blouse" },
+  { src: "/images/dev_fashion/aari3.jpg", alt: "Sandhana Custom Fit Blouse" },
+  { src: "/images/dev_fashion/aari4.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/aari6.jpg", alt: "Sandhana Custom Fit Blouse" },
+  { src: "/images/dev_fashion/aari7.jpg", alt: "Sandhana Custom Fit Blouse" },
+  { src: "/images/dev_fashion/aari8.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/featured-aari.webp", alt: "Sandhana Designer Blouse Fit" },
+
+
+  { src: "/images/dev_fashion/aarold_blouse1.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/old_blouse2.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/old_blouse3.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/old_blouse4.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/old_blouse15.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/custom_drs1.jpg", alt: "Sandhana Designer Blouse Fit" },
+
+
+
+  { src: "/images/dev_fashion/bls_port1.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port2.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port3.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port4.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port5.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port6.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port7.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port8.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port9.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port10.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port11.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port12.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port13.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port14.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port15.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port16.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port17.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port18.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port19.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port20.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port21.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port22.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port23.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port24.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port25.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port26.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port27.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port28.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port29.jpg", alt: "Sandhana Designer Blouse Fit" },
+  { src: "/images/dev_fashion/bls_port30.jpg", alt: "Sandhana Designer Blouse Fit" },
+];
+
 export default function HomePage() {
+  const [primaryIndex, setPrimaryIndex] = useState(0);
+  const [secondaryIndex, setSecondaryIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPrimaryIndex((prev) => (prev + 1) % bridalCampaignImages.length);
+      setSecondaryIndex((prev) => (prev + 1) % customBlouseImages.length);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="w-full relative bg-white">
-      {/* 1. Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gold-50/45">
-        {/* Soft pastel decorative gradient */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-pastel-blush/30 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-pastel-sage/20 rounded-full blur-3xl -z-10" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Hero Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col space-y-6 sm:space-y-8 text-stone-900"
-          >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-gold-300 bg-gold-100/35 text-[10px] font-semibold tracking-widest text-gold-700 uppercase rounded-full self-start">
-              ✦ Premium Women's Boutique in coimbatore
-            </div>
-
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-wide text-stone-950">
-              Crafting Elegance,<br />
-              <span className="font-serif luxury-text-gradient">Designed for You</span>
-            </h1>
-
-            <p className="text-stone-600 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed text-justify">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We are delighted to be one of the city's leading Bridel Blouse Designers, providing an extraordinary stiching experience every time. Come and explore our collection - your wardrobe will never look the same!
-              Update your wardrobe with the allure of top Blouses, without compromising your budget!
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Link
-                href="/contact#booking"
-                className="px-8 py-4 bg-stone-900 text-white hover:bg-gold-600 hover:text-white rounded-none text-xs font-semibold tracking-widest uppercase transition-colors text-center shadow-md flex items-center justify-center gap-2.5"
-              >
-                Book Consultation
-                <ArrowRight className="w-4.5 h-4.5" />
-              </Link>
-              <Link
-                href="/gallery"
-                className="px-8 py-4 border border-stone-900 text-stone-900 hover:border-gold-600 hover:text-gold-600 rounded-none text-xs font-semibold tracking-widest uppercase transition-colors text-center bg-transparent"
-              >
-                Explore Collections
-              </Link>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="pt-6 border-t border-gold-200/50 flex flex-wrap gap-x-8 gap-y-4 text-xs text-stone-600">
-              <div className="flex items-center gap-2">
-                <div className="flex text-gold-500">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
-                <span className="font-semibold text-stone-900">4.9/5 Rating</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-gold-600" />
-                <span>Perfect Fit Guarantee</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-gold-600" />
-                <span>Worldwide Express Shipping</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Hero Right Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative w-full aspect-[4/5] max-w-lg mx-auto border border-gold-300 p-3 bg-white shadow-2xl"
-          >
-            <div className="relative w-full h-full overflow-hidden">
-              <Image
-                src="/dev_hero.png"
-                alt="Dev Fashion Premium Custom Designer Outfit"
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              {/* Artistic decorative frame */}
-              <div className="absolute inset-4 border border-white/40 pointer-events-none" />
-            </div>
-          </motion.div>
-        </div>
+      {/* 1. Hero Section — High-Fashion Luxury Editorial */}
+      <section className="py-2 w-full">
+        <Landingpage />
       </section>
 
       {/* 2. About Section */}
-      <section className="py-20 sm:py-28 border-t border-gold-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-center">
 
-            {/* About Left Image Panel */}
-            <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-              <div className="relative aspect-[3/4] border border-gold-200 p-2 bg-white shadow-md mt-6">
-                <div className="relative h-full w-full">
-                  <Image
-                    src="/images/dev_fashion/aari6.jpg"
-                    alt="Fabric Drafting Studio"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <div className="relative aspect-[3/4] border border-gold-200 p-2 bg-white shadow-md">
-                <div className="relative h-full w-full">
-                  <Image
-                    src="/images/dev_fashion/aari5.jpg"
-                    alt="Bridal Details"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+
+
+
+      {/* ─── 2. The section ─── */}
+      <section className="bg-white py-24 sm:py-28 lg:py-36 overflow-hidden">
+        <div className="site-container">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-24 items-center">
+
+            {/* ───────── LEFT: image composition (unchanged) ───────── */}
+            <div className="lg:col-span-5">
+              <div className="relative pl-6 sm:pl-8 max-w-md mx-auto lg:max-w-none">
+
+                <motion.div
+                  aria-hidden
+                  initial={{ scaleY: 0 }}
+                  whileInView={{ scaleY: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.6, ease }}
+                  className="absolute left-0 top-0 h-full w-5 sm:w-7 origin-top text-gold-500"
+                  style={{
+                    backgroundImage:
+                      "repeating-linear-gradient(to bottom, currentColor 0 1px, transparent 1px 10px), repeating-linear-gradient(to bottom, currentColor 0 2px, transparent 2px 50px)",
+                    backgroundSize: "10px 100%, 20px 100%",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "right top, right top",
+                  }}
+                />
+
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 1.1, ease }}
+                  className="relative border-2 border-dashed border-gold-500 p-2.5 bg-white"
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <Image
+                      src="/images/dev_fashion/aari6.jpg"
+                      alt="Fabric Drafting Studio"
+                      fill
+                      sizes="(min-width: 1024px) 40vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-8 -right-4 sm:-right-8 w-[36%] aspect-square border-[5px] border-white shadow-xl overflow-hidden">
+                    <Image
+                      src="/images/dev_fashion/aari5.jpg"
+                      alt="Bridal Details"
+                      fill
+                      sizes="15vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  className="absolute -top-4 right-4 sm:right-10 z-10"
+                >
+                  <motion.div
+                    animate={{ rotate: [4, -4, 4] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                    style={{ transformOrigin: "50% 0%" }}
+                    className="flex flex-col items-center"
+                  >
+                    <span className="w-px h-8 bg-stone-900" />
+                    <div className="relative w-36 sm:w-44 bg-white border border-stone-900 px-4 pt-6 pb-4 shadow-lg text-center">
+                      <span className="absolute top-2 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full border border-stone-900 bg-white" />
+                      <p className="font-serif italic text-[13px] sm:text-sm leading-snug text-stone-800">
+                        Every woman deserves to wear something that feels uniquely
+                        and beautifully hers.
+                      </p>
+                      <span className="block mt-3 pt-3 border-t border-dashed border-gold-500 text-xs text-gold-700 font-semibold">
+                        Made to measure
+                      </span>
+                    </div>
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
 
-            {/* About Right Content */}
-            <div className="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8 text-stone-900">
-              <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block">
-                ✦ Legacy & Craftsmanship
-              </span>
+            {/* ───────── RIGHT: quiet, editorial, generous space ───────── */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ staggerChildren: 0.18 }}
+              className="lg:col-span-7 lg:pl-6"
+            >
+              <motion.h2
+                variants={reveal}
+                className="font-serif font-light text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.02] tracking-[-0.02em] text-stone-950"
+              >
+                Made by hand,
+                <br />
+                to your measure.
+              </motion.h2>
 
-              <div className="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8 text-stone-900">
+              <motion.p
+                variants={reveal}
+                className="mt-10 max-w-xl font-serif text-xl sm:text-[1.4rem] leading-[1.7] text-stone-700"
+              >
+                Since 2017, Dev Fashion has stitched bridal and saree blouses in
+                Gandhipuram, Coimbatore. Each one is drafted, embroidered and fitted
+                for a single woman, and finished only when it sits exactly as it
+                should.
+              </motion.p>
 
-                {/* Heading */}
-                <div>
-                  <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.15] tracking-tight text-stone-950">
-                    Crafting Timeless
-                    <span className="block text-gold-600 italic font-normal mt-1">
-                      Couture Since 2017
-                    </span>
-                  </h2>
-
-                  <div className="mt-6 flex items-center gap-3">
-                    <span className="h-px w-16 bg-gold-500" />
-                    <span className="text-gold-500 text-xs">✦</span>
-                    <span className="h-px w-8 bg-gold-300" />
-                  </div>
-                </div>
-
-                {/* Quote / Brand Philosophy */}
-                <div className="relative border-l-2 border-gold-400 pl-5 sm:pl-6 py-2">
-                  <p className="font-serif italic text-lg sm:text-xl leading-relaxed text-stone-800">
-                    "Every woman deserves to wear something that feels
-                    uniquely and beautifully hers."
-                  </p>
-                </div>
-
-                {/* Story */}
-                <div className="space-y-3">
-
-                  <p className="text-stone-800 text-sm sm:text-base text-justify leading-7">
-                     &nbsp;&nbsp;&nbsp;&nbsp;With over a decade of experience in blouse stitching and bridal fashion, Dev Fashion creates beautifully crafted blouses that are made especially for each woman. From bridal blouses and designer saree blouses to Aari work, embroidery and custom-fit designs, every piece is made with care and attention to detail.
-                    <br /><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;"The idea was a place where you can feel very comfortable" says Durga Devi of dev fashion's concept. "It's a place to spend time. You arrive, you take off your clothes, you're at someone's house or you're in your gigantic closet and you can try everything."
-                    <br /><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;Based in Gandhipuram, Coimbatore, Dev Fashion is trusted by brides and women who love well-made, personalized clothing. We also work with customers across India and NRI clients through virtual consultations and personalized fitting support.
-                    <br /><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;For us, a blouse is more than just something you wear with a saree. We put our heart into every blouse we create, so you can wear it with confidence and make it a part of your special memories.
-                  </p>
-                </div>
-
-                {/* Signature Statement */}
-                <div className="pt-2">
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-gold-600 font-semibold">
-                    Designed for you. Crafted by hand. Made to be remembered.
-                  </p>
-                </div>
-              </div>
-
-              {/* Stats Block */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-gold-200/50">
-                {stats.map((stat, i) => (
-                  <div key={i} className="text-center sm:text-left">
-                    <span className="block font-serif text-2xl sm:text-3xl font-bold text-gold-600">
-                      {stat.value}
-                    </span>
-                    <span className="text-[10px] uppercase font-semibold tracking-wider text-stone-500 mt-1 block">
-                      {stat.label}
-                    </span>
-                  </div>
+              {/* Services: a refined typographic list, no boxes or chips */}
+              <motion.ul
+                variants={reveal}
+                className="mt-14 max-w-2xl border-t border-gold-400"
+              >
+                {[
+                  ["Bridal blouses", "For the wedding day and every ceremony around it."],
+                  ["Designer saree blouses", "Cut to complement the drape of the saree."],
+                  ["Aari work & embroidery", "Hand-stitched, one thread at a time."],
+                  ["Custom fit", "Drafted to your measurements and fitted before delivery."],
+                ].map(([title, text]) => (
+                  <li
+                    key={title}
+                    className="grid grid-cols-1 sm:grid-cols-[15rem_1fr] gap-x-8 gap-y-1 py-5 border-b border-gold-200"
+                  >
+                    <span className="font-serif text-xl text-stone-950">{title}</span>
+                    <span className="text-[15px] leading-7 text-stone-500">{text}</span>
+                  </li>
                 ))}
-              </div>
+              </motion.ul>
 
-              <div className="pt-2">
+              <motion.div
+                variants={reveal}
+                className="mt-12 flex flex-col sm:flex-row sm:items-center gap-x-12 gap-y-8"
+              >
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest text-stone-900 hover:text-gold-600 uppercase transition-colors underline decoration-gold-400 decoration-2 underline-offset-4" >
-                  Read Our Full Story
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  className="group relative inline-flex items-center gap-3 pb-2 font-serif text-lg text-stone-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-600"
+                >
+                  Our story
+                  <ArrowRight className="w-4 h-4 text-gold-600 transition-transform duration-500 group-hover:translate-x-1.5" />
+                  <span className="absolute bottom-0 left-0 h-px w-full bg-stone-300" />
+                  <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-[0.35] bg-gold-600 transition-transform duration-700 ease-out group-hover:scale-x-100" />
                 </Link>
-              </div>
-            </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* 2.5 Tailoring & Aari Work Course Section */}
-      <section id="courses" className="py-20 sm:py-28 bg-gold-50/30 border-t border-gold-100 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-center">
-            
-            {/* Left Image Column */}
-            <div className="lg:col-span-6 relative">
-              <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] border border-gold-300 p-3 bg-white shadow-2xl overflow-hidden group">
-                <div className="relative h-full w-full overflow-hidden">
-                  <Image
-                    src="/images/dev_fashion/class2.png"
-                    alt="Dev Fashion Tailoring & Aari Work Classes Studio in Coimbatore"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-stone-950/15 group-hover:bg-stone-950/5 transition-colors duration-300" />
-                </div>
-              </div>
-
-              {/* Floating Badge */}
-              <div className="absolute -bottom-6 right-4 sm:right-8 bg-red-900 text-white p-4 sm:p-6 border border-gold-400 shadow-xl max-w-xs">
-                <span className="text-gold-500 font-serif text-xl sm:text-2xl font-bold block mb-1">
-                  Admissions Open!
-                </span>
-                <p className="text-stone-300 text-xs leading-relaxed">
-                  Hands-on practical training & personalized attention at our Gandhipuram studio.
+                <p className="max-w-xs text-sm leading-6 text-stone-500">
+                  Outside Coimbatore? We offer video consultations and guided
+                  fittings for clients across India and abroad.
                 </p>
-              </div>
-            </div>
-
-            {/* Right Content Column */}
-            <div className="lg:col-span-6 flex flex-col space-y-6 sm:space-y-8 text-stone-900 mt-6 lg:mt-0">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 border border-gold-300 bg-gold-100/35 text-[10px] font-semibold tracking-widest text-gold-700 uppercase rounded-full self-start">
-                {/* ✦ Professional Academy */}
-                ✦ Space is limited...sign up to reserve your spot today!
-              </div>
-
-              <div>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium leading-[1.15] tracking-tight text-stone-950">
-                  Dev Fashion
-                  <span className="block text-gold-600 italic font-normal mt-1">
-                    Tailoring & Aari Work Classes
-                  </span>
-                </h2>
-
-                <div className="mt-6 flex items-center gap-3">
-                  <span className="h-px w-16 bg-gold-500" />
-                  <span className="text-gold-500 text-xs">✦</span>
-                  <span className="h-px w-8 bg-gold-300" />
-                </div>
-              </div>
-
-              <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-                We are proud to introduce our Professional Tailoring, Fashion Designing & Aari Embroidery Course, 
-                designed for those who want to turn their passion for fashion into a valuable skill.
-                <br /><br />
-                Learn directly from our experienced master designers in Gandhipuram, Coimbatore, 
-                through practical, hands-on training that takes you step by step from the fundamentals to advanced techniques.               
-              </p>
-
-              {/* Course Highlights Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-stone-800 pt-2">
-                <div className="flex items-start gap-3 bg-white p-3.5 border border-gold-200/60 shadow-sm">
-                  <Scissors className="w-4 h-4 text-gold-600 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-stone-950 font-semibold mb-0.5">Blouse Stitching & Pattern Making</strong>
-                    <span className="text-stone-600">Perfect necklines, armhole drafting, padding & lining.</span>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 bg-white p-3.5 border border-gold-200/60 shadow-sm">
-                  <Sparkles className="w-4 h-4 text-gold-600 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-stone-950 font-semibold mb-0.5">Aari & Maggam Work Training</strong>
-                    <span className="text-stone-600">Bead work, zardozi, cutwork, thread work & stones.</span>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 bg-white p-3.5 border border-gold-200/60 shadow-sm">
-                  <Ruler className="w-4 h-4 text-gold-600 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-stone-950 font-semibold mb-0.5">Custom Fitting & Alteration Skills</strong>
-                    <span className="text-stone-600">Mastering body measurement & flaw-free fits.</span>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3 bg-white p-3.5 border border-gold-200/60 shadow-sm">
-                  <Award className="w-4 h-4 text-gold-600 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="block text-stone-950 font-semibold mb-0.5">Boutique & Career Guidance</strong>
-                    <span className="text-stone-600">Start your own home boutique or designer label.</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a
-                  href="https://wa.me/918098558923?text=Hi%20Dev%20Fashion%2C%20I%20am%20interested%20in%20joining%20your%20Tailoring%20and%20Aari%20Work%20Course.%20Please%20share%20the%20batch%20timings%20and%20fees."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-[#B8324A] hover:bg-[#C8A96A] hover:text-[#16302A] text-white font-semibold text-xs uppercase tracking-[0.2em] transition-colors flex items-center gap-2"
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  Enquire via WhatsApp
-                </a>
-
-                <Link
-                  href="/contact?service=Tailoring%20%26%20Aari%20Work%20Course#booking"
-                  className="px-6 py-3 bg-[#C8A96A]  hover:bg-[#B8324A] hover:text-[#16302A] text-white font-semibold text-xs uppercase tracking-[0.2em] transition-colors flex items-center gap-2"
-                >
-                  Book Course Admission
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
-
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 3. Services Section */}
-      <section className="py-20 sm:py-28 bg-gold-50/25 border-t border-b border-gold-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 flex flex-col items-center">
+
+      {/* 3. Featured Collections & 5. Gallery Section */}
+      <section className="py-14 sm:py-20 lg:py-24">
+        <div className="site-container">
+          <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center">
+            <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
+              ✦ Design Portfolio
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-wide text-stone-950 mb-4">
+              Featured Collections & Gallery
+            </h2>
+            <div className="h-[1px] w-20 bg-gold-500 mb-5" />
+            <p className="text-stone-900 text-sm">
+              Maybe it is not a blouse.
+              Maybe it is who you become when you wear it.
+            </p>
+          </div>
+
+          <GalleryLightbox_copy />
+
+          <div className="text-center pt-2">
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest text-stone-900 hover:text-gold-600 uppercase transition-colors underline decoration-gold-400 decoration-2 underline-offset-4">
+              Explore a variety of styles and colors perfect for any event.
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
+      {/* 3.5 Tailoring & Aari Work Course Section */}
+
+       <section className="py-14 sm:py-20 lg:py-14 border-b border-gold-100">
+        <div className="site-container">
+          <div className="text-center max-w-4xl mx-auto mb-8 flex flex-col items-center">
+            <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
+              ✦ Space is limited...sign up to reserve your spot today!
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-wide text-stone-950 mb-4">
+              Dev Fashion Tailoring & Aari Work Classes
+            </h2>
+            <div className="h-[1px] w-20 bg-gold-500 mb-1" />
+          </div>
+
+          <CoursesSection />
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* 4. Services Section */}
+      <section className="py-14 sm:py-20 lg:py-24 bg-gold-50/25 border-t border-b border-gold-100">
+        <div className="site-container">
+          <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center">
             <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
               ✦ Elite Services
             </span>
@@ -398,43 +403,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Featured Collections & 5. Gallery Section */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 flex flex-col items-center">
-            <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
-              ✦ Design Portfolio
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-wide text-stone-950 mb-4">
-              Featured Collections & Gallery
-            </h2>
-            <div className="h-[1px] w-20 bg-gold-500 mb-5" />
-            <p className="text-stone-900 text-sm">
-              Maybe it is not a blouse.
-              Maybe it is who you become when you wear it.
-            </p>
-          </div>
 
-          <GalleryLightbox_copy />
-
-          <div className="text-center pt-2">
-            <Link
-              href="/gallery"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest text-stone-900 hover:text-gold-600 uppercase transition-colors underline decoration-gold-400 decoration-2 underline-offset-4">
-              Explore a variety of styles and colors perfect for any event.
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Why Choose Dev Fashion */}
-      <section className="py-20 sm:py-28 bg-stone-950 text-white relative overflow-hidden">
+      {/* 5. Why Choose Dev Fashion */}
+      <section className="py-14 sm:py-20 lg:py-24 bg-stone-950 text-white relative overflow-hidden">
         {/* Soft lighting decorations */}
         <div className="absolute top-1/2 left-0 w-80 h-80 bg-gold-900/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-20 flex flex-col items-center">
+        <div className="site-container relative z-10">
+          <div className="text-center max-w-4xl mx-auto mb-20 flex flex-col items-center">
             <span className="text-[10px] font-semibold tracking-widest text-gold-400 uppercase block mb-3">
               ✦ The Dev Fashion Edge
             </span>
@@ -486,10 +462,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Customer Testimonials */}
-      <section className="py-20 sm:py-28 border-b border-gold-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-8 flex flex-col items-center">
+      {/* 6. Customer Testimonials */}
+      <section className="py-14 sm:py-20 lg:py-24 border-b border-gold-100">
+        <div className="site-container">
+          <div className="text-center max-w-4xl mx-auto mb-8 flex flex-col items-center">
             <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-3">
               ✦ Words of Praise
             </span>
@@ -503,9 +479,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. Appointment Booking */}
-      <section id="booking" className="py-20 sm:py-28 bg-gold-50/20 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 7. Appointment Booking */}
+      <section id="booking" className="py-14 sm:py-20 lg:py-24 bg-gold-50/20 scroll-mt-20">
+        <div className="site-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Info text column */}
             <div className="lg:col-span-5 flex flex-col space-y-6 sm:space-y-8">
@@ -557,9 +533,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10. Privacy & Trust */}
+      {/* 8. Privacy & Trust */}
       <section className="py-12 bg-stone-900 text-stone-300 border-b border-stone-850">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="site-container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <div className="w-12 h-12 rounded-full border border-gold-600/40 flex items-center justify-center text-gold-500 shrink-0">
@@ -582,9 +558,9 @@ export default function HomePage() {
       </section>
 
       {/* 9. Quick Contact Section */}
-      <section className="py-16 bg-white border-b border-gold-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <section className="py-14 sm:py-16 lg:py-20 bg-white border-b border-gold-100">
+        <div className="site-container">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-center">
 
             <div>
               <h4 className="font-serif text-xl font-bold text-stone-900 mb-3">Visit Our Studio</h4>
@@ -619,3 +595,8 @@ export default function HomePage() {
     </div>
   );
 }
+
+
+
+
+

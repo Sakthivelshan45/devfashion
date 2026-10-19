@@ -19,10 +19,10 @@ export default function FloatingWhatsApp() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+    <div className="fixed bottom-[24px] right-[24px] z-40 flex flex-col items-end pointer-events-auto">
       {/* Tooltip */}
       {showTooltip && (
-        <div className="relative mb-3 bg-white text-stone-900 border border-gold-300 text-xs px-4 py-2.5 rounded-none shadow-xl max-w-xs animate-fade-in font-medium flex items-center gap-2">
+        <div className="relative mb-3 bg-white text-stone-900 border border-gold-300 text-xs px-4 py-2.5 rounded-sm shadow-xl max-w-xs animate-fade-in font-medium flex items-center gap-2">
           <span>Chat with our Stylist</span>
           <button
             onClick={() => setShowTooltip(false)}
@@ -32,7 +32,7 @@ export default function FloatingWhatsApp() {
             &times;
           </button>
           {/* Tooltip arrow */}
-          <div className="absolute right-4 bottom-[-6px] w-3 h-3 bg-white border-r border-b border-green-300 rotate-45" />
+          <div className="absolute right-4 bottom-[-6px] w-3 h-3 bg-white border-r border-b border-gold-300 rotate-45" />
         </div>
       )}
 

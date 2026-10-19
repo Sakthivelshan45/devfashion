@@ -113,7 +113,7 @@ export default function TestimonialCarousel() {
   const current = testimonials[currentIndex];
 
   return (
-    <div className="relative max-w-4xl mx-auto px-4 py-2">
+    <div className="relative max-w-6xl mx-auto px-4 py-2">
       {/* Background Quote Mark */}
       <div className="absolute top-0 left-6 text-gold-200/20 pointer-events-none select-none">
         <Quote className="w-40 h-40 stroke-[0.5]" />
@@ -139,7 +139,7 @@ export default function TestimonialCarousel() {
             </div>
 
             {/* Testimonial Text */}
-            <p className="font-serif text-lg md:text-xl lg:text-2xl italic text-stone-800 leading-relaxed max-w-2xl mb-8">
+            <p className="font-serif text-lg md:text-xl lg:text-2xl italic text-stone-800 leading-relaxed max-w-4xl mb-8">
               "{current.comment}"
             </p>
 
@@ -186,3 +186,13 @@ export default function TestimonialCarousel() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+

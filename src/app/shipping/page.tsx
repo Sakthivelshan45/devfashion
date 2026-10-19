@@ -11,7 +11,7 @@ export default function ShippingPolicyPage() {
     <div className="w-full bg-white pt-24 min-h-screen">
       {/* Header */}
       <section className="bg-gold-50/50 py-12 sm:py-16 border-b border-gold-100 text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="boutique-container">
           <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-2">
             ✦ Carefully Prepared & Delivered
           </span>
@@ -25,7 +25,7 @@ export default function ShippingPolicyPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-stone-700 text-sm leading-relaxed space-y-8">
+      <section className="py-16 boutique-container max-w-5xl text-stone-700 text-sm leading-relaxed space-y-8">
 
         {/* Highlight Alert Box */}
         <div className="bg-gold-50/50 border border-gold-250/70 p-6 flex gap-4 items-start">

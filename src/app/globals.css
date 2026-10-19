@@ -31,6 +31,19 @@
 :root {
   --background: #FAF8F5;
   --foreground: #141312;
+
+  /* CSS Spacing Scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* Section Vertical Rhythm: 80-100px desktop, 48-64px mobile */
+  --section-py-desktop: 88px;
+  --section-py-mobile: 56px;
 }
 
 body {
@@ -139,4 +152,42 @@ p, span, button, input, select, textarea, nav, .font-sans {
   background: linear-gradient(135deg, #141312 20%, #B38E46 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ========================================================
+   GLOBAL CONTAINER SYSTEM
+   Used by BOTH the navbar and every page section so the
+   left/right edges line up everywhere.
+   Content width = max-width - 2 * padding-inline
+   (1440 - 96 = 1344px on large screens)
+   ======================================================== */
+.site-container,
+.boutique-container,
+.container {
+  width: 100% !important;
+  max-width: 1440px !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(20px, 4vw, 48px) !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .site-container,
+  .boutique-container,
+  .container {
+    padding-inline: clamp(16px, 4.5vw, 20px) !important;
+  }
+}
+
+/* Section vertical rhythm utility: 80-100px desktop, 48-64px mobile */
+.section-py {
+  padding-top: var(--section-py-mobile);
+  padding-bottom: var(--section-py-mobile);
+}
+
+@media (min-width: 1024px) {
+  .section-py {
+    padding-top: var(--section-py-desktop);
+    padding-bottom: var(--section-py-desktop);
+  }
 }

@@ -6,8 +6,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0F0E0D] text-[#FAF8F5] border-t border-[#C5A059]/25 pt-20 pb-12 font-sans ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#0F0E0D] text-[#FAF8F5] border-t border-[#C5A059]/25 py-16 sm:py-20 lg:py-24 font-sans w-full">
+      <div className="site-container">
     
 
         {/* Main 4-Column Editorial Grid */}
@@ -224,5 +224,7 @@ export default function Footer() {
     </footer>
   );
 }
+
+
 
 
