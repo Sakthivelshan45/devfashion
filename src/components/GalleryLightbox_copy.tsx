@@ -112,6 +112,45 @@ const rawItems: RawItem[] = [
   // { src: "/images/dev_fashion/kid3.jpg", alt: "Kids ethnic wear", category: "Kids Wear", title: "Little Royals III", description: "Tailored for movement, styled for the spotlight." },
   // { src: "/images/dev_fashion/old_blouse1.jpg", alt: "Classic blouse design", category: "Designer Blouses", title: "Classic Heirloom Blouse", description: "A timeless blouse pattern reimagined with a modern fit." },
 
+
+
+  { src: "/images/dev_fashion/new_b1.jpeg", alt: "Bridal blouse design", category: "Bridal Collection", title: "Elegant Bridal Blouse", description: "A beautiful bridal design crafted with timeless elegance." },
+{ src: "/images/dev_fashion/new_b2.jpeg", alt: "Designer blouse design", category: "Designer Blouses", title: "Signature Designer Blouse", description: "A stylish blouse design blending creativity with a refined fit." },
+{ src: "/images/dev_fashion/new_b3.jpeg", alt: "Bride wearing a designer blouse", category: "our Brides and Models", title: "Bridal Elegance", description: "Celebrating beautiful bridal looks and memorable occasions." },
+{ src: "/images/dev_fashion/new_b4.jpeg", alt: "Party wear blouse design", category: "Party Wear", title: "Glamorous Party Wear", description: "A sophisticated design for celebrations and special evenings." },
+{ src: "/images/dev_fashion/new_b5.jpeg", alt: "Traditional blouse design", category: "Traditional Wear", title: "Traditional Grace", description: "Inspired by South Indian heritage and timeless craftsmanship." },
+{ src: "/images/dev_fashion/new_b6.jpeg", alt: "Festive blouse design", category: "Festive Collection", title: "Festive Charm", description: "A graceful design made for joyful celebrations and traditions." },
+{ src: "/images/dev_fashion/new_b7.jpeg", alt: "Custom-designed blouse", category: "Custom Designs", title: "Made Just for You", description: "A personalized design tailored to your style and preferences." },
+{ src: "/images/dev_fashion/new_b8.jpeg", alt: "Bridal blouse craftsmanship", category: "Bridal Collection", title: "Royal Bridal Creation", description: "A statement bridal blouse designed for unforgettable moments." },
+{ src: "/images/dev_fashion/new_b9.jpeg", alt: "Traditional South Indian blouse", category: "Traditional Wear", title: "Heritage Elegance", description: "A traditional look celebrating the beauty of South Indian fashion." },
+{ src: "/images/dev_fashion/new_b10.jpeg", alt: "Contemporary designer blouse", category: "Designer Blouses", title: "Contemporary Classic", description: "A modern interpretation of classic blouse styling." },
+{ src: "/images/dev_fashion/new_b11.jpeg", alt: "Festive occasion blouse", category: "Festive Collection", title: "Celebration Collection", description: "An elegant choice for festive gatherings and family occasions." },
+{ src: "/images/dev_fashion/new_b12.jpeg", alt: "Bride and model fashion look", category: "our Brides and Models", title: "Beautiful Bridal Moments", description: "Showcasing the beauty and confidence of our brides and models." },
+{ src: "/images/dev_fashion/new_b13.jpeg", alt: "Bespoke blouse design", category: "Custom Designs", title: "Personalised Perfection", description: "A custom creation designed around your individual fashion vision." },
+{ src: "/images/dev_fashion/new_b14.jpeg", alt: "Elegant party wear blouse", category: "Party Wear", title: "Evening Elegance", description: "A stylish blouse for parties, receptions and special occasions." },
+{ src: "/images/dev_fashion/new_b15.jpeg", alt: "Luxury bridal blouse", category: "Bridal Collection", title: "The Bridal Signature", description: "A refined bridal design created to complement your special day." },
+{ src: "/images/dev_fashion/new_b16.jpeg", alt: "Premium designer blouse", category: "Designer Blouses", title: "Modern Designer Edit", description: "Distinctive styling with a focus on detail and elegant finishing." },
+{ src: "/images/dev_fashion/new_b17.jpeg", alt: "Traditional ethnic blouse", category: "Traditional Wear", title: "Timeless Tradition", description: "Classic ethnic styling inspired by generations of craftsmanship." },
+{ src: "/images/dev_fashion/new_b18.jpeg", alt: "Bride in an elegant blouse", category: "our Brides and Models", title: "Our Bridal Stories", description: "Beautiful looks that celebrate individuality and confidence." },
+{ src: "/images/dev_fashion/new_b19.jpeg", alt: "Festive designer blouse", category: "Festive Collection", title: "Festive Sophistication", description: "A graceful design for festivals, celebrations and special moments." },
+{ src: "/images/dev_fashion/new_b20.jpeg", alt: "Party occasion blouse", category: "Party Wear", title: "Party-Ready Elegance", description: "A fashionable choice for a polished and confident occasion look." },
+{ src: "/images/dev_fashion/new_b21.jpeg", alt: "Made-to-measure blouse design", category: "Custom Designs", title: "Your Style, Your Design", description: "A made-to-measure creation inspired by your personal taste." },
+{ src: "/images/dev_fashion/new_b22.jpeg", alt: "South Indian bridal blouse", category: "Bridal Collection", title: "Bridal Heritage", description: "Traditional inspiration meets elegant bridal styling." },
+{ src: "/images/dev_fashion/new_b23.jpeg", alt: "Festive traditional blouse", category: "Festive Collection", title: "Festive Radiance", description: "A celebration-ready design for treasured festive occasions." },
+{ src: "/images/dev_fashion/new_b24.jpeg", alt: "Stylish designer blouse", category: "Designer Blouses", title: "The Designer Classic", description: "An elegant silhouette with a distinctive designer touch." },
+{ src: "/images/dev_fashion/new_b25.jpeg", alt: "Bride and model in designer fashion", category: "our Brides and Models", title: "Moments of Elegance", description: "A showcase of beautiful styling for brides and fashion lovers." },
+{ src: "/images/dev_fashion/new_b26.jpeg", alt: "Traditional Indian blouse", category: "Traditional Wear", title: "Classic Ethnic Beauty", description: "A timeless traditional design for sarees and cultural occasions." },
+{ src: "/images/dev_fashion/new_b27.jpeg", alt: "Party wear designer blouse", category: "Party Wear", title: "Celebration Style", description: "A chic design for parties, receptions and evening celebrations." },
+{ src: "/images/dev_fashion/new_b28.jpeg", alt: "Custom couture blouse", category: "Custom Designs", title: "Bespoke Beauty", description: "A unique blouse concept tailored to your preferred style." },
+{ src: "/images/dev_fashion/new_b29.jpeg", alt: "Bridal couture blouse", category: "Bridal Collection", title: "The Royal Bride", description: "A statement bridal creation for your most cherished occasion." },
+{ src: "/images/dev_fashion/new_b30.jpeg", alt: "Fashion-forward designer blouse", category: "Designer Blouses", title: "Signature Style", description: "Thoughtful design details paired with a contemporary look." },
+{ src: "/images/dev_fashion/new_b31.jpeg", alt: "Festive occasion designer blouse", category: "Festive Collection", title: "Festive Elegance", description: "A sophisticated design for meaningful celebrations." },
+{ src: "/images/dev_fashion/new_b32.jpeg", alt: "South Indian traditional blouse", category: "Traditional Wear", title: "Tradition Reimagined", description: "A fresh take on traditional South Indian blouse styling." },
+{ src: "/images/dev_fashion/new_b33.jpeg", alt: "Bride and model collection", category: "our Brides and Models", title: "Elegance in Every Frame", description: "Celebrating beautiful fashion moments from our collection." },
+{ src: "/images/dev_fashion/new_b34.jpeg", alt: "Personalized designer blouse", category: "Custom Designs", title: "Designed Around You", description: "A personalized design that brings your fashion ideas to life." },
+{ src: "/images/dev_fashion/new_b35.jpeg", alt: "Elegant party wear blouse", category: "Party Wear", title: "Occasion Glamour", description: "A polished design for parties and memorable celebrations." },
+{ src: "/images/dev_fashion/new_b36.jpeg", alt: "Elegant party wear blouse", category: "Party Wear", title: "Occasion Glamour", description: "A polished design for parties and memorable celebrations." },
+
   
   { src: "/images/dev_fashion/b1.jpg", alt: "Dev Fashion designer creation 1", category: "Bridal Collection", title: "Bridal Elegance I", description: "A bespoke South Indian bridal creation with carefully considered details and refined finishing." },
   { src: "/images/dev_fashion/b2.jpg", alt: "Dev Fashion designer creation 2", category: "Bridal Collection", title: "Bridal Elegance II", description: "Traditional bridal artistry crafted to celebrate your special occasion." },
@@ -219,7 +258,7 @@ const craftChapters = [
     },
   },
   {
-    label: "Aari Embroidery and zari",
+    label: "Aari Embroidery Work",
     src: "/images/dev_fashion/deeps_mirror.png",
     item: {
       alt: "Custom neckline detail",
@@ -228,7 +267,7 @@ const craftChapters = [
     },
   },
   {
-    label: "Sleeves",
+    label: "Net Designer Blouse",
     src: "/images/dev_fashion/client12.jpeg",
     item: {
       alt: "Elbow-length sleeve detail",
@@ -247,7 +286,7 @@ const craftChapters = [
   },
   {
     label: "Custom Blouse",
-    src: "/images/dev_fashion/nivi5.jpg",
+    src: "/images/dev_fashion/custom_drs1.jpg",
     item: {
       alt: "Custom fitting and tailoring",
       title: "Tailoring Perfection",
@@ -539,7 +578,7 @@ const COUPLE_PHOTOS = [
   "/images/dev_fashion/nivi_cpl3.jpeg",
   "/images/dev_fashion/new_cpl1.jpeg",
   "/images/dev_fashion/new_cpl2.jpeg",
-  "/images/dev_fashion/new_cpl3.jpeg",
+  "/images/dev_fashion/new_cpl3.jpg",
 ];
 
 /* ------------------------------------------------------------------ */
@@ -743,7 +782,7 @@ export default function GalleryLightbox() {
           <div className="lg:col-span-5 lg:pt-6">
             {/* Luxury editorial heading */}
 
-            <h2 className="leading-[0.5] font-serif" style={{ fontSize: "clamp(2.0rem, 3.0vw, 2.0rem)" }}>
+            <h2 className="leading-[0.9] font-serif" style={{ fontSize: "clamp(2.5rem, 3.5vw, 2.5rem)" }}>
               Your pride,
               
               <span className="text-[var(--wine)]"> our stitch.</span>
@@ -917,12 +956,7 @@ export default function GalleryLightbox() {
 
 
 
-      {/* --------------------------- */}
-
-
-
-
-
+      {/* -----------5 women image in main page---------------- */}
 
 
       <section className="relative overflow-hidden bg-[#f6e8d0] px-4 py-14 text-[#3b1d0e] sm:px-[6%] sm:py-20">
@@ -987,10 +1021,10 @@ export default function GalleryLightbox() {
             {[
               // replace these paths and titles with your own looks
               ["/images/dev_fashion/main.jpeg", "The Bride", "Heirloom drapes for the big day"],
-              ["/images/dev_fashion/durga.jpg", "The Festive", "Colour and zari for celebrations"],
-              ["/images/dev_fashion/sadhana_red_chudi.png", "The Everyday", "Easy tradition, all week long"],
+              ["/images/dev_fashion/anisha.jpeg", "The Festive", "Colour and zari for celebrations"],
+              ["/images/dev_fashion/sai.jpeg", "The Everyday", "Easy tradition, all week long"],
               ["/images/dev_fashion/deeps2.jpeg", "The Heirloom", "Pieces made to be passed down"],
-              ["/images/dev_fashion/nivi5.jpg", "The Heirloom", "Pieces made to be passed down"],
+              ["/images/dev_fashion/new_clint1.jpeg", "The Heirloom", "Pieces made to be passed down"],
             ].map(([src, title, line], i) => (
               <motion.article
                 key={src}
@@ -1041,7 +1075,7 @@ export default function GalleryLightbox() {
 
 
 
-      {/* 2nd one */}
+      {/* temple design showcase for blouses */}
 
       <section className="relative overflow-hidden bg-[#f8e9c8] text-[#3a1a10]">
         {/* shared clip path: rounded temple niche */}
@@ -1142,7 +1176,7 @@ export default function GalleryLightbox() {
               // replace these paths and titles with your own looks
               ["/images/Dev_fashion/1.jpg", "The Bride", "Heirloom drapes for the big day"],
               ["/images/Dev_fashion/b11.jpg", "The Festive", "Colour and zari for celebrations"],
-              ["/images/Dev_fashion/b20.jpg", "The Everyday", "Easy tradition, all week long"],
+              ["/images/Dev_fashion/new_b1.jpeg", "The Everyday", "Easy tradition, all week long"],
               ["/images/Dev_fashion/bls_port19.jpg", "The Heirloom", "Pieces made to be passed down"],
             ].map(([src, title, line], i) => (
               <motion.figure
@@ -1551,7 +1585,7 @@ export default function GalleryLightbox() {
 
    
                       
-        {/* ------------------------- COUPLES COLLECTION ------------------------- */}
+        {/* -------------------------auto changing COUPLES COLLECTION ------------------------- */}
         <section className="relative overflow-hidden bg-[#241714] px-5 py-16 text-[#faf6ef] sm:px-8 sm:py-20 lg:py-24">
           {/* Ambient background glow */}
           <div
@@ -2025,7 +2059,7 @@ export default function GalleryLightbox() {
             <div className="relative h-82 overflow-hidden bg-[var(--gold)]/80 sm:h-84 lg:h-[400px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/dev_fashion/group_temp.png"
+                src="/images/dev_fashion/nivi_outlook.jpeg"
                 alt="Dev Fashion"
                 className="h-full w-full object-cover"
               />
@@ -2119,243 +2153,6 @@ export default function GalleryLightbox() {
           </ol>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

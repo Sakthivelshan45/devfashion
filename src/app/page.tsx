@@ -792,7 +792,7 @@ export default function HomePage() {
                 >
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <Image
-                      src="/images/dev_fashion/aari6.jpg"
+                      src="/images/dev_fashion/b11.jpg"
                       alt="Fabric Drafting Studio"
                       fill
                       sizes="(min-width: 1024px) 40vw, 100vw"
@@ -801,7 +801,7 @@ export default function HomePage() {
                   </div>
                   <div className="absolute -bottom-8 -right-4 sm:-right-8 w-[36%] aspect-square border-[5px] border-white shadow-xl overflow-hidden">
                     <Image
-                      src="/images/dev_fashion/aari5.jpg"
+                      src="/images/dev_fashion/new_b8_1.jpeg"
                       alt="Bridal Details"
                       fill
                       sizes="15vw"
@@ -1166,6 +1166,15 @@ export default function HomePage() {
           </div>
 
           <TestimonialCarousel />
+
+           <div className="text-center pt-2">
+            <Link
+              href="/reviews"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-widest text-stone-900 hover:text-gold-600 uppercase transition-colors underline decoration-gold-400 decoration-2 underline-offset-4">
+              Explore More About Reviews
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </section>
 
