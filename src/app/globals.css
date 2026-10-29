@@ -165,7 +165,7 @@ p, span, button, input, select, textarea, nav, .font-sans {
 .boutique-container,
 .container {
   width: 100% !important;
-  max-width: 1440px !important;
+  max-width: 1500px !important;
   margin-inline: auto !important;
   padding-inline: clamp(20px, 4vw, 48px) !important;
   box-sizing: border-box !important;

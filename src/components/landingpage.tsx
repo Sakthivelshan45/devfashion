@@ -682,9 +682,9 @@
 //       <div className="pointer-events-none absolute -right-24 bottom-0 h-[460px] w-[460px] rounded-full bg-[#E6C5C5]/30 blur-3xl" />
 //       <span
 //         aria-hidden
-//         className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap font-serif text-[20vw] font-light leading-none text-[#B38E46]/[0.07] lg:left-[68%]"
+//         className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap font-serif text-[20vw] font-light leading-none text-[#B38E46]/[0.07] lg:left-[58%]"
 //       >
-//         COUTURE
+//         DEV FASHION
 //       </span>
 
 //       <div className="site-container relative">
@@ -1023,26 +1023,50 @@ const waLink = (text: string) => `https://wa.me/${WHATSAPP}?text=${encodeURIComp
 type Look = { id: number; src: string; tag: string };
 
 const rawLooks: Omit<Look, "id">[] = [
-  { src: "/images/dev_fashion/main.jpeg", tag: "Bridal Couture" },
-  { src: "/images/dev_fashion/deeps2.jpeg", tag: "Ethnic Editorial" },
-  { src: "/images/dev_fashion/sadhana_main.png", tag: "Royal Velvet Aurora" },
-  { src: "/images/dev_fashion/deepika1.jpg", tag: "Sapphire Velvet" },
-  { src: "/images/dev_fashion/sadhana_red2.png", tag: "Royal Zardozi" },
-  { src: "/images/dev_fashion/ammu.jpeg", tag: "Sheer Cutwork" },
-  { src: "/images/dev_fashion/sadhana_blue.png", tag: "Sapphire Silk" },
-  { src: "/dev_hero.png", tag: "Master Designer" },
-  { src: "/images/dev_fashion/angel1.png", tag: "Party Wear" },
-  { src: "/images/dev_fashion/sadhana_beach1.jpg", tag: "Seaside Edit" },
-  { src: "/images/dev_fashion/sadhana_blue2.png", tag: "Midnight Blue" },
-  { src: "/images/dev_fashion/sadhana_red_chudi.png", tag: "Crimson Chudi" },
-  { src: "/images/dev_fashion/sadhana_smile_flowers.png", tag: "Floral Muse" },
-  { src: "/images/dev_fashion/sadhana_smile_udha.png", tag: "Festive Glow" },
-  { src: "/images/dev_fashion/sadhana_smile5.png", tag: "Signature Smile" },
-  { src: "/images/dev_fashion/sadhana_smile6.png", tag: "Everyday Elegance" },
-  { src: "/images/dev_fashion/sadhana_temple.png", tag: "Temple Heritage" },
-  { src: "/images/dev_fashion/sadhana_vilet.png", tag: "Violet Couture" },
-  { src: "/images/dev_fashion/aari1.jpg", tag: "Aari Blouse" },
-  { src: "/images/dev_fashion/aari2.jpg", tag: "Custom Blouse" },
+  // { src: "/images/dev_fashion/main.jpeg", tag: "Bridal Couture" },
+  // { src: "/images/dev_fashion/1.jpeg", tag: "Ethnic Editorial" },
+  // { src: "/images/dev_fashion/sadhana_main.png", tag: "Royal Velvet Aurora" },
+  // { src: "/images/dev_fashion/deepika1.jpg", tag: "Sapphire Velvet" },
+  // { src: "/images/dev_fashion/sadhana_red2.png", tag: "Royal Zardozi" },
+  // { src: "/images/dev_fashion/ammu.jpeg", tag: "Sheer Cutwork" },
+  // { src: "/images/dev_fashion/sadhana_blue.png", tag: "Sapphire Silk" },
+  // { src: "/images/dev_fashion/bride3.jpg", tag: "Master Designer" },
+  // { src: "/images/dev_fashion/angel1.png", tag: "Party Wear" },
+  // { src: "/images/dev_fashion/sadhana_beach1.jpg", tag: "Seaside Edit" },
+  // { src: "/images/dev_fashion/sadhana_blue2.png", tag: "Midnight Blue" },
+  // { src: "/images/dev_fashion/sadhana_red_chudi.png", tag: "Crimson Chudi" },
+  // { src: "/images/dev_fashion/sadhana_smile_flowers.png", tag: "Floral Muse" },
+  // { src: "/images/dev_fashion/sadhana_smile_udha.png", tag: "Festive Glow" },
+  // { src: "/images/dev_fashion/sadhana_smile5.png", tag: "Signature Smile" },
+  // { src: "/images/dev_fashion/sadhana_smile6.png", tag: "Everyday Elegance" },
+  // { src: "/images/dev_fashion/sadhana_temple.png", tag: "Temple Heritage" },
+  // { src: "/images/dev_fashion/sadhana_vilet.png", tag: "Violet Couture" },
+  // { src: "/images/dev_fashion/aari1.jpg", tag: "Aari Blouse" },
+  // { src: "/images/dev_fashion/aari2.jpg", tag: "Custom Blouse" },
+
+   { src: "/images/dev_fashion/1.jpg", tag: "Bridal Couture" },
+  { src: "/images/dev_fashion/b1.jpg", tag: "Ethnic Editorial" },
+  { src: "/images/dev_fashion/b3.jpg", tag: "Royal Velvet Aurora" },
+  { src: "/images/dev_fashion/b2.jpg", tag: "Sapphire Velvet" },
+  { src: "/images/dev_fashion/b4.jpg", tag: "Royal Zardozi" },
+  { src: "/images/dev_fashion/b5.jpg", tag: "Sheer Cutwork" },
+  { src: "/images/dev_fashion/b6.jpg", tag: "Sapphire Silk" },
+  { src: "/images/dev_fashion/b7.jpg", tag: "Master Designer" },
+  { src: "/images/dev_fashion/b8.jpg", tag: "Party Wear" },
+  { src: "/images/dev_fashion/b9.jpg", tag: "Seaside Edit" },
+  { src: "/images/dev_fashion/b10.jpg", tag: "Midnight Blue" },
+  { src: "/images/dev_fashion/b11.jpg", tag: "Crimson Chudi" },
+  { src: "/images/dev_fashion/b12.jpg", tag: "Floral Muse" },
+  { src: "/images/dev_fashion/b13.jpg", tag: "Festive Glow" },
+  { src: "/images/dev_fashion/b14.jpg", tag: "Signature Smile" },
+  { src: "/images/dev_fashion/b15.jpg", tag: "Everyday Elegance" },
+  { src: "/images/dev_fashion/b16.jpg", tag: "Temple Heritage" },
+  { src: "/images/dev_fashion/b17.jpg", tag: "Violet Couture" },
+  { src: "/images/dev_fashion/b18.jpg", tag: "Aari Blouse" },
+  { src: "/images/dev_fashion/b19.jpg", tag: "Custom Blouse" },
+
+
+
 ];
 
 const looks: Look[] = rawLooks.map((l, i) => ({ ...l, id: i }));
@@ -1145,7 +1169,7 @@ function RingCard({
             style={{
               x: sheenX,
               background:
-                "linear-gradient(105deg, transparent 42%, rgba(255,255,255,0.32) 50%, transparent 58%)",
+                "linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.32) 0%, transparent 0%)",
             }}
             className="pointer-events-none absolute inset-y-0 -left-full w-[300%]"
           />
@@ -1469,7 +1493,7 @@ export default function Hero3D() {
               transition={{ duration: 0.8, delay: 0.05 }}
               className={`${label.className} mb-4 block text-[10px] font-medium uppercase tracking-[0.38em] text-[#B38E46]`}
             >
-              ✦ South Indian Bridal Couture &bull; Coimbatore ✦
+              ✦ South Indian Bridal Blouse Designer &bull; Coimbatore ✦
             </motion.span>
 
             <h1 className="leading-none">
@@ -1507,12 +1531,12 @@ export default function Hero3D() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.6 }}
-              className="mb-8 max-w-[520px] text-left text-sm font-light leading-relaxed text-[#5A5652] sm:text-base"
+              className="mb-8 max-w-[520px] text-justify text-sm font-light leading-relaxed text-[#5A5652] sm:text-base"
             >
-              We are delighted to be one of the city&apos;s leading Bridal Blouse
+              &nbsp;&nbsp;&nbsp; We are delighted to be one of the city&apos;s leading Bridal Blouse
               Designers, providing an extraordinary stitching experience every
               time. Come and explore our collection &mdash; your wardrobe will
-              never look the same, and never at the cost of your budget.
+              never look the same.
             </motion.p>
 
             <motion.div
@@ -1657,7 +1681,7 @@ export default function Hero3D() {
 
                 {/* floating badges */}
                 <div
-                  className="pointer-events-none absolute left-0 top-[8%] hidden sm:block"
+                  className="pointer-events-none absolute left-0 top-[18%] hidden sm:block"
                   style={{ transform: "translateZ(300px)" }}
                 >
                   <motion.div

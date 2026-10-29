@@ -14,6 +14,7 @@ const navLinks = [
   { name: "Jewelry", href: "/jewelry", badge: "NEW" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
+    { name: "Reviews", href: "/reviews" },
 ];
 
 export default function Navbar() {

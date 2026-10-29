@@ -1,8 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Phone, Mail, MapPin, Clock, MessageSquare, Navigation, ArrowUpRight } from "lucide-react";
+import {
+  Phone, Mail, MapPin, Clock, MessageSquare, Navigation, ArrowUpRight,
+  AtSign, Globe, Share2,
+} from "lucide-react";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import BookingForm from "@/components/BookingForm";
+import Image from "next/image";
 
 /* ========================================================
    ANIMATION STYLES (kept in this file)
@@ -143,174 +148,264 @@ export default function ContactPage() {
 
 
       {/* ========================================================
-          2. MAIN CONTENT: CONCIERGE DETAILS & BOOKING SUITE
-          ======================================================== */}
-      <section className="py-20 sm:py-32 w-full overflow-x-clip">
+    STORE INFO CARDS: HOURS / ABOUT / CONTACT
+    ======================================================== */}
+      <section className="w-full bg-white py-12 sm:py-16">
         <div className="boutique-container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_2fr_1fr] lg:gap-10">
 
-            {/* Contact Details Column */}
-            <div className="lg:col-span-5 flex flex-col space-y-8 sm:space-y-10">
+            {/* ---------- Opening Hours ---------- */}
+            <Reveal direction="up" delay={0}>
+              <div className="h-full rounded-sm bg-white p-7 shadow-[0_4px_20px_rgba(0,0,0,0.10)]">
+                <h3 className="mb-6 text-2xl font-normal text-stone-900">Opening Hours</h3>
 
-              <div>
-                <Reveal delay={0}>
-                  <span className="text-[10px] font-semibold tracking-[0.3em] text-[#B38E46] uppercase block mb-2">
-                    ✦ LUXURY ATELIER CONCIERGE
-                  </span>
-                </Reveal>
-                <Reveal delay={120}>
-                  <h2 className="font-serif text-3xl sm:text-4xl font-light text-stone-950 tracking-wide uppercase leading-tight">
-                    VIP styling and <br />
-                    <span className="df-shimmer-text italic font-serif font-normal normal-case">
-                      shopping services 🪡
-                    </span>
-                  </h2>
-                </Reveal>
-                <Reveal direction="line" delay={300}>
-                  <div className="h-[1.5px] w-16 bg-[#C5A059] mt-4 mb-6 origin-left" />
-                </Reveal>
-                <Reveal delay={400}>
-                  <p className="text-stone-600 text-sm sm:text-base leading-relaxed text-justify font-light">
-                    Our world-class stylists are waiting to connect with you now. Visit or call a store to book an appointment.
-                    We deliver a personalized white glove experience for Women clients across every occasion and lifestyle.
-                  </p>
-                </Reveal>
+                <ul className="space-y-5">
+                  {[
+                    { day: "Monday", time: "08:00 - 21:00" },
+                    { day: "Tuesday", time: "08:00 - 21:00" },
+                    { day: "Wednesday", time: "08:00 - 21:00" },
+                    { day: "Thursday", time: "08:00 - 21:00" },
+                    { day: "Friday", time: "08:00 - 21:00" },
+                    { day: "Saturday", time: "08:00 - 21:00" },
+                    { day: "Sunday", time: "11:00 - 17:00" },
+                  ].map((h) => (
+                    <li key={h.day} className="flex items-center justify-between text-sm">
+                      <span className="font-semibold uppercase tracking-wide text-stone-950">
+                        {h.day}
+                      </span>
+                      <span className="text-stone-700">{h.time}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="mt-5 text-[11px] font-light text-stone-500">
+                  Sunday by appointment only.
+                </p>
               </div>
+            </Reveal>
 
-              {/* Contact cards — staggered slide-in */}
-              <div className="space-y-4 text-sm text-stone-700">
+            {/* ---------- About ---------- */}
+            <Reveal direction="up" delay={120}>
+              <div className="h-full rounded-sm bg-white p-7 shadow-[0_4px_20px_rgba(0,0,0,0.10)]">
+                <h3 className="mb-6 text-2xl font-normal text-stone0-1900 text-center">🪡 Dev Fashion Bridel Blouse Designer</h3>
 
-                {/* Location */}
-                <Reveal direction="left" delay={0}>
-                  <div className="df-card group flex items-start gap-4 p-5 bg-white border border-[#E5D9C5] hover:border-[#C5A059] shadow-xs">
-                    <div className="df-icon w-11 h-11 bg-[#FAF8F5] border border-[#C5A059]/40 text-[#B38E46] flex items-center justify-center shrink-0 mt-0.5">
-                      <MapPin className="w-5 h-5 stroke-[1.5]" />
-                    </div>
-                    <div>
-                      <h4 className="font-serif font-semibold text-stone-950 text-base mb-1">Our Location</h4>
-                      <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-light">
-                        No.37, 9th Street,<br />
-                        Tatabad, Gandhipuram, Coimbatore<br />
-                        TamilNadu 641012, India
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-
-                {/* Direct Call */}
-                <Reveal direction="left" delay={120}>
-                  <div className="df-card group flex items-start gap-4 p-5 bg-white border border-[#E5D9C5] hover:border-[#C5A059] shadow-xs">
-                    <div className="df-icon w-11 h-11 bg-[#FAF8F5] border border-[#C5A059]/40 text-[#B38E46] flex items-center justify-center shrink-0 mt-0.5">
-                      <Phone className="w-5 h-5 stroke-[1.5]" />
-                    </div>
-                    <div>
-                      <h4 className="font-serif font-semibold text-stone-950 text-base mb-1">Direct Call</h4>
-                      <p className="text-stone-900 text-sm font-semibold tracking-wider">
-                        <a href="tel:+918098558923" className="hover:text-[#B38E46] transition-colors">+91 80985 58923</a>
-                      </p>
-                      <p className="text-[11px] text-stone-500 mt-1 font-light">Styling inquiries &amp; alterations follow-up, We&apos;re just a call/message away.</p>
-                    </div>
-                  </div>
-                </Reveal>
-
-                {/* Send Email */}
-                <Reveal direction="left" delay={240}>
-                  <div className="df-card group flex items-start gap-4 p-5 bg-white border border-[#E5D9C5] hover:border-[#C5A059] shadow-xs">
-                    <div className="df-icon w-11 h-11 bg-[#FAF8F5] border border-[#C5A059]/40 text-[#B38E46] flex items-center justify-center shrink-0 mt-0.5">
-                      <Mail className="w-5 h-5 stroke-[1.5]" />
-                    </div>
-                    <div>
-                      <h4 className="font-serif font-semibold text-stone-950 text-base mb-1">Send Email</h4>
-                      <p className="text-stone-900 text-sm font-medium">
-                        <a href="mailto:contact@devfashion.com" className="hover:text-[#B38E46] transition-colors">contact@devfashion.com</a>
-                      </p>
-                      <p className="text-[11px] text-stone-500 mt-1 font-light">Business partnerships &amp; bridal lookbook inquiries</p>
-                    </div>
-                  </div>
-                </Reveal>
-
-                {/* Operating Hours */}
-                <Reveal direction="left" delay={360}>
-                  <div className="df-card group flex items-start gap-4 p-5 bg-white border border-[#E5D9C5] hover:border-[#C5A059] shadow-xs">
-                    <div className="df-icon w-11 h-11 bg-[#FAF8F5] border border-[#C5A059]/40 text-[#B38E46] flex items-center justify-center shrink-0 mt-0.5">
-                      <Clock className="w-5 h-5 stroke-[1.5]" />
-                    </div>
-                    <div>
-                      <h4 className="font-serif font-semibold text-stone-950 text-base mb-1">Operating Hours</h4>
-                      <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-light">
-                        Monday - Saturday: 8:00 AM - 9:00 PM<br />
-                        Sunday: 11:00 AM - 5:00 PM (Appointments Only)
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
+                <p className="text-base leading-8 text-stone-800 text-justify">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We look forward to welcoming you to our studio in Coimbatore's Gandhipuram 
+                  Street, where you can browse the collection of bridal blouse designs, enjoy personal
+                  styling and find your perfect fit with custom stitching made to your
+                  measurements.
+                </p>
+                    <br />
+                <p className="text-base leading-8 text-stone-800 text-justify">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our world-class stylists are waiting to connect with you now. 
+                  Visit or call a store to book an appointment. We deliver a personalized 
+                  white glove experience for Women clients across every occasion and lifestyle.
+                </p>
               </div>
+            </Reveal>
 
-              {/* WhatsApp Concierge Card */}
-              <Reveal direction="scale" delay={100}>
-                <div className="bg-[#141312] text-white border border-[#C5A059]/40 p-6 sm:p-8 relative overflow-hidden shadow-xl">
-                  <div className="df-orb absolute top-0 right-0 w-32 h-32 bg-[#C5A059]/15 rounded-full blur-2xl pointer-events-none" />
-                  <div className="df-orb absolute -bottom-10 -left-10 w-28 h-28 bg-[#C5A059]/10 rounded-full blur-2xl pointer-events-none [animation-delay:-3s]" />
-                  <div className="relative z-10">
-                    <span className="text-[10px] font-semibold tracking-[0.25em] text-[#C5A059] uppercase block mb-1">
-                      ✦ INSTANT CLIENT DESK
-                    </span>
-                    <h4 className="font-serif text-xl sm:text-2xl font-light text-white mb-2">
-                      Need Instant Answers?
-                    </h4>
-                    <p className="text-stone-300 text-xs sm:text-sm leading-relaxed mb-6 font-light">
-                      Chat directly with our styling team on WhatsApp for price estimates, fabric suggestions and quick slot confirmations.
-                    </p>
+            {/* ---------- Contact us ---------- */}
+            <Reveal direction="up" delay={240}>
+              <div className="h-full rounded-sm bg-white p-7 shadow-[0_4px_20px_rgba(0,0,0,0.10)]">
+                <h3 className="mb-6 text-2xl font-normal text-stone-900">Contact us</h3>
+
+                <ul className="space-y-4 text-[15px]">
+                  <li className="flex items-start gap-3">
+                    <Phone className="mt-1 h-4 w-4 shrink-0 text-stone-800" />
+                    <a href="tel:+918098558923" className="text-[#337ab7] hover:underline">
+                      +91 80985 58923
+                    </a>
+                  </li>
+
+                  <li className="flex items-start gap-3">
+                    <AtSign className="mt-1 h-4 w-4 shrink-0 text-stone-800" />
                     <a
-                      href="https://wa.me/918098558923?text=Hi%20Dev%20Fashion%2C%20I%20have%20a%20tailoring%20enquiry."
+                      href="mailto:contact@devfashion.com"
+                      className="break-all text-[#337ab7] hover:underline"
+                    >
+                      contact@devfashion.com
+                    </a>
+                  </li>
+
+                  <li className="flex items-start gap-3">
+                    <MapPin className="mt-1 h-4 w-4 shrink-0 text-stone-800" />
+                    <a
+                      href={DIRECTIONS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="df-pulse-btn group/btn inline-flex items-center gap-3 px-6 py-3.5 bg-[#C5A059] hover:bg-white text-stone-950 text-xs font-semibold tracking-[0.25em] uppercase transition-all duration-300 shadow-md hover:-translate-y-0.5"
+                      className="leading-7 text-[#337ab7] hover:underline"
                     >
-                      <MessageSquare className="w-4 h-4 transition-transform duration-300 group-hover/btn:scale-125 group-hover/btn:-rotate-12" />
-                      <span>Chat with Stylist</span>
-                      <ArrowUpRight className="w-4 h-4 -ml-1 opacity-0 -translate-x-2 transition-all duration-300 group-hover/btn:opacity-100 group-hover/btn:translate-x-0" />
+                      No.37, 9th Street, Tatabad, Gandhipuram, Coimbatore, TamilNadu 641012
                     </a>
-                  </div>
-                </div>
-              </Reveal>
+                  </li>
 
-            </div>
+                  <li className="flex items-start gap-3">
+                    <Globe className="mt-1 h-4 w-4 shrink-0 text-stone-800" />
+                    <a
+                      href="https://www.devfashion.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#337ab7] hover:underline"
+                    >
+                      www.devfashion.in
+                    </a>
+                  </li>
 
-            {/* Form Column with Luxury Gold Framing */}
-            <div className="lg:col-span-7 scroll-mt-24" id="booking">
-              <div className="text-center mb-6">
-                <Reveal>
-                  <span className="text-[10px] font-semibold tracking-[0.3em] text-[#B38E46] uppercase block mb-2">
-                    ✦ RESERVATION DESK
-                  </span>
-                </Reveal>
-                <Reveal delay={120}>
-                  <h3 className="font-serif text-2xl sm:text-4xl font-light text-stone-950 uppercase tracking-wide">
-                    Private Appointment
-                  </h3>
-                </Reveal>
-                <Reveal direction="line" delay={300}>
-                  <div className="h-[1.5px] w-20 bg-[#C5A059] mx-auto mt-3" />
-                </Reveal>
+                  <li className="flex items-center gap-3 pt-1">
+                    <Share2 className="h-4 w-4 shrink-0 text-stone-800" />
+                    <div className="flex gap-2">
+                      <a
+                        href="https://www.facebook.com/devblouse/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        className="flex h-12 w-12 items-center justify-center bg-[#eef3fb] text-[#3b5998] transition-colors hover:bg-[#3b5998] hover:text-white"
+                      >
+                        <FaFacebook className="h-6 w-6" />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/devfashion_bridalblouse/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        className="flex h-12 w-12 items-center justify-center bg-[#eef3fb] text-[#c13584] transition-colors hover:bg-[#c13584] hover:text-white"
+                      >
+                        <FaInstagram className="h-6 w-6" />
+                      </a>
+                    </div>
+                  </li>
+                </ul>
               </div>
-
-              <Reveal direction="right" delay={200}>
-                <div className="df-frame bg-white border border-[#E5D9C5] p-3 sm:p-6 relative">
-                  {/* Corner Gold Accents — draw in on reveal, expand on hover */}
-                  <div className="df-corner top-2 left-2 border-t-2 border-l-2" />
-                  <div className="df-corner top-2 right-2 border-t-2 border-r-2" />
-                  <div className="df-corner bottom-2 left-2 border-b-2 border-l-2" />
-                  <div className="df-corner bottom-2 right-2 border-b-2 border-r-2" />
-
-                  <BookingForm />
-                </div>
-              </Reveal>
-            </div>
+            </Reveal>
 
           </div>
         </div>
       </section>
+
+
+      {/* ========================================================
+          2. MAIN CONTENT: CONCIERGE DETAILS & BOOKING SUITE
+          ======================================================== */}
+        <section className="py-20 sm:py-32 w-full overflow-x-clip">
+  <div className="boutique-container">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+      {/* Left Column: Heading + Image + WhatsApp */}
+      <div className="lg:col-span-5 flex flex-col space-y-8 sm:space-y-10">
+
+        <div>
+          <Reveal delay={0}>
+            <span className="text-[10px] font-semibold tracking-[0.3em] text-[#B38E46] uppercase text-center block mb-2">
+              ✦ LUXURY ATELIER CONCIERGE
+            </span>
+          </Reveal>
+          <Reveal delay={120}>
+            <h2 className="font-serif text-2xl sm:text-4xl font-light text-stone-950 uppercase tracking-wide">
+              VIP styling and shopping
+            </h2>
+          </Reveal>
+          <Reveal direction="line" delay={300}>
+            <div className="h-[1.5px] w-20 bg-[#C5A059] mx-auto mt-3" />
+          </Reveal>
+        </div>
+
+        {/* Boutique image (replaces the contact cards) */}
+        <Reveal direction="left" delay={100}>
+          <div className="relative aspect-[4/5] border border-gold-300 p-3 bg-white shadow-2xl max-w-lg mx-auto w-full">
+              <div className="relative h-full w-full overflow-hidden">
+                <img
+                  src="/images/dev_fashion/tailaring_course1.png"
+                  alt="Dev Fashion Boutique Tailoring Craft"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              </div>
+          </div>
+        </Reveal>
+      </div>
+
+      {/* Form Column with Luxury Gold Framing */}
+      <div className="lg:col-span-7 scroll-mt-24" id="booking">
+        <div className="text-center mb-6">
+          <Reveal>
+            <span className="text-[10px] font-semibold tracking-[0.3em] text-[#B38E46] uppercase block mb-2">
+              ✦ RESERVATION DESK
+            </span>
+          </Reveal>
+          <Reveal delay={120}>
+            <h3 className="font-serif text-2xl sm:text-4xl font-light text-stone-950 uppercase tracking-wide">
+              Private Appointment 
+            </h3>
+          </Reveal>
+          <Reveal direction="line" delay={300}>
+            <div className="h-[1.5px] w-20 bg-[#C5A059] mx-auto mt-3" />
+          </Reveal>
+        </div>
+        <br />
+        <Reveal direction="right" delay={200}>
+          <div className="df-frame bg-white border border-[#E5D9C5] p-3 sm:p-6 relative">
+            <div className="df-corner top-2 left-2 border-t-2 border-l-2" />
+            <div className="df-corner top-2 right-2 border-t-2 border-r-2" />
+            <div className="df-corner bottom-2 left-2 border-b-2 border-l-2" />
+            <div className="df-corner bottom-2 right-2 border-b-2 border-r-2" />
+          
+            <BookingForm />
+          </div>
+        </Reveal>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+        {/* ========================================================
+    WHATSAPP CONCIERGE (SEPARATE SECTION)
+    ======================================================== */}
+<section className="w-full bg-[#FAF8F5] pb-20 sm:pb-28">
+  <div className="boutique-container">
+    <Reveal direction="scale" delay={100}>
+      <div className="relative mx-auto max-w-5xl overflow-hidden border border-[#C5A059]/40 bg-[#141312] p-8 text-white shadow-xl sm:p-12">
+        <div className="df-orb pointer-events-none absolute right-0 top-0 h-40 w-40 rounded-full bg-[#C5A059]/15 blur-2xl" />
+        <div className="df-orb pointer-events-none absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-[#C5A059]/10 blur-2xl [animation-delay:-3s]" />
+
+        <div className="relative z-10 flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+          <div className="max-w-2xl">
+            <span className="mb-2 block text-[10px] font-semibold uppercase tracking-[0.25em] text-[#C5A059]">
+              ✦ INSTANT CLIENT DESK
+            </span>
+            <h4 className="mb-3 font-serif text-2xl font-light text-white sm:text-3xl">
+              Need Instant Answers?
+            </h4>
+            <p className="text-xs font-light leading-relaxed text-stone-300 sm:text-sm">
+              Chat directly with our styling team on WhatsApp for price estimates,
+              fabric suggestions and quick slot confirmations.
+            </p>
+          </div>
+
+          <a
+            href="https://wa.me/918098558923?text=Hi%20Dev%20Fashion%2C%20I%20have%20a%20tailoring%20enquiry."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="df-pulse-btn group/btn inline-flex shrink-0 items-center gap-3 bg-[#C5A059] px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-stone-950 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white"
+          >
+            <MessageSquare className="h-4 w-4 transition-transform duration-300 group-hover/btn:-rotate-12 group-hover/btn:scale-125" />
+            <span>Chat with Stylist</span>
+            <ArrowUpRight className="-ml-1 h-4 w-4 -translate-x-2 opacity-0 transition-all duration-300 group-hover/btn:translate-x-0 group-hover/btn:opacity-100" />
+          </a>
+        </div>
+      </div>
+    </Reveal>
+  </div>
+</section>
+
+
+
+
+
+
+
+
 
 
       {/* ========================================================
@@ -364,3 +459,14 @@ export default function ContactPage() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+

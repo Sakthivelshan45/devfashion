@@ -106,7 +106,7 @@ const coursesOffered: Course[] = [
     title: "Blouse Stitching",
     subtitle: "Bridal & Designer Blouse Tailoring",
     description: "Learn complete stitching of South Indian bridal blouses, padded blouses, princess cut, sweetheart necklines, backless designs, and lining attachment.",
-    image: "/images/classes/blouse_stitching.jpg",
+    image: "/images/dev_fashion/bls1.jpg",
     icon: Star,
     tag: "High Demand",
     duration: "4 to 6 Weeks",
@@ -135,7 +135,7 @@ const coursesOffered: Course[] = [
     title: "Basics of Tailoring",
     subtitle: "Sewing Machine & Fabric Essentials",
     description: "Fundamental training for beginners: sewing machine operations, needle handling, seam types, fabric cutting, hem finishing, and basic garment assembly.",
-    image: "/images/dev_fashion/basic_tailoring.png",
+    image: "/images/dev_fashion/class1.png",
     icon: BookOpen,
     tag: "Beginner Friendly",
     duration: "3 to 4 Weeks",
@@ -285,182 +285,8 @@ export default function ClassesPage() {
       </section>
 
       {/* 2. Interactive Institute Showcase & Heritage Section */}
-      <section className="py-20 sm:py-28 bg-[#FAF8F5] border-b border-[#C5A059]/20 relative overflow-hidden">
-        {/* Subtle Background Glow */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#C5A059]/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C5A059]/5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="boutique-container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-center">
-            
-            {/* Left Column: Official Poster Display with Fine Couture Framing & Animation */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-6 flex justify-center"
-            >
-              <div className="relative w-full max-w-md bg-[#141312] border border-[#C5A059]/40 p-4 shadow-2xl relative group rounded-sm hover:border-[#C5A059] transition-all duration-500">
-                {/* Gold Frame Corners */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#C5A059] z-20" />
-                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#C5A059] z-20" />
-                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#C5A059] z-20" />
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#C5A059] z-20" />
-
-                <div className="relative aspect-[3/4] w-full overflow-hidden bg-white rounded-sm">
-                  <Image
-                    src="/images/dev_fashion/institute_poster.png"
-                    alt="Dev Fashion Training Institute Official Course Poster"
-                    fill
-                    className="object-contain transform group-hover:scale-102 transition-transform duration-700"
-                    priority
-                  />
-                  
-                  {/* Subtle Shimmer Badge */}
-                  <div className="absolute bottom-4 left-4 right-4 bg-[#141312]/90 backdrop-blur-md border border-[#C5A059]/50 p-3 text-center">
-                    <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-[#C5A059] block">
-                      ✦ Official Training Institute Poster ✦
-                    </span>
-                    <span className="text-[11px] text-stone-300 font-light">
-                      Gandhipuram, Coimbatore & Live Online Classes
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right Column: Why Choose Us & Key Specs */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:col-span-6 flex flex-col space-y-6 sm:space-y-8"
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-[#C5A059]/40 bg-[#161514] text-[10px] font-semibold tracking-[0.25em] text-[#C5A059] uppercase self-start shadow-sm">
-                <MapPin className="w-3.5 h-3.5 text-[#C5A059]" />
-                100 Feet Road, Gandhipuram, Coimbatore
-              </div>
-
-              <div>
-                <span className="text-[10px] font-medium tracking-[0.3em] text-[#C5A059] uppercase block mb-2">
-                  ESTABLISHED CRAFTSMANSHIP ACADEMY
-                </span>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light leading-tight tracking-wide text-stone-950">
-                  Why Learn With Us?
-                </h2>
-                <div className="mt-4 h-[2px] w-20 bg-[#C5A059]" />
-              </div>
-
-              <div className="relative rounded-2xl bg-stone-50 px-6 sm:px-10 py-8 sm:py-10">
-                <span className="absolute -top-4 left-6 font-serif text-7xl leading-none text-gold-400 select-none">“</span>
-                <p className="font-serif italic text-lg sm:text-xl leading-relaxed text-stone-800">
-                  If you’re passionate about fashion, this is where your passion becomes your profession.
-                  Learn the art of fashion design, tailoring, pattern making and Aari embroidery through practical, hands-on training.
-                </p>
-              </div>
-
-              <p className="text-stone-700 text-sm sm:text-base text-justify leading-relaxed font-light">
-                &nbsp;&nbsp;&nbsp;We offer fun and innovative fashion design &amp; tailoring classes designed to spark creativity at any age. Our design school offers fashion classes consisting of sketching, draping, sewing, pattern making, Aari embroidery, blouse stitching, and boutique techniques for beginners &amp; adults. We offer practical studio training in Gandhipuram, Coimbatore and live online classes for global students.
-                <br /><br />
-                &nbsp;&nbsp;&nbsp;At <strong>Dev Fashion Training Institute</strong>, we bridge the gap between traditional craftsmanship and modern boutique demands. Whether you want to master blouse stitching for your family or establish your own fashion studio, our experienced instructors guide you step by step with personalized attention.
-              </p>
-
-              {/* 4 Animated Feature Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs pt-2">
-                {whyChooseUs.map((item, i) => {
-                  const IconComp = item.icon;
-                  return (
-                    <motion.div 
-                      key={i} 
-                      whileHover={{ y: -4 }}
-                      className="bg-white p-5 border border-stone-200/80 shadow-sm flex items-start gap-3.5 hover:border-[#C5A059] transition-all duration-300 group"
-                    >
-                      <div className="w-10 h-10 rounded-full bg-[#161514] text-[#C5A059] flex items-center justify-center shrink-0 group-hover:bg-[#C5A059] group-hover:text-stone-950 transition-colors">
-                        <IconComp className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <div className="flex items-center justify-between gap-1 mb-1">
-                          <strong className="block text-stone-950 font-serif text-sm font-semibold">{item.title}</strong>
-                          <span className="text-[9px] font-mono font-bold uppercase text-[#C5A059] bg-[#FAF8F5] px-1.5 py-0.5 border border-[#C5A059]/20">
-                            {item.stat}
-                          </span>
-                        </div>
-                        <span className="text-stone-600 text-xs leading-relaxed font-light">{item.desc}</span>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-
-              {/* Highlights banner */}
-              <div className="bg-[#141312] text-white p-5 border border-[#C5A059]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium tracking-[0.2em] uppercase rounded-sm shadow-md">
-                <div className="flex items-center gap-2.5">
-                  <CheckCircle className="w-4 h-4 text-[#C5A059]" />
-                  <span>Studio &amp; Online Classes</span>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <Globe className="w-4 h-4 text-[#C5A059]" />
-                  <span>International Student Base</span>
-                </div>
-              </div>
-
-            </motion.div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Interactive Student Learning Roadmap */}
-      <section className="py-16 bg-[#141312] text-white border-b border-[#C5A059]/30 relative">
-        <div className="boutique-container relative z-10">
-          <div className="text-center max-w-4xl mx-auto mb-14">
-            <span className="text-[10px] font-semibold tracking-[0.3em] text-[#C5A059] uppercase block mb-2">
-              ✦ STEP-BY-STEP ACADEMY ROADMAP
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-light tracking-wide text-white">
-              Your Journey To Fashion Mastery
-            </h2>
-            <div className="h-[1.5px] w-16 bg-[#C5A059] mx-auto mt-3" />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {studentJourneySteps.map((step, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className="bg-[#1A1817] border border-[#C5A059]/25 p-6 relative group hover:border-[#C5A059] transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="font-serif text-3xl font-light text-[#C5A059] opacity-80 group-hover:opacity-100 transition-opacity">
-                      {step.step}
-                    </span>
-                    <span className="w-2 h-2 rounded-full bg-[#C5A059]" />
-                  </div>
-                  <h3 className="font-serif text-lg font-semibold text-white mb-2 group-hover:text-[#C5A059] transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-stone-400 text-xs leading-relaxed font-light">
-                    {step.desc}
-                  </p>
-                </div>
-                <div className="mt-6 pt-4 border-t border-stone-800 text-[10px] font-mono text-[#C5A059] uppercase tracking-wider flex items-center gap-1.5">
-                  <Zap className="w-3 h-3 text-[#C5A059]" />
-                  Practical Module {idx + 1}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Main Animated Courses Showcase Grid Section */}
-      <section id="courses-offered" className="py-20 sm:py-28 bg-white scroll-mt-20 border-b border-[#C5A059]/20 relative">
+       <section id="courses-offered" className="py-20 sm:py-28 bg-white scroll-mt-20 border-b border-[#C5A059]/20 relative">
         <div className="boutique-container">
           
           <div className="text-center max-w-2xl mx-auto mb-12 flex flex-col items-center">
@@ -620,6 +446,182 @@ export default function ClassesPage() {
             </AnimatePresence>
           </motion.div>
 
+        </div>
+      </section>
+
+      {/* 3. Interactive Student Learning Roadmap */}
+      <section className="py-16 bg-[#141312] text-white border-b border-[#C5A059]/30 relative">
+        <div className="boutique-container relative z-10">
+          <div className="text-center max-w-4xl mx-auto mb-14">
+            <span className="text-[10px] font-semibold tracking-[0.3em] text-[#C5A059] uppercase block mb-2">
+              ✦ STEP-BY-STEP ACADEMY ROADMAP
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-light tracking-wide text-white">
+              Your Journey To Fashion Mastery
+            </h2>
+            <div className="h-[1.5px] w-16 bg-[#C5A059] mx-auto mt-3" />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {studentJourneySteps.map((step, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.15 }}
+                className="bg-[#1A1817] border border-[#C5A059]/25 p-6 relative group hover:border-[#C5A059] transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-serif text-3xl font-light text-[#C5A059] opacity-80 group-hover:opacity-100 transition-opacity">
+                      {step.step}
+                    </span>
+                    <span className="w-2 h-2 rounded-full bg-[#C5A059]" />
+                  </div>
+                  <h3 className="font-serif text-lg font-semibold text-white mb-2 group-hover:text-[#C5A059] transition-colors">
+                    {step.title}
+                  </h3>
+                  <p className="text-stone-400 text-xs leading-relaxed font-light">
+                    {step.desc}
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-stone-800 text-[10px] font-mono text-[#C5A059] uppercase tracking-wider flex items-center gap-1.5">
+                  <Zap className="w-3 h-3 text-[#C5A059]" />
+                  Practical Module {idx + 1}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Main Animated Courses Showcase Grid Section */}
+    
+              <section className="py-20 sm:py-28 bg-[#FAF8F5] border-b border-[#C5A059]/20 relative overflow-hidden">
+        {/* Subtle Background Glow */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#C5A059]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#C5A059]/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="boutique-container relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-center">
+            
+            {/* Left Column: Official Poster Display with Fine Couture Framing & Animation */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-6 flex justify-center"
+            >
+              <div className="relative w-full max-w-md bg-[#141312] border border-[#C5A059]/40 p-4 shadow-2xl relative group rounded-sm hover:border-[#C5A059] transition-all duration-500">
+                {/* Gold Frame Corners */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#C5A059] z-20" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#C5A059] z-20" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#C5A059] z-20" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#C5A059] z-20" />
+
+                <div className="relative aspect-[3/4] w-full overflow-hidden bg-white rounded-sm">
+                  <Image
+                    src="/images/dev_fashion/institute_poster.png"
+                    alt="Dev Fashion Training Institute Official Course Poster"
+                    fill
+                    className="object-contain transform group-hover:scale-102 transition-transform duration-700"
+                    priority
+                  />
+                  
+                  {/* Subtle Shimmer Badge */}
+                  <div className="absolute bottom-4 left-4 right-4 bg-[#141312]/90 backdrop-blur-md border border-[#C5A059]/50 p-3 text-center">
+                    <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-[#C5A059] block">
+                      ✦ Official Training Institute Poster ✦
+                    </span>
+                    <span className="text-[11px] text-stone-300 font-light">
+                      Gandhipuram, Coimbatore & Live Online Classes
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Column: Why Choose Us & Key Specs */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:col-span-6 flex flex-col space-y-6 sm:space-y-8"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-[#C5A059]/40 bg-[#161514] text-[10px] font-semibold tracking-[0.25em] text-[#C5A059] uppercase self-start shadow-sm">
+                <MapPin className="w-3.5 h-3.5 text-[#C5A059]" />
+                100 Feet Road, Gandhipuram, Coimbatore
+              </div>
+
+              <div>
+                <span className="text-[10px] font-medium tracking-[0.3em] text-[#C5A059] uppercase block mb-2">
+                  ESTABLISHED CRAFTSMANSHIP ACADEMY
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light leading-tight tracking-wide text-stone-950">
+                  Why Learn With Us?
+                </h2>
+                <div className="mt-4 h-[2px] w-20 bg-[#C5A059]" />
+              </div>
+
+              <div className="relative rounded-2xl bg-stone-50 px-6 sm:px-10 py-8 sm:py-10">
+                <span className="absolute -top-4 left-6 font-serif text-7xl leading-none text-gold-400 select-none">“</span>
+                <p className="font-serif italic text-lg sm:text-xl leading-relaxed text-stone-800">
+                  If you’re passionate about fashion, this is where your passion becomes your profession.
+                  Learn the art of fashion design, tailoring, pattern making and Aari embroidery through practical, hands-on training.
+                </p>
+              </div>
+
+              <p className="text-stone-700 text-sm sm:text-base text-justify leading-relaxed font-light">
+                &nbsp;&nbsp;&nbsp;We offer fun and innovative fashion design &amp; tailoring classes designed to spark creativity at any age. Our design school offers fashion classes consisting of sketching, draping, sewing, pattern making, Aari embroidery, blouse stitching, and boutique techniques for beginners &amp; adults. We offer practical studio training in Gandhipuram, Coimbatore and live online classes for global students.
+                <br /><br />
+                &nbsp;&nbsp;&nbsp;At <strong>Dev Fashion Training Institute</strong>, we bridge the gap between traditional craftsmanship and modern boutique demands. Whether you want to master blouse stitching for your family or establish your own fashion studio, our experienced instructors guide you step by step with personalized attention.
+              </p>
+
+              {/* 4 Animated Feature Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs pt-2">
+                {whyChooseUs.map((item, i) => {
+                  const IconComp = item.icon;
+                  return (
+                    <motion.div 
+                      key={i} 
+                      whileHover={{ y: -4 }}
+                      className="bg-white p-5 border border-stone-200/80 shadow-sm flex items-start gap-3.5 hover:border-[#C5A059] transition-all duration-300 group"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-[#161514] text-[#C5A059] flex items-center justify-center shrink-0 group-hover:bg-[#C5A059] group-hover:text-stone-950 transition-colors">
+                        <IconComp className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <div className="flex items-center justify-between gap-1 mb-1">
+                          <strong className="block text-stone-950 font-serif text-sm font-semibold">{item.title}</strong>
+                          <span className="text-[9px] font-mono font-bold uppercase text-[#C5A059] bg-[#FAF8F5] px-1.5 py-0.5 border border-[#C5A059]/20">
+                            {item.stat}
+                          </span>
+                        </div>
+                        <span className="text-stone-600 text-xs leading-relaxed font-light">{item.desc}</span>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+
+              {/* Highlights banner */}
+              <div className="bg-[#141312] text-white p-5 border border-[#C5A059]/40 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium tracking-[0.2em] uppercase rounded-sm shadow-md">
+                <div className="flex items-center gap-2.5">
+                  <CheckCircle className="w-4 h-4 text-[#C5A059]" />
+                  <span>Studio &amp; Online Classes</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Globe className="w-4 h-4 text-[#C5A059]" />
+                  <span>International Student Base</span>
+                </div>
+              </div>
+
+            </motion.div>
+
+          </div>
         </div>
       </section>
 
