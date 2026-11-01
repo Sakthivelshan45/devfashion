@@ -3623,10 +3623,10 @@ export default function GalleryLightbox() {
           <div className="mt-14 grid grid-cols-2 gap-x-3 gap-y-12 sm:gap-x-5 lg:grid-cols-4 lg:gap-x-7">
             {[
               // replace these paths and titles with your own looks
-              ["/images/Dev_fashion/1.jpg", "The Bride", "Heirloom drapes for the big day"],
-              ["/images/Dev_fashion/b11.jpg", "The Festive", "Colour and zari for celebrations"],
-              ["/images/Dev_fashion/new_b1.jpeg", "The Everyday", "Easy tradition, all week long"],
-              ["/images/Dev_fashion/bls_port19.jpg", "The Heirloom", "Pieces made to be passed down"],
+              ["/images/dev_fashion/1.jpg", "The Bride", "Heirloom drapes for the big day"],
+              ["/images/dev_fashion/b11.jpg", "The Festive", "Colour and zari for celebrations"],
+              ["/images/dev_fashion/new_b1.jpeg", "The Everyday", "Easy tradition, all week long"],
+              ["/images/dev_fashion/bls_port19.jpg", "The Heirloom", "Pieces made to be passed down"],
             ].map(([src, title, line], i) => (
               <motion.figure
                 key={src}
