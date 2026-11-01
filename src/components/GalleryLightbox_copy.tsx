@@ -578,7 +578,7 @@ const COUPLE_PHOTOS = [
   "/images/dev_fashion/nivi_cpl3.jpeg",
   "/images/dev_fashion/new_cpl1.jpeg",
   "/images/dev_fashion/new_cpl2.jpeg",
-  "/images/dev_fashion/new_cpl3.jpg",
+  "/images/dev_fashion/new_cpl3.jpg", 
 ];
 
 /* ------------------------------------------------------------------ */
@@ -1284,13 +1284,14 @@ export default function GalleryLightbox() {
 
 
 
-  {/* auto changing main  */}
+      {/* auto changing main  */}
+
 
       <section className="relative mt-12 overflow-hidden bg-[#4a0d0d] text-[#fbf1df]">
         {/* ================= PART 1: auto-changing photos with offer text ================= */}
         <div className="relative flex h-[100svh] min-h-[680px] flex-col overflow-hidden">
           {/* ---------- BACKGROUND: auto-changing photos ---------- */}
-          <div className="absolute inset-0 lg:left-[36%]">
+          <div className="absolute inset-0">
             {[
               ["/images/bls/l1.jpg", "தீபாவளி", "Diwali Silks", "Zari and jewel tones for the festival of lights"],
               ["/images/bls/l2.jpg", "தீபாவளி", "Lamp-lit Festive", "Statement drapes for puja and parties"],
@@ -1342,20 +1343,10 @@ export default function GalleryLightbox() {
                 </div>
               </div>
             ))}
-
-            {/* gold frame with diamond corners (desktop) */}
-            <div aria-hidden className="pointer-events-none absolute inset-6 z-10 hidden border border-[#c9973f]/50 lg:block">
-              <span className="absolute -left-1 -top-1 h-2 w-2 rotate-45 bg-[#f3c96a]" />
-              <span className="absolute -right-1 -top-1 h-2 w-2 rotate-45 bg-[#f3c96a]" />
-              <span className="absolute -bottom-1 -left-1 h-2 w-2 rotate-45 bg-[#f3c96a]" />
-              <span className="absolute -bottom-1 -right-1 h-2 w-2 rotate-45 bg-[#f3c96a]" />
-            </div>
           </div>
 
-          {/* ---------- OVERLAYS so text is always readable ---------- */}
-          <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#4a0d0d] via-[#4a0d0d]/75 to-[#4a0d0d]/35 lg:hidden" />
-          <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 hidden w-[62%] bg-gradient-to-r from-[#4a0d0d] via-[#4a0d0d]/90 to-transparent lg:block" />
-          <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_10%_0%,rgba(243,162,26,0.28),transparent_55%)]" />
+          {/* mobile only: soft shade so the white text stays readable on a phone (desktop unchanged) */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#4a0d0d]/80 via-[#4a0d0d]/30 to-[#4a0d0d]/45 lg:hidden" />
 
           {/* ---------- diya garland ---------- */}
           <svg aria-hidden className="relative z-10 block h-12 w-full shrink-0">
@@ -1380,7 +1371,7 @@ export default function GalleryLightbox() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="flex max-w-xl flex-col items-start text-left"
+              className="flex max-w-xl flex-col items-start text-left [text-shadow:0_2px_14px_rgba(0,0,0,0.6)] lg:[text-shadow:none]"
             >
               {/* eyebrow: diya · label · pongal pot */}
               <div className="flex flex-nowrap items-center gap-2 whitespace-nowrap sm:gap-3">
@@ -1413,31 +1404,29 @@ export default function GalleryLightbox() {
 
               {/* headline */}
               <h2
-                className="mt-6 font-serif font-light"
+                className="mt-6 font-serif font-light text-white"
                 style={{ fontSize: "clamp(1.8rem, 3.6vw, 3.5rem)", lineHeight: 1.22 }}
               >
                 Light the lamps,
                 <br />
-                <span className="bg-gradient-to-r from-[#f3c96a] via-[#fff3c4] to-[#e0a93d] bg-clip-text text-transparent">
-                  let the pot overflow!
-                </span>
+                <span>let the pot overflow!</span>
               </h2>
 
               {/* short gold rule */}
               <span aria-hidden className="mt-6 block h-px w-24 bg-gradient-to-r from-[#f3c96a] to-transparent" />
 
               {/* body copy: left-aligned, two short paragraphs (no justify = no stretched gaps) */}
-              <div className="mt-6 hidden max-w-md space-y-3 text-left text-[15px] leading-7 sm:block">
-                <p className="text-[#fbf1df]/90">
+              <div className="mt-6 hidden max-w-md space-y-3 text-left text-[15px] leading-7 text-white sm:block">
+                <p>
                   From Deepavali evenings to Thai Pongal mornings, dress both festivals in Dev Fashion silks and stitching, now at festival prices!
                 </p>
-                <p className="text-[#fbf1df]/70">
+                <p>
                   Every celebration deserves something special. May your festive moments be filled with love, grace and timeless beauty. Warm wishes from Dev Fashion.
                 </p>
               </div>
 
               {/* buttons */}
-              <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
+              <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4 max-sm:[&>a]:px-6 max-sm:[&>a]:py-3.5">
                 <Link
                   href="/gallery"
                   className="group inline-flex items-center gap-3 bg-[#f3c96a] px-8 py-4 text-sm font-semibold tracking-wide text-[#3a1a10] shadow-[0_12px_30px_-12px_rgba(243,201,106,0.7)] transition-colors hover:bg-[#fbf1df] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f3c96a]"
@@ -1568,7 +1557,6 @@ export default function GalleryLightbox() {
           />
         </div>
       </section>
-
 
 
 

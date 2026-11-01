@@ -119,7 +119,7 @@ export default function AboutPage() {
               Founded by Mrs. Durga Devi, a passionate designer with over 17 years of experience in tailoring and fashion industry especially in bride blouse stitching.
               <br /> <br />
               &nbsp;&nbsp;&nbsp;We aim to make every woman feel confident and beautiful in her attire by helping her choose the perfect blouse that complements her personality and sense of style.
-               Our work is guided by a belief that true beauty lies in precision, care and imagination. <b> Each Blouse is created with a commitment to excellence and a respect for the women who wear it.</b>
+               Our work is guided by a belief that true beauty lies in precision, care and imagination. <b> Each Creation is created with a commitment to excellence and a respect for the women who wear it.</b>
               <br /> <br />
               &nbsp;&nbsp;&nbsp;At Dev Fashion, we don't simply design clothes.
               We listen to a woman's vision, understand her style and turn her imagination into something she can proudly wear.
@@ -129,7 +129,7 @@ export default function AboutPage() {
             <h4 className="font-serif text-2xl tracking-wide text-stone-950">
               What We Specialize In!
             </h4>
-
+        
             <div className="h-[1px] w-16 bg-gold-500" />
 
             
@@ -138,7 +138,7 @@ export default function AboutPage() {
             </span>
 
             <p className="text-stone-600 text-xs sm:text-base leading-relaxed text-justify">
-              &nbsp;&nbsp;&nbsp;Aari Embroidery is a central strength of Dev fashion. The team works across bridal blouses, sarees, kurtas, gowns, lehengas and other garments where detailed handwork and design execution matter.
+              &nbsp;&nbsp;&nbsp;Aari Embroidery is a central strength of Dev fashion. The team works across bridal blouses, sarees, Salwars, gowns, lehengas, Kids wear, Mens wear and other garments where detailed handwork and design execution matter.
               <br /> <br />
               &nbsp;&nbsp;&nbsp;At the same time, Dev Fashion is not limited to bridal wear. It supports women across three major needs: everyday and professional clothing, bridal and designer clothing, and red-carpet and concept clothing.
               <br /><br />
@@ -243,7 +243,7 @@ export default function AboutPage() {
                 <br /><br />
                 &nbsp;&nbsp;&nbsp;However, due to the circumstances of life at the time, she found herself working multiple minimum-wage jobs and later becoming a mother. Yet, she couldn’t ignore the creative world that had been quietly growing in the back of her mind. Eventually, she took the leap and entered the world of fashion that had been calling her for so long.
                 <br /> <br />
-                &nbsp;&nbsp;&nbsp;She started her career as a tailor in 2007, earning a daily wage of ₹35, and she hasn’t looked back since.
+                &nbsp;&nbsp;&nbsp;She started her career as a tailor in 2007 and she hasn’t looked back since.
                 She loves the idea of expressing herself through blouse design.
                 She has worked for some of the finest brands, including Classic polo. Now, after years of experience in coimbator’s Garment industry, Durga Devi welcomes the opportunity to share her skills and expertise with others as a fashion design instructor serving coimbatore.
                 Designing became a form of therapy for her. Her eye for design and her deep belief in quality over quantity became the soul of this boutique.
