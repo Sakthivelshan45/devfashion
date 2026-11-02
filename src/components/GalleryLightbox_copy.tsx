@@ -3025,7 +3025,7 @@ function CoupleCollection() {
   }, [reduce, inView]);
 
   return (
-    <section ref={ref} className="relative overflow-hidden bg-[#241714] px-5 py-16 text-[#faf6ef] sm:px-8 sm:py-20 lg:py-24">
+    <section ref={ref} className="relative mt-12 overflow-hidden bg-[#241714] px-5 py-16 text-[#faf6ef] sm:px-8 sm:py-20 lg:py-24">
       {/* Ambient background glow */}
       <div
         aria-hidden="true"
@@ -3325,13 +3325,14 @@ export default function GalleryLightbox() {
 
 
       {/* ------------------------- CRAFTSMANSHIP ------------------------- */}
-      <section className="bg-[var(--white)] px-4 py-20 text-[var(--plum)] sm:px-[6%] sm:py-12">
-        <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-12 lg:gap-16">      
-          <div className="lg:col-span-5 lg:pt-6">
-            {/* Luxury editorial heading: two clean, aligned lines */}
+       <section className="overflow-x-clip bg-[var(--white)] px-4 py-12 text-[var(--plum)] sm:px-[6%] sm:py-16 lg:py-20">
+        {/* Phone/tablet order: heading → photo stack → chapter list. Desktop: heading + list on the left, stack on the right. */}
+        <div className="mx-auto grid max-w-[1400px] gap-y-8 lg:grid-cols-12 lg:gap-x-16 lg:gap-y-0">
+          {/* ---------- heading ---------- */}
+          <div className="lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:pt-6">
             <h2
               className="text-left font-serif leading-[1.12]"
-              style={{ fontSize: "clamp(2.5rem, 3.5vw, 2.5rem)" }}
+              style={{ fontSize: "clamp(1.6rem, 6.5vw, 2.5rem)" }}
             >
               <span className="block">
                 Your pride,{" "}
@@ -3342,64 +3343,11 @@ export default function GalleryLightbox() {
                 <span className="font-bold italic">tailored to you.</span>
               </span>
             </h2>
-
-            {/* Interactive craft chapters */}
-            <ul className="mt-10 divide-y divide-[var(--plum)]/10 border-y border-[var(--plum)]/10 sm:mt-10">
-              {craftChapters.map((c, i) => (
-                <li key={c.label}>
-                  <button
-                    type="button"
-                    onClick={() => setCraft(i)}
-                    onMouseEnter={() => setCraft(i)}
-                    onFocus={() => setCraft(i)}
-                    aria-pressed={craft === i}
-                    className="group flex w-full items-start gap-4 py-5 text-left transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--wine)] sm:py-6"
-                  >
-                    {/* Animated gold indicator */}
-                    <span
-                      className={`mt-3 h-px shrink-0 transition-all duration-500 ${craft === i
-                          ? "w-10 bg-[var(--wine)]"
-                          : "w-4 bg-[var(--plum)]/25 group-hover:w-7 group-hover:bg-[var(--wine)]"
-                        }`}
-                    />
-
-                    <span className="min-w-0 flex-1">
-                      <span
-                        className={`block font-serif text-xl leading-snug transition-all duration-300 sm:text-2xl ${craft === i
-                            ? "translate-x-1 text-[var(--wine)]"
-                            : "text-[var(--plum)]/60 group-hover:text-[var(--plum)]"
-                          }`}
-                      >
-                        {c.label}
-                      </span>
-
-                      {craft === i && (
-                        <span
-                          key={c.label}
-                          className="mt-3 block max-w-md animate-[fadeIn_500ms_ease-out] text-sm leading-7 text-[var(--plum)]/75"
-                        >
-                          {c.item.description}
-                        </span>
-                      )}
-                    </span>
-
-                    {/* Active chapter number */}
-                    <span
-                      className={`pt-1 font-serif text-xs tracking-widest transition-colors duration-300 ${craft === i
-                          ? "text-[var(--wine)]"
-                          : "text-[var(--plum)]/30"
-                        }`}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </button>
-                </li>
-              ))}
-            </ul>
           </div>
 
-          <div className="lg:col-span-7">
-            <div className="mx-auto w-full max-w-[460px] lg:ml-auto">
+          {/* ---------- photo stack (shows right after the heading on phones) ---------- */}
+          <div className="lg:col-span-7 lg:col-start-6 lg:row-span-2 lg:row-start-1">
+            <div className="mx-auto w-full max-w-[280px] sm:max-w-[380px] lg:ml-auto lg:max-w-[460px]">
               {/* the stack */}
               <div className="relative aspect-[4/5] w-full">
                 {craftChapters.map((c, i) => {
@@ -3440,7 +3388,7 @@ export default function GalleryLightbox() {
                       }}
                       transition={{ type: "spring", stiffness: 140, damping: 18 }}
                       style={{ zIndex: total - k }}
-                      className="absolute inset-0 flex cursor-pointer flex-col bg-[#fffdf8] p-3 shadow-[0_24px_40px_-24px_rgba(25,14,19,0.6)] ring-1 ring-[var(--plum)]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--wine)] sm:p-4"
+                      className="absolute inset-0 flex cursor-pointer flex-col bg-[#fffdf8] p-2.5 shadow-[0_24px_40px_-24px_rgba(25,14,19,0.6)] ring-1 ring-[var(--plum)]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--wine)] sm:p-4"
                     >
                       {/* tape on the front print */}
                       {front && (
@@ -3455,14 +3403,14 @@ export default function GalleryLightbox() {
                           src={c.src}
                           alt={c.item.alt}
                           fill
-                          sizes="(max-width: 1024px) 90vw, 460px"
+                          sizes="(max-width: 640px) 280px, (max-width: 1024px) 380px, 460px"
                           className="pointer-events-none object-cover object-top"
                         />
                       </div>
 
                       {/* white print margin with the chapter name */}
-                      <div className="flex h-14 items-end justify-between gap-3 pt-3 sm:h-16">
-                        <p className="truncate font-serif text-lg italic leading-none text-[var(--wine)] sm:text-xl">
+                      <div className="flex h-12 items-end justify-between gap-3 pt-2.5 sm:h-16 sm:pt-3">
+                        <p className="truncate font-serif text-base italic leading-none text-[var(--wine)] sm:text-xl">
                           {c.label}
                         </p>
                         <p className="shrink-0 text-[10px] tracking-[0.25em] text-[var(--plum)]/50">
@@ -3475,7 +3423,7 @@ export default function GalleryLightbox() {
               </div>
 
               {/* controls */}
-              <div className="mt-12 flex items-center justify-between text-[var(--plum)]/70 sm:mt-14">
+              <div className="mt-10 flex items-center justify-between text-[var(--plum)]/70 sm:mt-14">
                 <button
                   onClick={() => setCraft((craft - 1 + craftChapters.length) % craftChapters.length)}
                   aria-label="Previous chapter"
@@ -3496,6 +3444,62 @@ export default function GalleryLightbox() {
                 </button>
               </div>
             </div>
+          </div>
+
+          {/* ---------- chapter list ---------- */}
+          <div className="lg:col-span-5 lg:col-start-1 lg:row-start-2">
+            <ul className="divide-y divide-[var(--plum)]/10 border-y border-[var(--plum)]/10 lg:mt-10">
+              {craftChapters.map((c, i) => (
+                <li key={c.label}>
+                  <button
+                    type="button"
+                    onClick={() => setCraft(i)}
+                    onMouseEnter={() => setCraft(i)}
+                    onFocus={() => setCraft(i)}
+                    aria-pressed={craft === i}
+                    className="group flex w-full items-start gap-3 py-4 text-left transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--wine)] sm:gap-4 sm:py-6"
+                  >
+                    {/* Animated gold indicator */}
+                    <span
+                      className={`mt-3 h-px shrink-0 transition-all duration-500 ${craft === i
+                          ? "w-8 bg-[var(--wine)] sm:w-10"
+                          : "w-3 bg-[var(--plum)]/25 group-hover:w-7 group-hover:bg-[var(--wine)] sm:w-4"
+                        }`}
+                    />
+
+                    <span className="min-w-0 flex-1">
+                      <span
+                        className={`block font-serif text-lg leading-snug transition-all duration-300 sm:text-2xl ${craft === i
+                            ? "translate-x-1 text-[var(--wine)]"
+                            : "text-[var(--plum)]/60 group-hover:text-[var(--plum)]"
+                          }`}
+                      >
+                        {c.label}
+                      </span>
+
+                      {craft === i && (
+                        <span
+                          key={c.label}
+                          className="mt-2 block max-w-md animate-[fadeIn_500ms_ease-out] text-[13px] leading-6 text-[var(--plum)]/75 sm:mt-3 sm:text-sm sm:leading-7"
+                        >
+                          {c.item.description}
+                        </span>
+                      )}
+                    </span>
+
+                    {/* Active chapter number */}
+                    <span
+                      className={`pt-1 font-serif text-xs tracking-widest transition-colors duration-300 ${craft === i
+                          ? "text-[var(--wine)]"
+                          : "text-[var(--plum)]/30"
+                        }`}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -3574,7 +3578,7 @@ export default function GalleryLightbox() {
               ["/images/dev_fashion/anisha.jpeg", "The Festive", "Colour and zari for celebrations"],
               ["/images/dev_fashion/sai.jpeg", "The Everyday", "Easy tradition, all week long"],
               ["/images/dev_fashion/deeps2.jpeg", "The Heirloom", "Pieces made to be passed down"],
-              ["/images/dev_fashion/new_clint1.jpeg", "The Heirloom", "Pieces made to be passed down"],
+              ["/images/dev_fashion/new_clint1.jpeg", "The Tradition", "Cultural elegance Woven with Grace"],
             ].map(([src, title, line], i) => (
               <motion.article
                 key={src}
@@ -3627,7 +3631,7 @@ export default function GalleryLightbox() {
 
       {/* temple design showcase for blouses */}
 
-      <section className="relative overflow-hidden bg-[#f8e9c8] text-[#3a1a10]">
+      <section className="relative mt-12 overflow-hidden bg-[#f8e9c8] text-[#3a1a10]">
         {/* shared clip path: rounded temple niche */}
         <svg width="0" height="0" className="absolute" aria-hidden focusable="false">
           <defs>
@@ -3723,11 +3727,10 @@ export default function GalleryLightbox() {
           {/* four gopuram shrines */}
           <div className="mt-14 grid grid-cols-2 gap-x-3 gap-y-12 sm:gap-x-5 lg:grid-cols-4 lg:gap-x-7">
             {[
-              // replace these paths and titles with your own looks
-              ["/images/dev_fashion/1.jpg", "The Bride", "Heirloom drapes for the big day"],
-              ["/images/dev_fashion/b11.jpg", "The Festive", "Colour and zari for celebrations"],
-              ["/images/dev_fashion/new_b1.jpeg", "The Everyday", "Easy tradition, all week long"],
-              ["/images/dev_fashion/bls_port19.jpg", "The Heirloom", "Pieces made to be passed down"],
+              ["/images/dev_fashion/1.jpg", "The Bridal Grandeur", "Intricate craftsmanship and regal embroidery for unforgettable wedding moments"],
+              ["/images/dev_fashion/b11.jpg", "The Festive Grace", "Rich teal silk, golden zari and delicate detailing for every celebration"],
+              ["/images/dev_fashion/blouse_new (46).jpg", "The Royal Craft", "Exquisite maroon tones adorned with intricate gold embroidery and traditional handwork"],
+              ["/images/dev_fashion/bls_port19.jpg", "The Peacock Legacy", "Timeless blue elegance featuring exquisite peacock-inspired embroidery and golden artistry"]
             ].map(([src, title, line], i) => (
               <motion.figure
                 key={src}
@@ -3836,11 +3839,10 @@ export default function GalleryLightbox() {
 
       {/* auto changing main  */}
 
-
-     <section className="relative mt-12 overflow-hidden bg-[#4a0d0d] text-[#fbf1df]">
+        <section className="relative mt-12 overflow-hidden bg-[#4a0d0d] text-[#fbf1df]">
         {/* ================= PART 1: auto-changing photos with offer text ================= */}
-        {/* Phone: grows with its content so nothing is clipped. Desktop (lg+): full-screen hero as before. */}
-        <div className="relative flex min-h-[100svh] flex-col overflow-hidden lg:h-[100svh] lg:min-h-[680px]">
+        {/* Phone/tablet: smaller slideshow, photos + progress bars only (no text). Desktop (lg+): full-screen hero with text. */}
+        <div className="relative flex h-[70vw] flex-col overflow-hidden sm:h-[60vw] lg:h-[100svh] lg:min-h-[680px]">
           {/* ---------- BACKGROUND: auto-changing photos ---------- */}
           {/* --bw / --gap size the progress bars: smaller on phones so all 6 always fit */}
           <div className="absolute inset-0 [--bw:2rem] [--gap:0.375rem] sm:[--bw:2.75rem] sm:[--gap:0.5rem]">
@@ -3869,21 +3871,21 @@ export default function GalleryLightbox() {
                   />
                 </motion.div>
 
-                {/* caption for the current photo (same text on phone and desktop) */}
+                {/* caption for the current photo: desktop only */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: [0, 1, 1, 0], y: [14, 0, 0, -8] }}
                   transition={{ duration: 30, times: [0, 0.0333, 0.1667, 0.2], repeat: Infinity, delay: i * 5, ease: "linear" }}
-                  className="absolute bottom-10 right-5 z-20 max-w-[15rem] text-right sm:right-8 sm:max-w-[17rem] lg:bottom-18 lg:right-14"
+                  className="absolute bottom-8 right-4 z-20 max-w-[11rem] text-right sm:bottom-10 sm:right-8 sm:max-w-[17rem] lg:bottom-18 lg:right-14"
                 >
-                  <p className="text-sm font-medium tracking-wide text-[#f3c96a]">{festival}</p>
-                  <p className="mt-0.5 font-serif text-2xl italic sm:text-3xl">{title}</p>
-                  <p className="mt-1 text-[11px] leading-snug text-[#fbf1df]/80 sm:text-xs">{line}</p>
+                  <p className="text-xs font-medium tracking-wide text-[#f3c96a] sm:text-sm">{festival}</p>
+                  <p className="mt-0.5 font-serif text-lg italic sm:text-3xl">{title}</p>
+                  <p className="mt-1 hidden text-[11px] leading-snug text-[#fbf1df]/80 sm:block sm:text-xs">{line}</p>
                 </motion.div>
 
-                {/* progress bar for this photo */}
+                {/* progress bar for this photo: sits closer to the bottom on small screens */}
                 <div
-                  className="absolute bottom-8 z-20 h-[3px] overflow-hidden rounded-full bg-[#fbf1df]/25 lg:bottom-12"
+                  className="absolute bottom-3 z-20 h-[3px] overflow-hidden rounded-full bg-[#fbf1df]/25 sm:bottom-5 lg:bottom-12"
                   style={{
                     right: `calc(1.25rem + ${5 - i} * (var(--bw) + var(--gap)))`,
                     width: "var(--bw)",
@@ -3900,8 +3902,8 @@ export default function GalleryLightbox() {
             ))}
           </div>
 
-          {/* soft shade so the white text stays readable on a phone (desktop unchanged) */}
-          {/* <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#4a0d0d]/80 via-[#4a0d0d]/30 to-[#4a0d0d]/45 lg:hidden" /> */}
+          {/* soft shade so the text stays readable on phone/tablet (desktop unchanged) */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#4a0d0d]/40 via-[#4a0d0d]/10 to-[#4a0d0d]/20 lg:hidden" />
 
           {/* ---------- diya garland ---------- */}
           <svg aria-hidden className="relative z-10 block h-12 w-full shrink-0">
@@ -3918,10 +3920,8 @@ export default function GalleryLightbox() {
             <rect width="100%" height="100%" fill="url(#dfGarland)" />
           </svg>
 
-
-          {/* ---------- TEXT ---------- */}
-          {/* bottom padding on phone/tablet keeps the text clear of the photo caption + progress bars */}
-          <div className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1320px] flex-1 items-center px-5 pb-40 pt-6 sm:px-[5%] sm:pb-36 lg:pb-0 lg:pt-0 xl:px-8">
+          {/* ---------- TEXT: eyebrow + headline on every screen; details desktop only ---------- */}
+          <div className="relative z-10 mx-auto flex min-h-0 w-full max-w-[1320px] flex-1 items-start px-5 pt-4 sm:px-[5%] sm:pt-6 lg:items-center lg:pt-0 xl:px-8">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -3929,7 +3929,7 @@ export default function GalleryLightbox() {
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="flex max-w-xl flex-col items-start text-left [text-shadow:0_2px_14px_rgba(0,0,0,0.6)] lg:[text-shadow:none]"
             >
-              {/* eyebrow: diya · label · pongal pot (same label on every screen) */}
+              {/* eyebrow: diya · label · pongal pot */}
               <div className="flex flex-wrap items-center gap-x-2 gap-y-1 sm:gap-3">
                 {/* diya */}
                 <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 motion-safe:animate-pulse sm:h-6 sm:w-6" aria-hidden>
@@ -3959,8 +3959,8 @@ export default function GalleryLightbox() {
 
               {/* headline */}
               <h2
-                className="mt-6 font-serif font-light text-white"
-                style={{ fontSize: "clamp(1.8rem, 3.6vw, 3.5rem)", lineHeight: 1.22 }}
+                className="mt-4 font-serif font-light text-white lg:mt-6"
+                style={{ fontSize: "clamp(1.6rem, 3.6vw, 3.5rem)", lineHeight: 1.22 }}
               >
                 Light the lamps,
                 <br />
@@ -3968,10 +3968,10 @@ export default function GalleryLightbox() {
               </h2>
 
               {/* short gold rule */}
-              <span aria-hidden className="mt-6 block h-px w-24 bg-gradient-to-r from-[#f3c96a] to-transparent" />
+              <span aria-hidden className="mt-6 hidden h-px w-24 lg:block bg-gradient-to-r from-[#f3c96a] to-transparent" />
 
-              {/* body copy: now shown on phones too */}
-              <div className="mt-6 max-w-md space-y-3 text-left text-sm leading-6 text-white sm:text-[15px] sm:leading-7">
+              {/* body copy */}
+              <div className="mt-6 hidden max-w-md space-y-3 text-left text-sm leading-6 text-white sm:text-[15px] sm:leading-7 lg:block">
                 <p>
                   From Deepavali evenings to Thai Pongal mornings, dress both festivals in Dev Fashion silks and stitching, now at festival prices!
                 </p>
@@ -3981,7 +3981,7 @@ export default function GalleryLightbox() {
               </div>
 
               {/* buttons */}
-              <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4 max-sm:[&>a]:px-6 max-sm:[&>a]:py-3.5">
+              <div className="mt-8 hidden flex-wrap items-center gap-3 sm:gap-4 lg:flex">
                 <Link
                   href="/gallery"
                   className="group inline-flex items-center gap-3 bg-[#f3c96a] px-8 py-4 text-sm font-semibold tracking-wide text-[#3a1a10] shadow-[0_12px_30px_-12px_rgba(243,201,106,0.7)] transition-colors hover:bg-[#fbf1df] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f3c96a]"
@@ -3998,8 +3998,8 @@ export default function GalleryLightbox() {
                 </Link>
               </div>
 
-              {/* trust strip: now shown on phones too (wraps onto extra lines) */}
-              <ul className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[10px] uppercase tracking-[0.14em] text-[#fbf1df]/70 sm:mt-9 sm:gap-x-5 sm:text-[11px] sm:tracking-[0.18em]">
+              {/* trust strip */}
+              <ul className="mt-8 hidden flex-wrap items-center gap-x-4 gap-y-2 text-[10px] uppercase tracking-[0.14em] text-[#fbf1df]/70 sm:mt-9 sm:gap-x-5 sm:text-[11px] sm:tracking-[0.18em] lg:flex">
                 <li>Hand-finished aari &amp; zari work</li>
                 <li aria-hidden className="hidden h-1 w-1 rotate-45 bg-[#f3c96a] sm:block" />
                 <li>Bridal specialists</li>
@@ -4012,7 +4012,7 @@ export default function GalleryLightbox() {
           {/* gold zari edge */}
           <div
             aria-hidden
-            className="relative z-10 h-1.5 w-full shrink-0 bg-[repeating-linear-gradient(to_right,#c9973f_0_14px,#4a0d0d_14px_20px)]"
+            className="relative z-10 mt-auto h-1.5 w-full shrink-0 bg-[repeating-linear-gradient(to_right,#c9973f_0_14px,#4a0d0d_14px_20px)]"
           />
         </div>
 
@@ -4035,7 +4035,7 @@ export default function GalleryLightbox() {
           </svg>
           <style>{`
       .df-viewport { container-type: inline-size; }
-      .df-panel { flex: none; width: 50vw; width: 50cqw; aspect-ratio: 4 / 5; }
+      .df-panel { flex: none; width: 50vw; width: 50cqw; aspect-ratio: 4 / 3; }
       @media (min-width: 640px)  { .df-panel { width: 33.3334vw; width: 33.3334cqw; aspect-ratio: 4 / 3; } }
       @media (min-width: 1024px) { .df-panel { width: 25vw; width: 25cqw; aspect-ratio: 16 / 9; } }
       @keyframes dfSlideRight { from { transform: translateX(-50%); } to { transform: translateX(0); } }
@@ -4118,7 +4118,6 @@ export default function GalleryLightbox() {
       </section>
 
 
-
         {/* ------------------------- COUPLES COLLECTION (auto changing) ------------------------- */}
         <CoupleCollection />
 
@@ -4128,30 +4127,35 @@ export default function GalleryLightbox() {
       {/* Paste inside the main <div> of GalleryLightbox and REMOVE the earlier arch sections.
     Plain scoped CSS, so it does not depend on Tailwind.
     Uses motion, Link, ArrowRight, the `reduce` variable and the WA constant, which your file already has. */}
-      <section id="signature-aari" className="aa">
+    <section id="signature-aari" className="aa mt-12">
         <style>{`
     @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap");
 
-    .aa { --ink:#2b1820; --muted:#7d6068; --gold:#B8924A; --gold-soft:rgba(184,146,74,.5); --wine:#5e0e1d; --rose:#8b2346; --ivory:#FAF7F1; --blush:#F6E4E2;
-      position: relative; overflow: hidden; background: var(--ivory); color: var(--ink); padding: 40px 18px 48px; box-sizing: border-box; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    /* COLOURS: edit the values here to re-colour the whole section.
+       Champagne blush ground, deep burgundy text and rose-gold accents: the same wine and gold family, in a light luxury tone. */
+    .aa { --bg:#f4e4e1; --bg-deep:#ecd3d0; --text:#4a0d1a; --muted:rgba(74,13,26,.68); --gold:#9a6f3a; --gold-deep:#b08550; --gold-soft:rgba(154,111,58,.42); --mount:#fffaf6; --mount-ink:#5e0e1d; --photo-bg:#e6cac6; --on-gold:#fffaf6; --wine:#5e0e1d;
+      position: relative; overflow: hidden; background: linear-gradient(160deg, #f9eeea 0%, #f2dfdb 55%, #ebd0cb 100%); color: var(--text); padding: 40px 18px 48px; box-sizing: border-box; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
     .aa *, .aa *::before, .aa *::after { box-sizing: border-box; }
     .aa::before { content: ""; position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(ellipse at 0% 0%, rgba(216,182,182,.38), transparent 52%), radial-gradient(ellipse at 100% 100%, rgba(184,146,74,.16), transparent 50%); }
+      background: radial-gradient(ellipse at 15% 0%, rgba(255,255,255,.65), transparent 55%), radial-gradient(ellipse at 90% 100%, rgba(184,146,74,.20), transparent 55%); }
+    /* fine gold hairline along the bottom */
+    .aa::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; pointer-events: none;
+      background: linear-gradient(to right, transparent, var(--gold-soft), transparent); }
     .aa-serif { font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif; }
     .aa-in { position: relative; width: 100%; max-width: 1240px; margin: 0 auto; }
 
     /* header */
     .aa-head { display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 20px; }
-    .aa-rule { display: block; width: 52px; height: 1px; background: var(--gold); }
-    .aa-head h2 { margin: 14px 0 0; font-weight: 500; font-size: clamp(2rem, 3.6vw, 3.2rem); line-height: 1.04; letter-spacing: .005em; }
-    .aa-head p { max-width: 470px; margin: 10px 0 0; font-size: 14.5px; line-height: 1.65; color: var(--muted); }
+    .aa-rule { display: block; width: 40px; height: 1px; background: var(--gold); }
+    .aa-head h2 { margin: 14px 0 0; font-weight: 400; font-size: clamp(2rem, 3.2vw, 2.9rem); line-height: 1.05; letter-spacing: .02em; color: var(--text); }
+    .aa-head p { max-width: 470px; margin: 12px 0 0; font-size: 14px; font-weight: 300; line-height: 1.65; color: var(--muted); }
     .aa-side { display: flex; align-items: flex-end; gap: 22px; }
-    .aa-side svg { width: 62px; height: 62px; flex: none; }
-    .aa a.aa-link { display: inline-flex; align-items: center; gap: 10px; padding-bottom: 3px; border-bottom: 1px solid var(--rose); color: var(--rose); font-size: 14px; font-weight: 500; text-decoration: none; }
+    .aa-side svg { width: 46px; height: 46px; flex: none; opacity: .85; }
+    .aa a.aa-link { display: inline-flex; align-items: center; gap: 10px; padding-bottom: 3px; border-bottom: 1px solid var(--gold); color: var(--gold); font-size: 13px; font-weight: 400; letter-spacing: .06em; text-decoration: none; }
     .aa a.aa-link svg { width: 16px; height: 16px; transition: transform .3s; }
     .aa a.aa-link:hover svg { transform: translateX(4px); }
-    .aa a.aa-fit { display: inline-flex; align-items: center; height: 40px; padding: 0 20px; background: var(--gold); color: #190E13; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-decoration: none; transition: background .3s, color .3s; }
-    .aa a.aa-fit:hover { background: var(--wine); color: #fff; }
+    .aa a.aa-fit { display: inline-flex; align-items: center; height: 40px; padding: 0 22px; border: 1px solid var(--wine); background: var(--wine); color: #f9eeea; font-size: 12.5px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; box-shadow: 0 14px 26px -16px rgba(94,14,29,.7); transition: background .4s, color .4s, border-color .4s; }
+    .aa a.aa-fit:hover { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
 
     /* needle and thread */
     .aa-thread { display: block; width: 100%; height: 34px; margin-top: 14px; overflow: visible; }
@@ -4159,35 +4163,37 @@ export default function GalleryLightbox() {
     /* four arched blouses */
     .aa-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 16px; margin-top: 18px; }
     .aa-item { position: relative; }
-    .aa-frame { position: relative; padding: 7px; border: 1px solid var(--gold-soft); border-radius: 999px 999px 8px 8px; background: #fff; box-shadow: 0 26px 40px -30px rgba(66,19,34,.5); transition: transform .6s cubic-bezier(.22,1,.36,1), border-color .5s; }
-    .aa-frame::before { content: ""; position: absolute; left: 50%; top: -5px; width: 9px; height: 9px; transform: translateX(-50%) rotate(45deg); background: var(--gold); }
-    .aa-item:hover .aa-frame { transform: translateY(-8px); border-color: var(--gold); }
-    .aa-img { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 999px 999px 3px 3px; background: var(--blush); }
+    .aa-frame { position: relative; padding: 6px; border: 1px solid var(--gold-soft); border-radius: 999px 999px 6px 6px; background: var(--mount); box-shadow: 0 30px 44px -26px rgba(94,14,29,.5); transition: transform .6s cubic-bezier(.22,1,.36,1), border-color .5s; }
+    .aa-frame::before { content: ""; position: absolute; left: 50%; top: -4px; width: 7px; height: 7px; transform: translateX(-50%) rotate(45deg); background: var(--gold); }
+    .aa-item:hover .aa-frame { transform: translateY(-6px); border-color: var(--gold); }
+    .aa-img { position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 999px 999px 3px 3px; background: var(--photo-bg); }
     .aa-img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 28%; transition: transform 1.2s ease-out; }
     .aa-item:hover .aa-img img { transform: scale(1.07); }
-    .aa-stitch { position: absolute; inset: 7px; border: 1px dashed rgba(255,255,255,.85); border-radius: 999px 999px 2px 2px; opacity: 0; transition: opacity .5s, inset .5s, border-color .5s; pointer-events: none; }
+    .aa-stitch { position: absolute; inset: 7px; border: 1px dashed rgba(255,255,255,.9); border-radius: 999px 999px 2px 2px; opacity: 0; transition: opacity .5s, inset .5s, border-color .5s; pointer-events: none; }
     .aa-item:hover .aa-stitch { opacity: 1; inset: 11px; border-color: var(--gold); }
 
     /* swinging hang-tag with the price */
     .aa-tagwrap { position: absolute; right: -8px; top: 44%; z-index: 3; transform-origin: 50% 0; }
     .aa-tagwrap i { display: block; width: 1px; height: 14px; margin: 0 auto; background: var(--gold); }
-    .aa-tag { display: block; position: relative; padding: 10px 11px 6px; background: var(--ivory); border: 1px solid var(--gold); border-radius: 2px 2px 6px 6px; box-shadow: 0 8px 14px -8px rgba(66,19,34,.45); font-size: 15px; font-weight: 600; line-height: 1; color: var(--wine); }
-    .aa-tag::before { content: ""; position: absolute; left: 50%; top: 3px; width: 4px; height: 4px; transform: translateX(-50%); border-radius: 50%; border: 1px solid var(--gold); background: #fff; }
+    .aa-tag { display: block; position: relative; padding: 9px 10px 5px; background: var(--mount); border: 1px solid var(--gold-soft); border-radius: 2px 2px 5px 5px; box-shadow: 0 8px 14px -8px rgba(66,19,34,.4); font-size: 13px; font-weight: 500; letter-spacing: .08em; line-height: 1; color: var(--mount-ink); }
+    .aa-tag::before { content: ""; position: absolute; left: 50%; top: 3px; width: 4px; height: 4px; transform: translateX(-50%); border-radius: 50%; border: 1px solid var(--gold-soft); background: var(--bg); }
 
     /* caption */
     .aa-cap { margin-top: 18px; text-align: center; }
-    .aa-cap h3 { margin: 0; font-weight: 600; font-size: 20px; line-height: 1.15; color: var(--wine); }
-    .aa-cap p { margin: 5px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--muted); }
-    .aa a.aa-enq { display: inline-flex; align-items: center; gap: 7px; margin-top: 9px; padding-bottom: 2px; border-bottom: 1px solid var(--gold); color: var(--rose); font-size: 13px; font-weight: 500; text-decoration: none; }
+    .aa-cap h3 { margin: 0; font-weight: 500; font-size: 20px; line-height: 1.15; letter-spacing: .02em; color: var(--text); }
+    .aa-cap p { margin: 6px 0 0; font-size: 12.5px; font-weight: 300; line-height: 1.5; color: var(--muted); }
+    .aa a.aa-enq { display: inline-flex; align-items: center; gap: 7px; margin-top: 9px; padding-bottom: 2px; border-bottom: 1px solid var(--gold-soft); color: var(--gold); font-size: 12px; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; transition: color .3s, border-color .3s; }
+    .aa a.aa-enq:hover { color: var(--text); border-color: var(--gold); }
     .aa a.aa-enq svg { width: 13px; height: 13px; transition: transform .3s; }
     .aa a.aa-enq:hover svg { transform: translateX(3px); }
     .aa a:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
 
     @media (min-width: 900px) {
-      .aa { min-height: calc(100svh - 90px); display: flex; align-items: center; padding: 28px 28px 36px; }
-      .aa-in { max-width: min(1240px, calc((100svh - 360px) * 3.55)); }
+      .aa { min-height: calc(100svh - 90px); display: flex; align-items: center; padding: 28px clamp(24px, 4vw, 64px) 40px; }
+      .aa-in { max-width: 1560px; }
       .aa-head { flex-direction: row; align-items: flex-end; }
-      .aa-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 28px; }
+      .aa-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 clamp(20px, 2.4vw, 40px); }
+      .aa-img { aspect-ratio: 5 / 6; }
       .aa-item:nth-child(even) { margin-top: 30px; }
       .aa-cap h3 { font-size: 21px; }
     }
@@ -4212,7 +4218,7 @@ export default function GalleryLightbox() {
             <div className="aa-side">
               {/* fine-line scissors, one slow snip every few seconds */}
               <svg aria-hidden viewBox="0 0 64 64" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                <g stroke="#8b2346" strokeWidth="1.8">
+                <g stroke="#9a6f3a" strokeWidth="1.6">
                   {!reduce && (
                     <animateTransform attributeName="transform" type="rotate" values="-11 32 32;-11 32 32;2 32 32;-11 32 32" keyTimes="0;0.55;0.7;1" dur="4.5s" repeatCount="indefinite" />
                   )}
@@ -4220,7 +4226,7 @@ export default function GalleryLightbox() {
                   <circle cx="16" cy="52" r="8" />
                   <path d="M22 46 L32 32" />
                 </g>
-                <g stroke="#2b1820" strokeWidth="1.8">
+                <g stroke="#4a0d1a" strokeWidth="1.6">
                   {!reduce && (
                     <animateTransform attributeName="transform" type="rotate" values="11 32 32;11 32 32;-2 32 32;11 32 32" keyTimes="0;0.55;0.7;1" dur="4.5s" repeatCount="indefinite" />
                   )}
@@ -4228,7 +4234,7 @@ export default function GalleryLightbox() {
                   <circle cx="48" cy="52" r="8" />
                   <path d="M42 46 L32 32" />
                 </g>
-                <circle cx="32" cy="32" r="2.6" fill="#B8924A" stroke="#2b1820" strokeWidth="1.4" />
+                <circle cx="32" cy="32" r="2.6" fill="#b08550" stroke="#4a0d1a" strokeWidth="1.4" />
               </svg>
               <Link href="/gallery" className="aa-link">
                 View all designs <ArrowRight />
@@ -4244,8 +4250,8 @@ export default function GalleryLightbox() {
             <motion.path
               id="aaThread"
               d="M -10 17 C 100 2, 200 32, 300 17 S 500 2, 600 17 S 800 32, 900 17 S 1100 2, 1210 17"
-              stroke="#B8924A"
-              strokeWidth="1.4"
+              stroke="#9a6f3a"
+              strokeWidth="1"
               strokeLinecap="round"
               initial={{ pathLength: reduce ? 1 : 0 }}
               whileInView={{ pathLength: 1 }}
@@ -4257,8 +4263,8 @@ export default function GalleryLightbox() {
                 <animateMotion dur="14s" repeatCount="indefinite" rotate="auto">
                   <mpath href="#aaThread" />
                 </animateMotion>
-                <line x1="-26" y1="0" x2="26" y2="0" stroke="#2b1820" strokeWidth="2" strokeLinecap="round" />
-                <ellipse cx="-20" cy="0" rx="4.5" ry="1.6" fill="#FAF7F1" stroke="#2b1820" strokeWidth="1.2" />
+                <line x1="-26" y1="0" x2="26" y2="0" stroke="#4a0d1a" strokeWidth="1.6" strokeLinecap="round" />
+                <ellipse cx="-20" cy="0" rx="4.5" ry="1.6" fill="#f4e4e1" stroke="#4a0d1a" strokeWidth="1.1" />
               </g>
             )}
           </svg>
@@ -4267,9 +4273,9 @@ export default function GalleryLightbox() {
           <div className="aa-grid">
             {[
               // EDIT HERE: photo, name, one short line, price shown on the hang-tag
-              { src: "/images/bls/main1.jpg", name: "Rose Zari Bridal", line: "Peacock zari on raw silk. Made to order.", price: "New" },
+              { src: "/images/dev_fashion/blouse_new (6).jpg", name: "Rose Zari Bridal", line: "Peacock zari on raw silk. Made to order.", price: "New" },
               { src: "/images/bls/main2.jpg", name: "Pearl Bloom", line: "Pearl and stone flowers. Only 5 pieces.", price: "New" },
-              { src: "/images/bls/main3.jpg", name: "Heirloom Gold Maggam", line: "Pure zari and antique beads. Made to order.", price: "New" },
+              { src: "/images/dev_fashion/blouse_new (132).jpg", name: "Heirloom Gold Maggam", line: "Pure zari and antique beads. Made to order.", price: "New" },
               { src: "/images/bls/main4.jpg", name: "Emerald Tassel", line: "Beaded tassels on deep emerald silk.", price: "New" },
             ].map((p, i) => (
               <motion.article
@@ -4313,8 +4319,6 @@ export default function GalleryLightbox() {
           </div>
         </div>
       </section>
-
-
 
 
 

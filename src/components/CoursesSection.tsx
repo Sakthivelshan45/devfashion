@@ -183,20 +183,21 @@ export default function CoursesSection() {
               </div>
 
               {/* admissions card */}
-              <div className="absolute right-[1%] top-[8%]" style={layer(44)}>
-                <div className="rounded-2xl bg-white/95 px-5 py-4 shadow-[0_28px_44px_-18px_rgba(42,27,16,.5)] ring-1 ring-[#C8A96A]/60">
-                  <p className="flex items-center gap-2 text-sm font-semibold text-[#B8324A]">
-                    <span className="relative flex h-2 w-2">
+             {/* admissions card */}
+              <div className="absolute right-0 top-[3%] sm:right-[1%] sm:top-[8%]" style={layer(44)}>
+                <div className="rounded-lg bg-white/95 px-2.5 py-1.5 shadow-[0_14px_24px_-12px_rgba(42,27,16,.5)] ring-1 ring-[#C8A96A]/60 sm:rounded-2xl sm:px-5 sm:py-4 sm:shadow-[0_28px_44px_-18px_rgba(42,27,16,.5)]">
+                  <p className="flex items-center gap-1.5 text-[10px] font-semibold text-[#B8324A] sm:gap-2 sm:text-sm">
+                    <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
                       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#B8324A] opacity-60" />
-                      <span className="relative inline-flex h-2 w-2 rounded-full bg-[#B8324A]" />
+                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#B8324A] sm:h-2 sm:w-2" />
                     </span>
                     Admissions open
                   </p>
-                  <p className="mt-1 text-[1.6rem] leading-none" style={serif}>
+                  <p className="mt-0.5 text-[1.05rem] leading-none sm:mt-1 sm:text-[1.6rem]" style={serif}>
                     Limited seats
                   </p>
-                  <p className="mt-2 flex items-center gap-1.5 text-xs text-[#2A1B10]/65">
-                    <MapPin className="h-3 w-3 text-[#B8324A]" aria-hidden />
+                  <p className="mt-1 flex items-center gap-1 text-[9px] text-[#2A1B10]/65 sm:mt-2 sm:gap-1.5 sm:text-xs">
+                    <MapPin className="h-2.5 w-2.5 text-[#B8324A] sm:h-3 sm:w-3" aria-hidden />
                     Gandhipuram, Coimbatore
                   </p>
                 </div>
@@ -221,8 +222,8 @@ export default function CoursesSection() {
               <span className="h-px w-8 bg-gradient-to-l from-[#C8A96A] to-transparent" />
             </div>
 
-            <p className="mt-6 max-w-[32rem] text-base leading-relaxed text-[#2A1B10]/75">
-              We are proud to introduce our Professional Tailoring, Fashion Designing & Aari Embroidery Course,
+            <p className="mt-6 max-w-[32rem] text-base leading-relaxed text-[#2A1B10]/75 text-justify">
+             &nbsp;&nbsp;&nbsp; We are proud to introduce our Professional Tailoring, Fashion Designing & Aari Embroidery Course,
               designed for those who want to turn their passion for fashion into a valuable skill.
               Begin with the fundamentals and grow step by step into
               advanced techniques.

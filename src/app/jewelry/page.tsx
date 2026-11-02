@@ -330,7 +330,7 @@ export default function JewelryPage() {
           ========================================== */}
       <section className="relative py-24 sm:py-40 border-b border-gold-100 text-center bg-cover bg-center bg-no-repeat sm:bg-fixed"
         style={{
-          backgroundImage: "url('/images/jewelry/group11.png')",
+          backgroundImage: "url('/images/dev_fashion/group11.png')",
         }}>
 
 

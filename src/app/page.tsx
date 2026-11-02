@@ -111,7 +111,7 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="absolute -top-4 right-4 sm:right-10 z-10"
+                  className="absolute -top-3 right-2 sm:-top-4 sm:right-10 z-10"
                 >
                   <motion.div
                     animate={{ rotate: [4, -4, 4] }}
@@ -119,15 +119,15 @@ export default function HomePage() {
                     style={{ transformOrigin: "50% 0%" }}
                     className="flex flex-col items-center"
                   >
-                    <span className="w-px h-8 bg-stone-900" />
-                    <div className="relative w-36 sm:w-44 bg-white border border-stone-900 px-4 pt-6 pb-4 shadow-lg text-center">
-                      <span className="absolute top-2 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full border border-stone-900 bg-white" />
-                      <p className="font-serif italic text-[13px] sm:text-sm leading-snug text-stone-800">
+                    <span className="w-px h-5 sm:h-8 bg-stone-900" />
+                    <div className="relative w-28 sm:w-44 bg-white border border-stone-900 px-2.5 pt-4 pb-2.5 sm:px-4 sm:pt-6 sm:pb-4 shadow-md sm:shadow-lg text-center">
+                      <span className="absolute top-1.5 sm:top-2 left-1/2 -translate-x-1/2 w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full border border-stone-900 bg-white" />
+                      <p className="font-serif italic text-[10px] leading-snug sm:text-sm text-stone-800">
                         Every woman deserves to wear something that feels uniquely
                         and beautifully hers.
                       </p>
-                      <span className="block mt-3 pt-3 border-t border-dashed border-gold-500 text-xs text-gold-700 font-semibold">
-                        Made to measure
+                      <span className="block mt-2 pt-2 sm:mt-3 sm:pt-3 border-t border-dashed border-gold-500 text-[9px] sm:text-xs text-gold-700 font-semibold">
+                        Designed Around You
                       </span>
                     </div>
                   </motion.div>
@@ -207,7 +207,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Lookbook ─── */}
+      {/* ─── 3. 4 blouse Lookbook ─── */}
       <section className="relative overflow-hidden bg-[white] px-4 py-14 text-[#3b1d0e] sm:px-[6%] sm:py-20">
         <div
           aria-hidden
@@ -255,7 +255,7 @@ export default function HomePage() {
           <div className="mt-12 flex flex-col gap-2 lg:h-[560px] lg:flex-row lg:gap-3">
             {[
               // replace these paths and titles with your own looks
-              ["/images/dev_fashion/aari5.jpg", "The Bride", "Heirloom drapes for the big day"],
+              ["/images/dev_fashion/aari8.jpg", "The Bride", "Heirloom drapes for the big day"],
               ["/images/dev_fashion/bls_port5.jpg", "The Everyday", "Easy tradition, all week long"],
               ["/images/dev_fashion/lan_bls25.jpg", "The Heirloom", "Pieces made to be passed down"],
               ["/images/dev_fashion/aari6.jpg", "The Festive", "Colour and zari for celebrations"],
