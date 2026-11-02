@@ -346,9 +346,9 @@ export default function ReviewsPage() {
       {/* ================= Page heading (with background image) ================= */}
 
 
-        <section className="relative py-24 sm:py-50 border-b border-gold-100 text-center bg-cover bg-center bg-no-repeat sm:bg-fixed"
+        <section className="relative py-24 sm:py-40 border-b border-gold-100 text-center bg-cover bg-center bg-no-repeat sm:bg-fixed"
         style={{
-          backgroundImage: "url('/images/dev_fashion/abt.png')",
+          backgroundImage: "url('/images/dev_fashion/reviews.jpg')",
         }}>
 
 

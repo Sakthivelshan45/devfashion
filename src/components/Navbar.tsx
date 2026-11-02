@@ -83,7 +83,7 @@ export default function Navbar() {
                   DEV FASHION
                 </span>
                 <span className="text-[8px] sm:text-[9px] tracking-[0.2em] text-gold-600 uppercase font-semibold mt-1">
-                  Bridal Blouse Designer • Coimbatore
+                  Bridal Blouse Designer 
                 </span>
               </div>
             </Link>

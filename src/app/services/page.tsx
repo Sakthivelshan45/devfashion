@@ -678,7 +678,7 @@ export default function ServicesPage() {
                 <Tilt3D glare className="h-full w-full border border-[#E5D9C5] p-3 bg-white shadow-xl">
                   <div className="relative h-full w-full overflow-hidden">
                     <Image
-                      src="/images/dev_fashion/deeps2.jpeg"
+                      src="/images/dev_fashion/durga_mesherment.png"
                       alt="Garment Fitting and Alteration Services Studio"
                       fill
                       className="object-cover"

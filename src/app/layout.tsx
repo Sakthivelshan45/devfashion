@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dev Fashion | South Indian Bridal Couture & Boutique Atelier",
     description: "South Indian bridal blouse designing, Aari embroidery, custom stitching & jewellery rentals in Coimbatore.",
-    url: "https://devfashion.com",
+    url: "https://devfashion.in",
     siteName: "Dev Fashion",
     locale: "en_US",
     type: "website",
