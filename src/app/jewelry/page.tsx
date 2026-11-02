@@ -328,7 +328,7 @@ export default function JewelryPage() {
           SECTION 1: CINEMATIC HERO (FULL-SCREEN CINEMATIC)
           "Jewellery for the woman who leads."
           ========================================== */}
-      <section className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-no-repeat sm:bg-fixed"
+      <section className="relative py-24 sm:py-40 border-b border-gold-100 text-center bg-cover bg-center bg-no-repeat sm:bg-fixed"
         style={{
           backgroundImage: "url('/images/jewelry/group11.png')",
         }}>
