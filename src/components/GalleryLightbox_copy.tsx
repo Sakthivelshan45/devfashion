@@ -2935,6 +2935,9 @@ const COUPLE_PHOTOS = [
   "/images/dev_fashion/cpl4.jpg",
   "/images/dev_fashion/cpl5.jpg",
   "/images/dev_fashion/cpl6.jpg",
+  "/images/dev_fashion/blouse_new (175).jpg",
+  "/images/dev_fashion/blouse_new (253).jpg",
+  "/images/dev_fashion/blouse_new (235).jpg",
 ];
 
 const COUPLE_INTERVAL = 5000; // ms between changes
