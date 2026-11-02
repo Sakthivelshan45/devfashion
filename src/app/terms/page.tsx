@@ -9,9 +9,18 @@ export const metadata = {
 export default function TermsPage() {
   return (
     <div className="w-full bg-white pt-24 min-h-screen">
-      {/* Header */}
-      <section className="bg-gold-50/50 py-12 sm:py-16 border-b border-gold-100 text-center">
-        <div className="boutique-container">
+
+      <section  className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-fixed bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/dev_fashion/terms_conditions.jpg')",
+        }}>
+
+
+        {/* Dark/white overlay */}
+        <div className="absolute inset-0 bg-black/65" />
+
+        {/* Content */}
+       <div className="boutique-container">
           <span className="text-[10px] font-semibold tracking-widest text-gold-600 uppercase block mb-2">
             ✦ Studio Guidelines
           </span>
@@ -21,6 +30,9 @@ export default function TermsPage() {
           <div className="h-[1.5px] w-16 bg-gold-500 mx-auto" />
         </div>
       </section>
+
+
+  
 
       {/* Main content */}
       <section className="py-16 boutique-container max-w-5xl text-stone-700 text-sm leading-relaxed space-y-8">
@@ -78,7 +90,7 @@ export default function TermsPage() {
             Design layout diagrams and embroidery sketches sent via email or WhatsApp must be reviewed and approved by the client before cutting. Once a design is approved and fabric cutting has commenced, cancelations or refunds cannot be processed.
           </p>
           <p className="mt-4">
-            If you need to discuss a design modification, please contact our helpline immediately at <a href="tel:+919025751328" className="text-gold-650 hover:underline">+91 98765 43210</a>.
+            If you need to discuss a design modification, please contact our helpline immediately at <a href="tel:+918098558923" className="text-gold-650 hover:underline">+91 80985 589236</a>.
           </p>
         </div>
 
