@@ -299,7 +299,7 @@ export default function ServicesPage() {
         ref={heroRef}
         className="relative py-16 sm:py-38 border-b border-gold-100 text-center bg-cover bg-center bg-no-repeat sm:bg-fixed overflow-hidden"
         style={{
-          backgroundImage: "url('/images/dev_fashion/service.png')",
+          backgroundImage: "url('/images/dev_fashion/service1.png')",
         }}
       >
 
