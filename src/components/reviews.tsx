@@ -31,8 +31,6 @@ const GOOGLE_REVIEWS_URL =
 const GOOGLE_WRITE_URL = "";
 
 /* Background image of the page heading */
-const HEADER_IMAGE = "/images/dev_fashion/abt.png";
-
 /* ================================================================== */
 /*  2. YOUR REVIEWS (all names and reviews are placeholders)           */
 /*                                                                     */

@@ -1,0 +1,195 @@
+<!doctype html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"color-ground","type":"color","label":"Ground","default":"#FAF8F5"},
+    {"id":"color-ink","type":"color","label":"Ink","default":"#141312"},
+    {"id":"color-gold","type":"color","label":"Gold","default":"#B38E46"},
+    {"id":"font-display","type":"string","label":"Display font","default":"Cormorant Garamond"},
+    {"id":"font-body","type":"string","label":"Body font","default":"Manrope"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Dev Fashion — Bridal Couture</title>
+    <script src="assets/js/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Cormorant Garamond";
+        src: url("assets/fonts/cormorant-garamond-latin-variable.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400 600;
+        font-display: block;
+      }
+
+      @font-face {
+        font-family: "Cormorant Garamond";
+        src: url("assets/fonts/cormorant-garamond-italic-latin-variable.woff2") format("woff2");
+        font-style: italic;
+        font-weight: 400 600;
+        font-display: block;
+      }
+
+      @font-face {
+        font-family: "Manrope";
+        src: url("assets/fonts/manrope-latin-variable.woff2") format("woff2");
+        font-style: normal;
+        font-weight: 400 600;
+        font-display: block;
+      }
+
+      :root {
+        --color-dark: #0C0C0B;
+        --color-paper: #FAF8F5;
+        --color-gold-soft: #D4C3A3;
+        --color-gold-deep: #665022;
+        --font-display: "Cormorant Garamond";
+        --font-body: "Manrope";
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        margin: 0;
+        overflow: hidden;
+        background: var(--color-ground);
+        color: var(--color-ink);
+      }
+
+      body {
+        font-family: var(--font-body), Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: var(--color-ground);
+      }
+
+      .clip {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-onjd"
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="21"
+      data-width="1080"
+      data-height="1920"
+      data-fps="30"
+    >
+      <div data-hf-id="hf-uk04"
+        id="scene-detail"
+        class="clip"
+        data-composition-id="scene-detail"
+        data-composition-src="compositions/scene-detail.html"
+        data-start="0"
+        data-duration="4.35"
+        data-track-index="1"
+        data-track-kind="graphics"
+        data-width="1080"
+        data-height="1920"
+        style="inset: 0; z-index: 1"
+      ></div>
+      <div data-hf-id="hf-iay9"
+        id="scene-atelier"
+        class="clip"
+        data-composition-id="scene-atelier"
+        data-composition-src="compositions/scene-atelier.html"
+        data-start="4"
+        data-duration="4.95"
+        data-track-index="2"
+        data-track-kind="graphics"
+        data-width="1080"
+        data-height="1920"
+        style="inset: 0; z-index: 2"
+      ></div>
+      <div data-hf-id="hf-lglh"
+        id="scene-lookbook"
+        class="clip"
+        data-composition-id="scene-lookbook"
+        data-composition-src="compositions/scene-lookbook.html"
+        data-start="8.74"
+        data-duration="4.81"
+        data-track-index="3"
+        data-track-kind="graphics"
+        data-width="1080"
+        data-height="1920"
+        style="inset: 0; z-index: 3"
+      ></div>
+      <div data-hf-id="hf-03es"
+        id="scene-craft"
+        class="clip"
+        data-composition-id="scene-craft"
+        data-composition-src="compositions/scene-craft.html"
+        data-start="13.11"
+        data-duration="4.74"
+        data-track-index="4"
+        data-track-kind="graphics"
+        data-width="1080"
+        data-height="1920"
+        style="inset: 0; z-index: 4"
+      ></div>
+      <div data-hf-id="hf-ovmz"
+        id="scene-signature"
+        class="clip"
+        data-composition-id="scene-signature"
+        data-composition-src="compositions/scene-signature.html"
+        data-start="17.47"
+        data-duration="3.53"
+        data-track-index="5"
+        data-track-kind="graphics"
+        data-width="1080"
+        data-height="1920"
+        style="inset: 0; z-index: 5"
+      ></div>
+
+      <audio data-hf-id="hf-o6hn"
+        id="music"
+        class="clip"
+        data-start="0"
+        data-duration="21"
+        data-track-index="10"
+        data-volume="0.3"
+        data-fade-in="1"
+        data-fade-out="1.5"
+        src="assets/music/happy-beats-business-moves-vol-12-by-ende-dot-app.mp3"
+      ></audio>
+      <audio data-hf-id="hf-wlfj"
+        id="look-reveal"
+        class="clip"
+        data-start="8.74"
+        data-duration="0.19"
+        data-track-index="11"
+        data-volume="0.3"
+        src="assets/sfx/impact/impactSoft_medium_001.ogg"
+      ></audio>
+      <audio data-hf-id="hf-y9dk"
+        id="brand-reveal"
+        class="clip"
+        data-start="17.47"
+        data-duration="0.66"
+        data-track-index="12"
+        data-volume="0.22"
+        src="assets/sfx/impact/impactBell_heavy_003.ogg"
+      ></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

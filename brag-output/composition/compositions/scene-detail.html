@@ -1,0 +1,80 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--color-dark);
+    }
+
+    #s1-photo {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 72%;
+      object-fit: cover;
+      object-position: center 42%;
+    }
+
+    #s1-panel {
+      top: 68%;
+      left: 0;
+      width: 100%;
+      height: 32%;
+      background: var(--color-dark);
+    }
+
+    #s1-rule {
+      top: 1334px;
+      left: 92px;
+      width: 76px;
+      height: 3px;
+      background: var(--color-gold);
+      transform-origin: left center;
+    }
+
+    #s1-copy {
+      top: 1390px;
+      left: 88px;
+      width: 900px;
+      color: var(--color-paper);
+    }
+
+    #s1-kicker {
+      margin: 0 0 24px;
+      color: var(--color-gold-soft);
+      font: 600 26px/1.35 var(--font-body), Arial, sans-serif;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    #s1-title {
+      margin: 0;
+      font: 400 76px/1.02 var(--font-display), Georgia, serif;
+      letter-spacing: -0.025em;
+    }
+
+    #s1-title em {
+      display: block;
+      margin-top: 8px;
+      color: var(--color-gold-soft);
+      font-weight: 400;
+    }
+  </style>
+  <div data-hf-id="hf-e7kt" id="root" data-composition-id="scene-detail" data-width="1080" data-height="1920">
+    <img data-hf-id="hf-25yf" id="s1-photo" class="clip" data-start="0" data-duration="4.35" data-hold src="assets/images/1.jpg" alt="" />
+    <div data-hf-id="hf-x89o" id="s1-panel"></div>
+    <div data-hf-id="hf-nkvl" id="s1-rule" class="clip" data-start="0.25" data-duration="3.75"></div>
+    <div data-hf-id="hf-w9mo" id="s1-copy" class="clip" data-start="0.3" data-duration="3.8">
+      <p data-hf-id="hf-p1ax" id="s1-kicker">South Indian Bridal Couture</p>
+      <h1 data-hf-id="hf-g8e6" id="s1-title">Crafting Elegance,<em data-hf-id="hf-g100">Designed for You</em></h1>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#s1-photo", { scale: 1.035 }, { scale: 1, duration: 1.2, ease: "power3.out" }, 0);
+    tl.fromTo("#s1-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.55, ease: "power3.out" }, 0.25);
+    tl.fromTo("#s1-copy", { opacity: 0, filter: "blur(8px)", x: 18 }, { opacity: 1, filter: "blur(0px)", x: 0, duration: 0.75, ease: "power3.out" }, 0.48);
+    window.__timelines["scene-detail"] = tl;
+  </script>
+</template>

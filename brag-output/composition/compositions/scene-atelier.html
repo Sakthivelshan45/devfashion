@@ -1,0 +1,84 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--color-dark);
+    }
+
+    #s2-photo {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 69%;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+
+    #s2-panel {
+      top: 65%;
+      left: 0;
+      width: 100%;
+      height: 35%;
+      background: var(--color-dark);
+    }
+
+    #s2-copy {
+      top: 1270px;
+      left: 76px;
+      width: 930px;
+      text-align: center;
+      color: var(--color-paper);
+    }
+
+    #s2-kicker {
+      margin: 0 0 22px;
+      color: var(--color-gold-soft);
+      font: 600 26px/1.35 var(--font-body), Arial, sans-serif;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    #s2-title {
+      margin: 0;
+      font: 400 74px/1.04 var(--font-display), Georgia, serif;
+      letter-spacing: -0.02em;
+    }
+
+    #s2-location {
+      margin: 24px 0 0;
+      color: var(--color-gold-soft);
+      font: 500 26px/1.3 var(--font-body), Arial, sans-serif;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    #s2-rule {
+      top: 1224px;
+      left: 501px;
+      width: 78px;
+      height: 3px;
+      background: var(--color-gold);
+      transform-origin: left center;
+    }
+  </style>
+  <div data-hf-id="hf-ongw" id="root" data-composition-id="scene-atelier" data-width="1080" data-height="1920">
+    <img data-hf-id="hf-xj2f" id="s2-photo" class="clip" data-start="0" data-duration="4.95" data-hold src="assets/images/b14.jpg" alt="" />
+    <div data-hf-id="hf-26cn" id="s2-panel"></div>
+    <div data-hf-id="hf-qbvi" id="s2-rule" class="clip" data-start="0.25" data-duration="4.25"></div>
+    <div data-hf-id="hf-swz6" id="s2-copy" class="clip" data-start="0.3" data-duration="4.4">
+      <p data-hf-id="hf-wfoq" id="s2-kicker">Dev Fashion</p>
+      <h2 data-hf-id="hf-aj01" id="s2-title">South Indian<br data-hf-id="hf-x5px" />Bridal Blouse Designer</h2>
+      <p data-hf-id="hf-a6l8" id="s2-location">Coimbatore</p>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#root", { opacity: 0 }, { opacity: 1, duration: 0.38, ease: "power2.inOut" }, 0);
+    tl.fromTo("#s2-photo", { opacity: 0, scale: 1.035 }, { opacity: 1, scale: 1, duration: 1.15, ease: "power3.out" }, 0.05);
+    tl.fromTo("#s2-copy", { opacity: 0, x: -24, filter: "blur(8px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.72, ease: "power3.out" }, 0.35);
+    tl.fromTo("#s2-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.out" }, 0.58);
+    window.__timelines["scene-atelier"] = tl;
+  </script>
+</template>

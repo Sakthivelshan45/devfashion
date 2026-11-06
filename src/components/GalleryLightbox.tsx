@@ -2086,6 +2086,15 @@ const categoryDefaults: Record<Category, { title: string; description: string }>
 // [file, category (or a list of categories), optional title, optional description]
 const rawItems: [string, Category | Category[], string?, string?][] = [
 
+  ["nivi_diwali_edit.jpeg", "Bridal Collection"],
+  ["diwali_edit1.jpeg", "Custom Designs"],
+  ["diwali_edit2.jpeg", "Custom Designs"],
+  ["nivi_diwali1.jpeg", "Custom Designs"],
+  ["nivi_diwali2.jpeg", "Custom Designs"],
+  ["nivi_diwali3.jpeg", "Custom Designs"],
+  ["nivi_diwali4.jpeg", "Custom Designs"],
+  ["nivi_diwali5.jpeg", "Custom Designs"],
+  ["new_kiddo.jpeg", "Traditional Wear"],
 
 
   ["blouse_new (1).jpg", "Bridal Collection"],
@@ -2912,12 +2921,16 @@ export default function GalleryLightbox({ stickyTop = 0 }: { stickyTop?: number 
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
+      const savedItems = raw ? JSON.parse(raw) : null;
+      const noteValue = localStorage.getItem(NOTE_KEY) ?? "";
+      const nameValue = localStorage.getItem(NAME_KEY) ?? "";
+      queueMicrotask(() => {
       if (raw) {
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed)) setSaved(parsed.filter((s) => typeof s === "string"));
+        if (Array.isArray(savedItems)) setSaved(savedItems.filter((s) => typeof s === "string"));
       }
-      setNote(localStorage.getItem(NOTE_KEY) ?? "");
-      setCustName(localStorage.getItem(NAME_KEY) ?? "");
+      setNote(noteValue);
+      setCustName(nameValue);
+      });
     } catch {}
     storageReady.current = true;
   }, []);
@@ -2939,8 +2952,10 @@ export default function GalleryLightbox({ stickyTop = 0 }: { stickyTop?: number 
       const file = galleryItems.some((i) => i.file === raw) ? raw : decodeLook(raw);
       const idx = galleryItems.findIndex((i) => i.file === file);
       if (idx >= 0) {
-        setDirection(1);
-        setActive(idx);
+        queueMicrotask(() => {
+          setDirection(1);
+          setActive(idx);
+        });
       }
     }
     hashChecked.current = true;
@@ -2957,7 +2972,7 @@ export default function GalleryLightbox({ stickyTop = 0 }: { stickyTop?: number 
   }, []);
 
   useEffect(() => {
-    if (sheetOpen && saved.length === 0) setSheetOpen(false);
+    if (sheetOpen && saved.length === 0) queueMicrotask(() => setSheetOpen(false));
   }, [sheetOpen, saved.length]);
 
   /* ---- search + filter ---- */
@@ -3018,7 +3033,7 @@ export default function GalleryLightbox({ stickyTop = 0 }: { stickyTop?: number 
   }, [current]);
 
   useEffect(() => {
-    setZoomed(false);
+    queueMicrotask(() => setZoomed(false));
   }, [current?.id]);
 
   /* ---- helpers ---- */

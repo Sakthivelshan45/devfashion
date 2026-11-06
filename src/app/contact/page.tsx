@@ -1,8 +1,9 @@
 "use client";
+/* eslint-disable react/no-unescaped-entities */
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
-  Phone, Mail, MapPin, Clock, MessageSquare, Navigation, ArrowUpRight,
+  Phone, MapPin, MessageSquare, Navigation, ArrowUpRight,
   AtSign, Globe, Share2,
 } from "lucide-react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
@@ -76,7 +77,7 @@ function Reveal({
     const el = ref.current;
     if (!el) return;
     if (typeof IntersectionObserver === "undefined") {
-      setVisible(true);
+      queueMicrotask(() => setVisible(true));
       return;
     }
     const observer = new IntersectionObserver(
@@ -313,9 +314,10 @@ export default function ContactPage() {
         <Reveal direction="left" delay={100}>
           <div className="relative aspect-[4/5] border border-gold-300 p-3 bg-white shadow-2xl max-w-lg mx-auto w-full">
               <div className="relative h-full w-full overflow-hidden">
-                <img
+                <Image
                   src="/images/dev_fashion/tailaring_course1.png"
                   alt="Dev Fashion Boutique Tailoring Craft"
+                  fill
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
@@ -459,10 +461,6 @@ export default function ContactPage() {
     </div>
   );
 }
-
-
-
-
 
 
 

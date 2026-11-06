@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import type { LucideIcon } from "lucide-react";
 import {
   Scissors,
   Sparkles,
@@ -18,12 +18,10 @@ import {
   Clock,
   MapPin,
   X,
-  ChevronRight,
   GraduationCap,
   Eye,
   Check,
   Zap,
-  Sparkle
 } from "lucide-react";
 import BookingForm from "@/components/BookingForm";
 
@@ -33,7 +31,7 @@ interface Course {
   subtitle: string;
   description: string;
   image: string;
-  icon: any;
+  icon: LucideIcon;
   tag: string;
   duration: string;
   level: string;

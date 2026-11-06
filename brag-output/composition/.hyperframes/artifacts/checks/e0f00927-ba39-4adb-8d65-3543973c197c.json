@@ -1,0 +1,285 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 6
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"look-reveal\" is 0.19s but its slot (data-duration) is 0.50s — the slot is shortened to the media length when rendered. Set data-duration to ~0.19s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "21",
+          "data-width": "1920",
+          "data-height": "1080",
+          "data-fps": "30"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      },
+      {
+        "code": "clip_media_fit",
+        "severity": "warning",
+        "message": "Audio \"brand-reveal\" is 0.66s but its slot (data-duration) is 0.80s — the slot is shortened to the media length when rendered. Set data-duration to ~0.66s if that isn't intended.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "21",
+          "data-width": "1920",
+          "data-height": "1080",
+          "data-fps": "30"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0
+      }
+    ]
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 21,
+    "samples": [
+      1.167,
+      3.5,
+      5.833,
+      8.167,
+      10.5,
+      12.833,
+      15.167,
+      17.5,
+      19.833
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.167,
+      5.833,
+      10.5,
+      15.167,
+      19.833
+    ],
+    "checked": 14,
+    "passed": 14
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 4,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.13 s (5.25–8.38 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 5.25,
+        "seconds": 3.125,
+        "floorSeconds": 3,
+        "until": 8.375
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.13 s (10.00–13.13 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 10,
+        "seconds": 3.125,
+        "floorSeconds": 3,
+        "until": 13.125
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.13 s (14.25–17.38 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 14.25,
+        "seconds": 3.125,
+        "floorSeconds": 3,
+        "until": 17.375
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 168
+  },
+  "audio": {
+    "ok": false,
+    "errorCount": 3,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/music/happy-beats-business-moves-vol-12-by-ende-dot-app.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#music",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "timeRange": [
+          0,
+          21
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/impact/impactSoft_medium_001.ogg cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#look-reveal",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 8.74,
+        "timeRange": [
+          8.74,
+          9.24
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/impact/impactBell_heavy_003.ogg cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#brand-reveal",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 17.47,
+        "timeRange": [
+          17.47,
+          18.27
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": true,
+    "files": [
+      ".hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-00-at-1.2s.png",
+      ".hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-01-at-5.8s.png",
+      ".hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-02-at-10.5s.png",
+      ".hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-03-at-15.2s.png",
+      ".hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-04-at-19.8s.png"
+    ],
+    "times": [
+      1.167,
+      5.833,
+      10.5,
+      15.167,
+      19.833
+    ],
+    "findingFiles": []
+  }
+}

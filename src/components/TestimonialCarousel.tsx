@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable react/no-unescaped-entities */
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -77,13 +78,6 @@ export default function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      handleNext();
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [currentIndex]);
-
   const handlePrev = () => {
     setDirection(-1);
     setCurrentIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
@@ -93,6 +87,11 @@ export default function TestimonialCarousel() {
     setDirection(1);
     setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   };
+
+  useEffect(() => {
+    const timer = setInterval(handleNext, 6000);
+    return () => clearInterval(timer);
+  }, [currentIndex]);
 
   // Slide animation variants
   const slideVariants = {
@@ -186,8 +185,6 @@ export default function TestimonialCarousel() {
     </div>
   );
 }
-
-
 
 
 

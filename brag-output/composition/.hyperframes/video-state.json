@@ -1,0 +1,820 @@
+{
+  "version": 1,
+  "historyId": "a3f538d3-251a-4b00-84df-c3bf9a98fa82",
+  "currentRevision": "41be4a4e-565b-4123-8aa4-3a98a4781825",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "26e43c63a41e1ba38ba287bea1af2795c55ba2e3787d3a635c062c3a8a9818f4",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\26\\26e43c63a41e1ba38ba287bea1af2795c55ba2e3787d3a635c062c3a8a9818f4"
+    },
+    "CLAUDE.md": {
+      "hash": "26e43c63a41e1ba38ba287bea1af2795c55ba2e3787d3a635c062c3a8a9818f4",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\26\\26e43c63a41e1ba38ba287bea1af2795c55ba2e3787d3a635c062c3a8a9818f4"
+    },
+    "assets/fonts/cormorant-garamond-italic-latin-variable.woff2": {
+      "hash": "6f2f5c3b1abc3d0bb035a927f66a90ca873f94fc31c4966c8d024142c2036e55",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\6f\\6f2f5c3b1abc3d0bb035a927f66a90ca873f94fc31c4966c8d024142c2036e55"
+    },
+    "assets/fonts/cormorant-garamond-latin-variable.woff2": {
+      "hash": "d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\d8\\d80df8ff5aecd299a61549f9e29ab1ed0b9b05f4ea71d50fe978e07d5240b235"
+    },
+    "assets/fonts/manrope-latin-variable.woff2": {
+      "hash": "8c2def024c1bf31aacf3624ae3c4d701269b4ec3dc765c04830839f0d36b2d9e",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8c\\8c2def024c1bf31aacf3624ae3c4d701269b4ec3dc765c04830839f0d36b2d9e"
+    },
+    "assets/images/1.jpg": {
+      "hash": "8ab18f8259315823bb74cb9f401f7064b8097be8069bab1ff21d45f88a72b2fe",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8a\\8ab18f8259315823bb74cb9f401f7064b8097be8069bab1ff21d45f88a72b2fe"
+    },
+    "assets/images/b3.jpg": {
+      "hash": "8f87ead7b7f5ede6e0a2da3a9af4fed785d9432014774ffd11a06252b3a07279",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8f\\8f87ead7b7f5ede6e0a2da3a9af4fed785d9432014774ffd11a06252b3a07279"
+    },
+    "assets/images/logo.jpg": {
+      "hash": "ca518d72dc0d9f817f9744defef6e8897582089ee4f67a34733dd8a78a652b75",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\ca\\ca518d72dc0d9f817f9744defef6e8897582089ee4f67a34733dd8a78a652b75"
+    },
+    "assets/js/gsap.min.js": {
+      "hash": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\92\\92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
+    },
+    "assets/sfx/impact/impactBell_heavy_003.ogg": {
+      "hash": "5572ccdeb3b62373b86fa955355b3a222c36e815f0636ba16165189a21cf2514",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\55\\5572ccdeb3b62373b86fa955355b3a222c36e815f0636ba16165189a21cf2514"
+    },
+    "assets/sfx/impact/impactSoft_medium_001.ogg": {
+      "hash": "7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\76\\7642a4fd43e547afe4f7adfadb3dabb681c0ff512f52c1674bae30a726841faf"
+    },
+    "compositions/scene-atelier.html": {
+      "hash": "68abdf3fe52a120560410697bcb34b7a18ed8fde97683ad0b717c3e3dc6307ec",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\68\\68abdf3fe52a120560410697bcb34b7a18ed8fde97683ad0b717c3e3dc6307ec"
+    },
+    "compositions/scene-craft.html": {
+      "hash": "764a386864cf21145280c84d37c44c6402f828bbac00cba8c517491e24bce1f3",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\76\\764a386864cf21145280c84d37c44c6402f828bbac00cba8c517491e24bce1f3"
+    },
+    "compositions/scene-detail.html": {
+      "hash": "25219411788ef6b483b01b1866cec737fbd1ba587ede55812d91e69cbbba690f",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\25\\25219411788ef6b483b01b1866cec737fbd1ba587ede55812d91e69cbbba690f"
+    },
+    "compositions/scene-lookbook.html": {
+      "hash": "c7b723e789844b9d8e56f73165d2f67e24e57761d899e5a60c4f62fa7fdb3616",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\c7\\c7b723e789844b9d8e56f73165d2f67e24e57761d899e5a60c4f62fa7fdb3616"
+    },
+    "compositions/scene-signature.html": {
+      "hash": "38edeb8f1342a12cceb93db58aac66c9f7732e3a52f1a4638c898a7513443301",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\38\\38edeb8f1342a12cceb93db58aac66c9f7732e3a52f1a4638c898a7513443301"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\53\\53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "ddd282117087508e9dc77bd6f88be8cb13496efcd45f1aaa01adeb3a465a8144",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\dd\\ddd282117087508e9dc77bd6f88be8cb13496efcd45f1aaa01adeb3a465a8144"
+    },
+    "meta.json": {
+      "hash": "514c38c391b164e8e9bacf02b21ebd537a1c0d87c329b05f49abbc6a33d91784",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\51\\514c38c391b164e8e9bacf02b21ebd537a1c0d87c329b05f49abbc6a33d91784"
+    },
+    "package.json": {
+      "hash": "4ed573297b9a7277e90df7635cb5b344e5fa9e5b81a11cae600ceb3821a3e76c",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\4e\\4ed573297b9a7277e90df7635cb5b344e5fa9e5b81a11cae600ceb3821a3e76c"
+    },
+    "assets/images/b1.jpg": {
+      "hash": "a9637795b5c1edb0b530a1fb31eb48b532bf0b9866ac8d9761d2a94a3f8f2fe9",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\a9\\a9637795b5c1edb0b530a1fb31eb48b532bf0b9866ac8d9761d2a94a3f8f2fe9"
+    },
+    "assets/images/b14.jpg": {
+      "hash": "84c8cb6540258c1d00d001e5b0f6e67edb483227985f0c1de18f6e4a83a9c91e",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\84\\84c8cb6540258c1d00d001e5b0f6e67edb483227985f0c1de18f6e4a83a9c91e"
+    },
+    "assets/images/b18.jpg": {
+      "hash": "ebb20e5263dee6bb18b3b74ad60dbc1785b7df59e1e4324a0ce8a1b791aae099",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\eb\\ebb20e5263dee6bb18b3b74ad60dbc1785b7df59e1e4324a0ce8a1b791aae099"
+    },
+    "assets/music/happy-beats-business-moves-vol-12-by-ende-dot-app.mp3": {
+      "hash": "5888d4bd2ba0119b87a94e502ae2cc401c08192945cc5e5c2f8e8a33aa47a0a1",
+      "content": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\58\\5888d4bd2ba0119b87a94e502ae2cc401c08192945cc5e5c2f8e8a33aa47a0a1"
+    }
+  },
+  "revisions": {
+    "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793695708107,
+      "endedAt": 1793695708187,
+      "files": {
+        "compositions/scene-atelier.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\c8\\c8eae31f6af46c1c0b1a7b6310ad2174949746ecec5e81be59a23dcd9d483735",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\bb\\bb8917e3f676422341d8d7f761af2c13824a367b35c256eb9f42d6437cbba313"
+        },
+        "compositions/scene-craft.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\4c\\4c5ce6d38e982906e0f13997421f3730284da2560655a5fe97f795d5706e1e3b",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\e8\\e8d0c5078c2ef152069dc1168abc565740bdbb5c3f7b91c29cc52d837cf971ac"
+        },
+        "compositions/scene-detail.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\92\\92babbe929359d05fe345d6c53e246a1e981eeb66ad04ce5dbf0c3d1824ee6d5",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\71\\71161bdfc447deed70efc115b879a0c20001170aa39a21fd9b8ed0cd03620cb8"
+        },
+        "compositions/scene-lookbook.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\ff\\ff8e399d2b1a42b755da20e717b3a4044b740096ad9e1312dee678fb194b62e8",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\99\\998cb58395cacec119962e41b11a9ae82853e4841fe9f2192063110ec4006c9c"
+        },
+        "index.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\67\\6714070e45fb8a4033baa8ce4ab1efc26ab503d406485e52041ca9cdacaa8891",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\6e\\6eab550f19cdb7dfc5784812f15ca6b0b29e7f39ad5322a6cb0d407a33aaa304"
+        },
+        "meta.json": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\b2\\b2c28fd6e44fa18d220e6771d215942c73089d944d611964224c04a8b341fdcc",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\51\\514c38c391b164e8e9bacf02b21ebd537a1c0d87c329b05f49abbc6a33d91784"
+        }
+      }
+    },
+    "be1a1a5e-5984-4b05-81d7-4ce99ca0383a": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793695836415,
+      "endedAt": 1793695836457,
+      "files": {
+        "compositions/scene-atelier.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\bb\\bb8917e3f676422341d8d7f761af2c13824a367b35c256eb9f42d6437cbba313",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\64\\643260e7d4361f091fd7ad257e9119f16f85a15ac40f39b9d6018132ed56252f"
+        },
+        "compositions/scene-craft.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\e8\\e8d0c5078c2ef152069dc1168abc565740bdbb5c3f7b91c29cc52d837cf971ac",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\95\\953285febb9608b8dbfe1c25fea610459f5dbf26b552ebefd220dd061341ee24"
+        },
+        "compositions/scene-detail.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\71\\71161bdfc447deed70efc115b879a0c20001170aa39a21fd9b8ed0cd03620cb8",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8b\\8b493e81d95b7685defb2af932b071f75054e60d084e59bb4117fdeb883972b9"
+        },
+        "compositions/scene-lookbook.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\99\\998cb58395cacec119962e41b11a9ae82853e4841fe9f2192063110ec4006c9c",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\30\\30b4b52f6ac77eeefa20537bcca63cd1151282934bad5cb1740463f122138031"
+        },
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\ae\\aec2916de4fdc975d7c098e3ff965e9ecf18097a77918ce1b90f6492391c5635",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\f5\\f5b28af099d5255aa95729cce7bf2b583c0a7c8ae09a4a7aa05b11511122f970"
+        },
+        "index.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\6e\\6eab550f19cdb7dfc5784812f15ca6b0b29e7f39ad5322a6cb0d407a33aaa304",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\3f\\3fd2a3347369f4ed3f6b962e9954804ba90c9a3f13e0860b5d5e27d232d7f5cb"
+        }
+      }
+    },
+    "bf6912d9-3e2c-4b1e-97c6-630810c7895d": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "label": "Move layer",
+      "startedAt": 1793696064487,
+      "endedAt": 1793696064487,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\f5\\f5b28af099d5255aa95729cce7bf2b583c0a7c8ae09a4a7aa05b11511122f970",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\e4\\e41cfa71e76b3f1336c8cdf5007cb61efffebb0e5c91a1863b71291354a47349"
+        }
+      }
+    },
+    "60550c7c-5b77-4daa-9fd4-85d9f6066bb7": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "targets": [
+        {
+          "file": "compositions/scene-signature.html",
+          "id": "s5-cta",
+          "hfId": "hf-ro6p",
+          "selector": "#s5-cta"
+        }
+      ],
+      "label": "Edit text",
+      "startedAt": 1793696076017,
+      "endedAt": 1793696076017,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\e4\\e41cfa71e76b3f1336c8cdf5007cb61efffebb0e5c91a1863b71291354a47349",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8d\\8d87686cd2e6263ba993facd6163479f543f2d23bec2792c98130e561de86707"
+        }
+      }
+    },
+    "6ca58a68-b1cd-4fd3-bae4-e25708cdb737": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "targets": [
+        {
+          "file": "compositions/scene-signature.html",
+          "id": "s5-cta",
+          "hfId": "hf-ro6p",
+          "selector": "#s5-cta"
+        }
+      ],
+      "label": "Edit text",
+      "startedAt": 1793696082709,
+      "endedAt": 1793696082709,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8d\\8d87686cd2e6263ba993facd6163479f543f2d23bec2792c98130e561de86707",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\84\\84eff2c3e1963bc8e4ca9d288d450bf4e484a53bbed832e8ff66d48eb6961d21"
+        }
+      }
+    },
+    "15fc336d-6b99-4820-85b2-a11929e44fd5": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "label": "Remove all keyframes",
+      "startedAt": 1793696083259,
+      "endedAt": 1793696083259,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\84\\84eff2c3e1963bc8e4ca9d288d450bf4e484a53bbed832e8ff66d48eb6961d21",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\dc\\dcefbd75af5cf3d0b1f06f14907c58667d37aa15c868800036470ca393cac5aa"
+        }
+      }
+    },
+    "cc64a8b7-acf8-45e8-887b-de96a67022b2": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "targets": [
+        {
+          "file": "compositions/scene-signature.html",
+          "id": "s5-cta",
+          "hfId": "hf-ro6p",
+          "selector": "#s5-cta"
+        }
+      ],
+      "label": "Edit text",
+      "startedAt": 1793696084086,
+      "endedAt": 1793696084086,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\dc\\dcefbd75af5cf3d0b1f06f14907c58667d37aa15c868800036470ca393cac5aa",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\30\\30524723c78f3421c7ad0d6907fdfc179a5c72cd564a9d4d255e65ec36371ba5"
+        }
+      }
+    },
+    "51712202-1509-470a-8950-57f63072dcac": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "label": "Remove all keyframes",
+      "startedAt": 1793696084661,
+      "endedAt": 1793696084661,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\30\\30524723c78f3421c7ad0d6907fdfc179a5c72cd564a9d4d255e65ec36371ba5",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\aa\\aa0ab55c01572ff9c3cf22351f37f036fc9911e6f727805e846c5b92a3dceb25"
+        }
+      }
+    },
+    "8fe976e1-add7-4e31-9180-3efdbb7ca626": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "label": "Delete timeline clip",
+      "startedAt": 1793696085541,
+      "endedAt": 1793696085542,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\aa\\aa0ab55c01572ff9c3cf22351f37f036fc9911e6f727805e846c5b92a3dceb25",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8a\\8a285ece6ce4c68aeb68148005dd7c722fd4e52cba5310a418326b881b9c3148"
+        }
+      }
+    },
+    "ebc5f0d1-2e17-42c3-a0a2-fb46e52fd07e": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "targets": [
+        {
+          "file": "compositions/scene-signature.html",
+          "id": "s5-rule-bottom",
+          "hfId": "hf-wj0i",
+          "selector": "#s5-rule-bottom"
+        }
+      ],
+      "label": "Edit text",
+      "startedAt": 1793696111850,
+      "endedAt": 1793696111850,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8a\\8a285ece6ce4c68aeb68148005dd7c722fd4e52cba5310a418326b881b9c3148",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\ba\\bac9f09fcb621a8c089da45a8dbf56167378e30d146367cecd3654d0ff32ff63"
+        }
+      }
+    },
+    "78512732-944c-4c87-97ad-7e80c5a97040": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "label": "Delete timeline clip",
+      "startedAt": 1793696114809,
+      "endedAt": 1793696114809,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\ba\\bac9f09fcb621a8c089da45a8dbf56167378e30d146367cecd3654d0ff32ff63",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\bc\\bc732da5d98a051752955bf94602d055d8f1b13f6fc33fd6cf1159fd75642815"
+        }
+      }
+    },
+    "b3c5764c-b6b4-47b3-af32-319820f6bec1": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "label": "Add keyframe at 100%",
+      "startedAt": 1793696136569,
+      "endedAt": 1793696136569,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\bc\\bc732da5d98a051752955bf94602d055d8f1b13f6fc33fd6cf1159fd75642815",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\ea\\ea9b0b0c3f0e5c5b9c41450cbe17063eec028ea39e3bdeabb60db539c4138825"
+        }
+      }
+    },
+    "faa7aeef-c41d-4a5b-9e62-26988dce911a": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "label": "Undid: Add keyframe at 100%",
+      "startedAt": 1793696276343,
+      "endedAt": 1793696276358.3452,
+      "undoes": "b3c5764c-b6b4-47b3-af32-319820f6bec1",
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\ea\\ea9b0b0c3f0e5c5b9c41450cbe17063eec028ea39e3bdeabb60db539c4138825",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\bc\\bc732da5d98a051752955bf94602d055d8f1b13f6fc33fd6cf1159fd75642815"
+        }
+      }
+    },
+    "88f19ca6-e4e8-497a-bd31-f2e29d12bf5e": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "label": "Undid: Delete timeline clip",
+      "startedAt": 1793696279052,
+      "endedAt": 1793696279060.6345,
+      "undoes": "78512732-944c-4c87-97ad-7e80c5a97040",
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\bc\\bc732da5d98a051752955bf94602d055d8f1b13f6fc33fd6cf1159fd75642815",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\ba\\bac9f09fcb621a8c089da45a8dbf56167378e30d146367cecd3654d0ff32ff63"
+        }
+      }
+    },
+    "1dd4ea10-1865-44b6-a1e0-9e416b128a00": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "targets": [
+        {
+          "file": "compositions/scene-signature.html",
+          "id": "s5-rule-bottom",
+          "hfId": "hf-wj0i",
+          "selector": "#s5-rule-bottom"
+        }
+      ],
+      "label": "Edit text",
+      "startedAt": 1793696302735,
+      "endedAt": 1793696302735,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\ba\\bac9f09fcb621a8c089da45a8dbf56167378e30d146367cecd3654d0ff32ff63",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8a\\8a285ece6ce4c68aeb68148005dd7c722fd4e52cba5310a418326b881b9c3148"
+        }
+      }
+    },
+    "b9867188-a150-4141-9264-68f3570bd320": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "targets": [
+        {
+          "file": "compositions/scene-signature.html",
+          "id": "s5-rule-bottom",
+          "hfId": "hf-wj0i",
+          "selector": "#s5-rule-bottom"
+        }
+      ],
+      "label": "Edit text",
+      "startedAt": 1793696307038,
+      "endedAt": 1793696307038,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8a\\8a285ece6ce4c68aeb68148005dd7c722fd4e52cba5310a418326b881b9c3148",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\f0\\f0d459cd6102175e82ccd0729f44dbf67ce7e3cd75da0a7f61ebfcef412eda72"
+        }
+      }
+    },
+    "95b0903f-bf45-4ae7-bf5f-e0c5ecbdd70d": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "targets": [
+        {
+          "file": "compositions/scene-signature.html",
+          "id": "s5-rule-bottom",
+          "hfId": "hf-wj0i",
+          "selector": "#s5-rule-bottom"
+        }
+      ],
+      "label": "Edit layer style",
+      "startedAt": 1793696325604,
+      "endedAt": 1793696325604,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\f0\\f0d459cd6102175e82ccd0729f44dbf67ce7e3cd75da0a7f61ebfcef412eda72",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\54\\54d15e216d620c12b3909319e07f164bc5199795eec5e4f81dcff23479a36bb6"
+        }
+      }
+    },
+    "6c49c70b-167e-4fdf-af9f-0f20de72aaeb": {
+      "actor": {
+        "kind": "person",
+        "name": "You"
+      },
+      "targets": [
+        {
+          "file": "compositions/scene-signature.html",
+          "id": "s5-rule-bottom",
+          "hfId": "hf-wj0i",
+          "selector": "#s5-rule-bottom"
+        }
+      ],
+      "label": "Edit layer style",
+      "startedAt": 1793696335627,
+      "endedAt": 1793696335627,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\54\\54d15e216d620c12b3909319e07f164bc5199795eec5e4f81dcff23479a36bb6",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\7f\\7f5b1926545ac8b7e226d101424d5cbfdc1540453086e9cf2e073fcec088809e"
+        }
+      }
+    },
+    "1cd21894-989a-48c4-a5ae-941401bd8552": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793696523803,
+      "endedAt": 1793696525815,
+      "files": {
+        "index.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\3f\\3fd2a3347369f4ed3f6b962e9954804ba90c9a3f13e0860b5d5e27d232d7f5cb",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\dd\\ddd282117087508e9dc77bd6f88be8cb13496efcd45f1aaa01adeb3a465a8144"
+        }
+      }
+    },
+    "0bfcdff8-2025-4484-8880-b0f391a751cf": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793696526076,
+      "endedAt": 1793696528084,
+      "files": {
+        "compositions/scene-detail.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\8b\\8b493e81d95b7685defb2af932b071f75054e60d084e59bb4117fdeb883972b9",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\25\\25219411788ef6b483b01b1866cec737fbd1ba587ede55812d91e69cbbba690f"
+        }
+      }
+    },
+    "f322f04e-ce64-44f0-a642-d07bcd5d11a0": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793696529209,
+      "endedAt": 1793696531211,
+      "files": {
+        "compositions/scene-atelier.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\64\\643260e7d4361f091fd7ad257e9119f16f85a15ac40f39b9d6018132ed56252f",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\68\\68abdf3fe52a120560410697bcb34b7a18ed8fde97683ad0b717c3e3dc6307ec"
+        }
+      }
+    },
+    "3d5967c5-22a6-4d10-bda4-db53dd9f7a40": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793696532028,
+      "endedAt": 1793696534031,
+      "files": {
+        "compositions/scene-lookbook.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\30\\30b4b52f6ac77eeefa20537bcca63cd1151282934bad5cb1740463f122138031",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\c7\\c7b723e789844b9d8e56f73165d2f67e24e57761d899e5a60c4f62fa7fdb3616"
+        }
+      }
+    },
+    "9db32298-3fc9-4f3c-87ee-092e2b132b45": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793696534951,
+      "endedAt": 1793696536953,
+      "files": {
+        "compositions/scene-craft.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\95\\953285febb9608b8dbfe1c25fea610459f5dbf26b552ebefd220dd061341ee24",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\76\\764a386864cf21145280c84d37c44c6402f828bbac00cba8c517491e24bce1f3"
+        }
+      }
+    },
+    "41be4a4e-565b-4123-8aa4-3a98a4781825": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1793696537697,
+      "endedAt": 1793696539702,
+      "files": {
+        "compositions/scene-signature.html": {
+          "before": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\7f\\7f5b1926545ac8b7e226d101424d5cbfdc1540453086e9cf2e073fcec088809e",
+          "after": "C:\\Users\\sakth\\.cache\\hyperframes\\history\\a3f538d3-251a-4b00-84df-c3bf9a98fa82\\blobs\\38\\38edeb8f1342a12cceb93db58aac66c9f7732e3a52f1a4638c898a7513443301"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695",
+      "id": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e"
+    },
+    "revisions": {
+      "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695": [
+        {
+          "id": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e",
+          "scope": "project",
+          "report": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\checks\\dcca5adb-2bda-4e3e-9c5e-c4f2e794621e.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 10000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": true,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1793695721494,
+          "contentHash": "d06c7d0a01890d9b07dc79bbc447a97f918d0c5d9040eb8a31c2b82687681294",
+          "revision": "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695",
+          "inputFingerprint": "de804680ddb67234838a6cfd2fa58daf431a95d4e687e5346f23dd83d989acfa",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "e0f00927-ba39-4adb-8d65-3543973c197c",
+        "scope": "project",
+        "report": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\checks\\e0f00927-ba39-4adb-8d65-3543973c197c.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 10000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": true,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1793694520443,
+        "contentHash": "7edeed78370440d1a53278a5e7892ad2b3056214370c996a2d0de4fa9445b36e",
+        "revision": null,
+        "inputFingerprint": "5d2b218985d1a9833622703365e43f1b20d288b5f5be1b2617ef0d13d3e7377a",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": {
+      "revision": "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695",
+      "id": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e-4"
+    },
+    "revisions": {
+      "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695": [
+        {
+          "id": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e-0",
+          "scope": "full",
+          "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\4eb6a114-e854-4672-b93c-6568aaef43d0\\frame-00-at-1.2s.png",
+          "time": 1.167,
+          "metadata": {
+            "checkId": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1793695721494,
+          "contentHash": "ff6a9f601d9191ffd191ae19f43a20aafee329d01efee4fcb16b5e01be262190",
+          "revision": "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695",
+          "inputFingerprint": "de804680ddb67234838a6cfd2fa58daf431a95d4e687e5346f23dd83d989acfa",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "id": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e-1",
+          "scope": "full",
+          "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\4eb6a114-e854-4672-b93c-6568aaef43d0\\frame-01-at-5.8s.png",
+          "time": 5.833,
+          "metadata": {
+            "checkId": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1793695721495,
+          "contentHash": "16804b142bedcc4f7734ed2798ec001a7ab49c33decd040e7684d27e09a8ef75",
+          "revision": "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695",
+          "inputFingerprint": "de804680ddb67234838a6cfd2fa58daf431a95d4e687e5346f23dd83d989acfa",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "id": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e-2",
+          "scope": "full",
+          "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\4eb6a114-e854-4672-b93c-6568aaef43d0\\frame-02-at-10.5s.png",
+          "time": 10.5,
+          "metadata": {
+            "checkId": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1793695721496,
+          "contentHash": "df492aa431f847f0c4f97c3cce5a709caaafdaf177db204e958b2dd66ee79518",
+          "revision": "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695",
+          "inputFingerprint": "de804680ddb67234838a6cfd2fa58daf431a95d4e687e5346f23dd83d989acfa",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "id": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e-3",
+          "scope": "full",
+          "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\4eb6a114-e854-4672-b93c-6568aaef43d0\\frame-03-at-15.2s.png",
+          "time": 15.167,
+          "metadata": {
+            "checkId": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1793695721496,
+          "contentHash": "a81aba2fbd2ec3967dfd061ace935a240bff15c0a9bc90e40673a5e402dee4f7",
+          "revision": "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695",
+          "inputFingerprint": "de804680ddb67234838a6cfd2fa58daf431a95d4e687e5346f23dd83d989acfa",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "id": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e-4",
+          "scope": "full",
+          "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\4eb6a114-e854-4672-b93c-6568aaef43d0\\frame-04-at-19.8s.png",
+          "time": 19.833,
+          "metadata": {
+            "checkId": "dcca5adb-2bda-4e3e-9c5e-c4f2e794621e",
+            "width": 1920,
+            "height": 1080
+          },
+          "createdAt": 1793695721497,
+          "contentHash": "82547772a201dbb10ccd14dbdcdfe123a6eaaaaf7bc154e734dbf67c89185efb",
+          "revision": "29c10a03-b5ae-4cde-bdd2-c6f9d2c10695",
+          "inputFingerprint": "de804680ddb67234838a6cfd2fa58daf431a95d4e687e5346f23dd83d989acfa",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "e0f00927-ba39-4adb-8d65-3543973c197c-0",
+        "scope": "full",
+        "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-00-at-1.2s.png",
+        "time": 1.167,
+        "metadata": {
+          "checkId": "e0f00927-ba39-4adb-8d65-3543973c197c",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1793694520443,
+        "contentHash": "ff6a9f601d9191ffd191ae19f43a20aafee329d01efee4fcb16b5e01be262190",
+        "revision": null,
+        "inputFingerprint": "5d2b218985d1a9833622703365e43f1b20d288b5f5be1b2617ef0d13d3e7377a",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "e0f00927-ba39-4adb-8d65-3543973c197c-1",
+        "scope": "full",
+        "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-01-at-5.8s.png",
+        "time": 5.833,
+        "metadata": {
+          "checkId": "e0f00927-ba39-4adb-8d65-3543973c197c",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1793694520443,
+        "contentHash": "16804b142bedcc4f7734ed2798ec001a7ab49c33decd040e7684d27e09a8ef75",
+        "revision": null,
+        "inputFingerprint": "5d2b218985d1a9833622703365e43f1b20d288b5f5be1b2617ef0d13d3e7377a",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "e0f00927-ba39-4adb-8d65-3543973c197c-2",
+        "scope": "full",
+        "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-02-at-10.5s.png",
+        "time": 10.5,
+        "metadata": {
+          "checkId": "e0f00927-ba39-4adb-8d65-3543973c197c",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1793694520443,
+        "contentHash": "df492aa431f847f0c4f97c3cce5a709caaafdaf177db204e958b2dd66ee79518",
+        "revision": null,
+        "inputFingerprint": "5d2b218985d1a9833622703365e43f1b20d288b5f5be1b2617ef0d13d3e7377a",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "e0f00927-ba39-4adb-8d65-3543973c197c-3",
+        "scope": "full",
+        "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-03-at-15.2s.png",
+        "time": 15.167,
+        "metadata": {
+          "checkId": "e0f00927-ba39-4adb-8d65-3543973c197c",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1793694520443,
+        "contentHash": "a81aba2fbd2ec3967dfd061ace935a240bff15c0a9bc90e40673a5e402dee4f7",
+        "revision": null,
+        "inputFingerprint": "5d2b218985d1a9833622703365e43f1b20d288b5f5be1b2617ef0d13d3e7377a",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "e0f00927-ba39-4adb-8d65-3543973c197c-4",
+        "scope": "full",
+        "image": "C:\\Users\\sakth\\.gemini\\antigravity\\scratch\\dev-fashion\\brag-output\\composition\\.hyperframes\\artifacts\\snapshots\\501df5d5-35de-4532-9e6c-51a3cac2d3a4\\frame-04-at-19.8s.png",
+        "time": 19.833,
+        "metadata": {
+          "checkId": "e0f00927-ba39-4adb-8d65-3543973c197c",
+          "width": 1920,
+          "height": 1080
+        },
+        "createdAt": 1793694520444,
+        "contentHash": "82547772a201dbb10ccd14dbdcdfe123a6eaaaaf7bc154e734dbf67c89185efb",
+        "revision": null,
+        "inputFingerprint": "5d2b218985d1a9833622703365e43f1b20d288b5f5be1b2617ef0d13d3e7377a",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  }
+}

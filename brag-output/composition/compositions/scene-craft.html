@@ -1,0 +1,67 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: var(--color-dark);
+      color: var(--color-paper);
+    }
+
+    #s4-photo {
+      top: 830px;
+      left: 60px;
+      width: 960px;
+      height: 960px;
+      object-fit: cover;
+      object-position: center 38%;
+    }
+
+    #s4-copy {
+      top: 235px;
+      left: 78px;
+      width: 924px;
+      text-align: center;
+      color: var(--color-paper);
+    }
+
+    #s4-kicker {
+      margin: 0 0 28px;
+      color: var(--color-gold-soft);
+      font: 600 26px/1.3 var(--font-body), Arial, sans-serif;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    #s4-title {
+      margin: 0;
+      font: 400 68px/1.1 var(--font-display), Georgia, serif;
+      letter-spacing: -0.015em;
+    }
+
+    #s4-rule {
+      top: 747px;
+      left: 502px;
+      width: 76px;
+      height: 3px;
+      background: var(--color-gold);
+      transform-origin: left center;
+    }
+  </style>
+  <div data-hf-id="hf-7n06" id="root" data-composition-id="scene-craft" data-width="1080" data-height="1920">
+    <img data-hf-id="hf-i2w6" id="s4-photo" class="clip" data-start="0" data-duration="4.74" data-hold src="assets/images/b18.jpg" alt="" />
+    <div data-hf-id="hf-b3ju" id="s4-rule" class="clip" data-start="0.18" data-duration="4.45"></div>
+    <div data-hf-id="hf-fexy" id="s4-copy" class="clip" data-start="0.22" data-duration="4.38">
+      <p data-hf-id="hf-r5ey" id="s4-kicker">Made for your moment</p>
+      <h2 data-hf-id="hf-gxv1" id="s4-title">Hand-embroidered and made to measure in our Coimbatore atelier.</h2>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#root", { opacity: 0 }, { opacity: 1, duration: 0.38, ease: "power2.inOut" }, 0);
+    tl.fromTo("#s4-photo", { opacity: 0, scale: 1.04 }, { opacity: 1, scale: 1, duration: 1.2, ease: "power3.out" }, 0.02);
+    tl.fromTo("#s4-copy", { opacity: 0, x: -20, filter: "blur(8px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.72, ease: "power3.out" }, 0.2);
+    tl.fromTo("#s4-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.42, ease: "power3.out" }, 0.48);
+    window.__timelines["scene-craft"] = tl;
+  </script>
+</template>

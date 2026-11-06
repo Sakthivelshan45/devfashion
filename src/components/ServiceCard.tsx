@@ -1,5 +1,6 @@
 import Link from "next/link";
 import * as Icons from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;
@@ -17,7 +18,7 @@ export default function ServiceCard({
   href = "/contact#booking"
 }: ServiceCardProps) {
   // Resolve icon dynamically
-  const IconComponent = (Icons as any)[iconName] || Icons.Scissors;
+  const IconComponent = (Icons[iconName as keyof typeof Icons] as LucideIcon | undefined) || Icons.Scissors;
 
   return (
     <div className="bg-white border border-[#EFEBE4] p-8 flex flex-col justify-between h-full group hover:border-[#C5A059] hover:shadow-xl transition-all duration-500 ease-out relative overflow-hidden">

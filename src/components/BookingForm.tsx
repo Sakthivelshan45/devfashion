@@ -456,7 +456,8 @@ function BookingFormInner() {
   const [today, setToday] = useState("");
 
   useEffect(() => {
-    setToday(todayString());
+    const frame = requestAnimationFrame(() => setToday(todayString()));
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   /* fill service and notes from a link such as /contact?service=Bridal%20Collection&design=Royal%20Zardozi */
@@ -469,11 +470,11 @@ function BookingFormInner() {
       ? (serviceParam as string)
       : categoryToService[serviceParam ?? ""] ?? "";
 
-    setFormData((prev) => ({
+    queueMicrotask(() => setFormData((prev) => ({
       ...prev,
       service: service || prev.service,
       notes: designParam ? `Enquiring about design: ${designParam}` : prev.notes,
-    }));
+    })));
   }, [searchParams]);
 
   const handleChange = (

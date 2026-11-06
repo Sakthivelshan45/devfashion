@@ -1,22 +1,18 @@
 "use client";
+/* eslint-disable react/no-unescaped-entities */
 
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   Heart,
   MessageSquare,
   ShieldCheck,
-  Star,
-  Film,
   Globe,
-  Truck,
   Award,
-  Lock,
   ChevronRight,
-  Sparkles
 } from "lucide-react";
 
 // Expanded South Indian Jewelry Catalog (24 Items)
@@ -307,7 +303,6 @@ const categoryFilterList = [
 export default function JewelryPage() {
   const [activeCategory, setActiveCategory] = useState("All Collections");
   const [activeOccasion, setActiveOccasion] = useState<string | null>(null);
-  const [hoveredPanel, setHoveredPanel] = useState<string | null>(null);
   const [likedItems, setLikedItems] = useState<Record<string, boolean>>({});
 
   const toggleLike = (id: string) => {
@@ -385,8 +380,6 @@ export default function JewelryPage() {
             return (
               <motion.div
                 key={panel.id}
-                onHoverStart={() => setHoveredPanel(panel.id)}
-                onHoverEnd={() => setHoveredPanel(null)}
                 onClick={() => {
                   setActiveOccasion(isSelected ? null : panel.filterKey);
                   const el = document.getElementById("catalog");

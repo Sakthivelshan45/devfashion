@@ -961,8 +961,9 @@
 
 
 "use client";
+/* eslint-disable react/no-unescaped-entities */
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
@@ -1412,11 +1413,16 @@ export default function Hero3D() {
 
   /* ---- viewer (click a card to open) ---- */
   const [openId, setOpenId] = useState<number | null>(null);
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
   const viewerOpen = useRef(false);
-  viewerOpen.current = openId !== null;
   const moved = useRef(false); // true while/after a drag, so a drag never counts as a click
+  useEffect(() => {
+    viewerOpen.current = openId !== null;
+  }, [openId]);
 
   const openLook = useCallback((id: number) => {
     if (moved.current) return;

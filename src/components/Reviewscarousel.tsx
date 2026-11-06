@@ -7,6 +7,7 @@ import {
   useMemo,
   useRef,
   useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
 import { createPortal } from "react-dom";
@@ -183,10 +184,12 @@ export default function ReviewsCarousel({
   const [hovered, setHovered] = useState(false);
   const [dragging, setDragging] = useState(false);
   const [inView, setInView] = useState(true);
-  const [mounted, setMounted] = useState(false);
   const [opened, setOpened] = useState<Opened | null>(null);
-
-  useEffect(() => setMounted(true), []);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   /* measure the viewport; re-measure on resize / rotate */
   useIsoLayoutEffect(() => {

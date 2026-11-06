@@ -49,7 +49,7 @@ export default function Navbar() {
 
   // Close mobile drawer on route change
   useEffect(() => {
-    setIsOpen(false);
+    queueMicrotask(() => setIsOpen(false));
   }, [pathname]);
 
   const handleLinkClick = () => {

@@ -1,5 +1,4 @@
 import { FileText, RotateCcw, AlertTriangle, Truck } from "lucide-react";
-import Link from "next/link";
 
 export const metadata = {
   title: "Terms & Conditions",

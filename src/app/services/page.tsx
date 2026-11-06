@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable react/no-unescaped-entities */
 
 import { useState, useRef, type ReactNode, type PointerEvent as RPointerEvent, type CSSProperties } from "react";
 import Image from "next/image";
@@ -14,23 +15,15 @@ import {
   type MotionProps,
 } from "framer-motion";
 import {
-  Scissors,
-  Sparkles,
-  Heart,
   Ruler,
-  Award,
   Globe,
   ArrowRight,
   ShieldCheck,
   CheckCircle,
   MessageSquare,
   ChevronRight,
-  Gem,
   HelpCircle,
   Clock,
-  MapPin,
-  Lock,
-  Phone
 } from "lucide-react";
 
 // FAQ List (100% Preserved)

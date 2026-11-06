@@ -2355,9 +2355,6 @@ import {
 import { X, ChevronLeft, ChevronRight, ArrowRight, ArrowDown, Scissors } from "lucide-react";
 
 
-import { Caveat } from "next/font/google";
-
-const hand = Caveat({ subsets: ["latin"], weight: ["500", "600"] });
 
 
 
@@ -2453,7 +2450,7 @@ const rawItems: RawItem[] = [
 
 
 
-  { src: "/images/dev_fashion/new_b1.jpeg", alt: "Bridal blouse design", category: "Bridal Collection", title: "Elegant Bridal Blouse", description: "A beautiful bridal design crafted with timeless elegance." },
+{ src: "/images/dev_fashion/new_b1.jpeg", alt: "Bridal blouse design", category: "Bridal Collection", title: "Elegant Bridal Blouse", description: "A beautiful bridal design crafted with timeless elegance." },
 { src: "/images/dev_fashion/new_b2.jpeg", alt: "Designer blouse design", category: "Designer Blouses", title: "Signature Designer Blouse", description: "A stylish blouse design blending creativity with a refined fit." },
 { src: "/images/dev_fashion/new_b3.jpeg", alt: "Bride wearing a designer blouse", category: "our Brides and Models", title: "Bridal Elegance", description: "Celebrating beautiful bridal looks and memorable occasions." },
 { src: "/images/dev_fashion/new_b4.jpeg", alt: "Party wear blouse design", category: "Party Wear", title: "Glamorous Party Wear", description: "A sophisticated design for celebrations and special evenings." },
@@ -2561,11 +2558,14 @@ const rawItems: RawItem[] = [
   { src: "/images/dev_fashion/kid2.jpeg", alt: "Dev Fashion designer creation 65", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
   { src: "/images/dev_fashion/kid3.jpeg", alt: "Dev Fashion designer creation 66", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
 
-    { src: "/images/dev_fashion/kid1.jpg", alt: "Dev Fashion designer creation 67", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
-  { src: "/images/dev_fashion/kid2.jpg", alt: "Dev Fashion designer creation 68", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
-  { src: "/images/dev_fashion/kid3.jpg", alt: "Dev Fashion designer creation 69", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
+  { src: "/images/dev_fashion/nivi_diwali_edit.jpeg", alt: "Dev Fashion designer creation 67", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
+  { src: "/images/dev_fashion/diwali_edit1.jpeg", alt: "Dev Fashion designer creation 68", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
+  { src: "/images/dev_fashion/diwali_edit2.jpeg", alt: "Dev Fashion designer creation 69", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
+  { src: "/images/dev_fashion/nivi_diwali1.jpeg", alt: "Dev Fashion designer creation 67", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
+  { src: "/images/dev_fashion/nivi_diwali2.jpeg", alt: "Dev Fashion designer creation 68", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
+  { src: "/images/dev_fashion/nivi_diwali3.jpeg", alt: "Dev Fashion designer creation 69", category: "Kids Wear", title: "The Signature Look", description: "A personalised Dev Fashion creation finished with thoughtful detailing." },
 
-
+  
 
 ];
 
@@ -2814,6 +2814,7 @@ function HangingCard({ item, index, onOpen }: { item: GalleryItem; index: number
   const rotateX = useTransform(sy, [0, 1], [9, -9]);
   const gx = useTransform(sx, (v) => `${v * 100}%`);
   const gy = useTransform(sy, (v) => `${v * 100}%`);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const glare = useMotionTemplate`radial-gradient(circle at ${gx} ${gy}, rgba(255,255,255,0.45), transparent 55%)`;
 
   const onMove = (e: React.MouseEvent) => {
@@ -3110,13 +3111,9 @@ export default function GalleryLightbox() {
   const lastFocus = useRef<HTMLElement | null>(null);
 
   // shuffled copy of the gallery (shuffled after mount, so server and client HTML match)
-  const [shuffled, setShuffled] = useState<GalleryItem[]>(galleryItems);
+  const [shuffled] = useState<GalleryItem[]>(() => shuffle(galleryItems));
   // how many hangers are showing right now
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-
-  useEffect(() => {
-    setShuffled(shuffle(galleryItems));
-  }, []);
 
   // const [coupleIndex, setCoupleIndex] = useState(0);
 
@@ -4346,7 +4343,7 @@ export default function GalleryLightbox() {
             <div className="relative h-82 overflow-hidden bg-[var(--gold)]/80 sm:h-84 lg:h-[400px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/dev_fashion/nivi_outlook.jpeg"
+                src="/images/dev_fashion/nivi_diwali_edit.jpeg"
                 alt="Dev Fashion"
                 className="h-full w-full object-cover"
               />
